@@ -5910,6 +5910,13 @@ body {
 .heading-1 {
   color: #faf9f9; }
 
+.instructions__instruction {
+  display: flex; }
+  .instructions__instruction-number {
+    padding: 1rem;
+    border: 1px solid orange;
+    border-radius: 50%; }
+
 .main {
   grid-row: 2;
   grid-column: 1 / -1; }
