@@ -1,0 +1,41 @@
+.header {
+
+    grid-row: 1;
+    grid-column: 1 / -1;
+    position: relative;
+
+    background-image: linear-gradient(to bottom, rgba($color-white, 0.0), rgba($color-white, .5)), url('../img/header_background_image.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+
+    &__box {
+        grid-row: 1;
+        grid-column: 1 / -1;
+
+        display: flex;
+        height: 100%;
+        width: 75%;
+        align-items: center;
+        justify-items: center;
+        margin: auto;
+
+        color: $color-grey-dark-1;
+
+        &-img {
+            height: 25rem;
+            width: auto;
+            margin: 2.5rem 0;
+        }
+
+        &-text_container {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5rem;
+            width: 75%;
+        }
+    }
+}
