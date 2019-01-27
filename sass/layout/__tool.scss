@@ -1,5 +1,4 @@
 .tool {
-    background-color: orangered;
     display: flex;
     flex-direction: column;
 
@@ -7,6 +6,8 @@
     border-radius: 0.5rem;
     margin: 2rem;
     padding: 2rem;
+
+    position: relative;
 
     &__content {}
 }

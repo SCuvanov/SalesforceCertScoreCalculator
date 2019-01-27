@@ -23,8 +23,6 @@
         justify-items: center;
         margin: auto;
 
-        color: $color-grey-dark-1;
-
         &-img {
             height: 25rem;
             width: auto;
@@ -46,14 +44,14 @@
             margin-top: 2rem;
             line-height: 2rem;
             font-size: 1.3rem;
-            color: $color-grey-dark-1;
+            color: $color-grey-dark-2;
         }
 
         &-text-2 {
             margin-top: 1rem;
             line-height: 2rem;
             font-size: 1.3rem;
-            color: $color-grey-dark-1;
+            color: $color-grey-dark-2;
         }
     }
 }

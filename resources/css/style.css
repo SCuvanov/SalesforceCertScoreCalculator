@@ -5919,6 +5919,36 @@ body {
   color: #333;
   font-size: 2.5rem; }
 
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.5rem;
+  width: 100%;
+  border: none;
+  background-color: #FFF;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0px 1rem 1.5rem -1.5rem rgba(0, 0, 0, 0.5);
+  color: #777;
+  outline: none;
+  transition: transform 0.05s; }
+  .btn:hover {
+    background-color: #faf9f9; }
+  .btn:active {
+    box-shadow: 0px 1rem 1.5rem -1.5rem black;
+    transform: translateY(0.05rem); }
+  .btn-icon {
+    font-size: 2rem; }
+
+.dropdown {
+  width: 20rem; }
+  .dropdown-menu {
+    display: flex;
+    flex-direction: column; }
+  .dropdown-item {
+    background-color: #FFF; }
+
 .main {
   grid-row: 2;
   grid-column: 1 / -1;
@@ -5943,8 +5973,7 @@ body {
     width: 85%;
     align-items: center;
     justify-items: center;
-    margin: auto;
-    color: #333; }
+    margin: auto; }
     .header__box-img {
       height: 25rem;
       width: auto;
@@ -5961,12 +5990,12 @@ body {
       margin-top: 2rem;
       line-height: 2rem;
       font-size: 1.3rem;
-      color: #333; }
+      color: #777; }
     .header__box-text-2 {
       margin-top: 1rem;
       line-height: 2rem;
       font-size: 1.3rem;
-      color: #333; }
+      color: #777; }
 
 .footer {
   grid-row: 3;
@@ -5978,7 +6007,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   background-color: #faf9f9;
   border-bottom: 1px solid #f0eeee;
   border-top: 1px solid #f0eeee; }
@@ -5995,18 +6024,18 @@ body {
       border: 2px solid #127a9a;
       color: #FFF;
       text-align: center;
-      font-size: 3.5rem; }
+      font-size: 3rem; }
     .instructions__instruction-text {
-      color: #333;
+      color: #777;
       font-size: 1.5rem;
       margin-left: 2.5rem;
       text-transform: uppercase; }
 
 .tool {
-  background-color: orangered;
   display: flex;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0.5rem;
   margin: 2rem;
-  padding: 2rem; }
+  padding: 2rem;
+  position: relative; }

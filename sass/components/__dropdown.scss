@@ -1,6 +1,13 @@
 .dropdown {
 
-    &-menu {}
+    width: 20rem;
 
-    &-item {}
+    &-menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-item {
+        background-color: $color-white;
+    }
 }
