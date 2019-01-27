@@ -18,7 +18,7 @@
 
         display: flex;
         height: 100%;
-        width: 75%;
+        width: 85%;
         align-items: center;
         justify-items: center;
         margin: auto;
@@ -36,6 +36,24 @@
             flex-direction: column;
             margin-left: 5rem;
             width: 75%;
+
+            background-color: rgba($color-white, 0.5);
+            padding: 3rem;
+            border-radius: 0.5rem;
+        }
+
+        &-text-1 {
+            margin-top: 2rem;
+            line-height: 2rem;
+            font-size: 1.3rem;
+            color: $color-grey-dark-1;
+        }
+
+        &-text-2 {
+            margin-top: 1rem;
+            line-height: 2rem;
+            font-size: 1.3rem;
+            color: $color-grey-dark-1;
         }
     }
 }

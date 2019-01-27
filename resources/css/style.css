@@ -5905,21 +5905,25 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: minmax(30vh, max-content) 1fr 1fr; }
+  grid-template-rows: minmax(30vh, max-content) 1fr min-content; }
+
+.heading-1, .heading-1-dark {
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
 
 .heading-1 {
-  color: #faf9f9; }
+  color: #faf9f9;
+  font-size: 1.6rem; }
 
-.instructions__instruction {
-  display: flex; }
-  .instructions__instruction-number {
-    padding: 1rem;
-    border: 1px solid orange;
-    border-radius: 50%; }
+.heading-1-dark {
+  color: #333;
+  font-size: 2.5rem; }
 
 .main {
   grid-row: 2;
-  grid-column: 1 / -1; }
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-rows: min-content 1fr; }
 
 .header {
   grid-row: 1;
@@ -5936,7 +5940,7 @@ body {
     grid-column: 1 / -1;
     display: flex;
     height: 100%;
-    width: 75%;
+    width: 85%;
     align-items: center;
     justify-items: center;
     margin: auto;
@@ -5949,8 +5953,60 @@ body {
       display: flex;
       flex-direction: column;
       margin-left: 5rem;
-      width: 75%; }
+      width: 75%;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 3rem;
+      border-radius: 0.5rem; }
+    .header__box-text-1 {
+      margin-top: 2rem;
+      line-height: 2rem;
+      font-size: 1.3rem;
+      color: #333; }
+    .header__box-text-2 {
+      margin-top: 1rem;
+      line-height: 2rem;
+      font-size: 1.3rem;
+      color: #333; }
 
 .footer {
   grid-row: 3;
-  grid-column: 1 / -1; }
+  grid-column: 1 / -1;
+  background-color: #faf9f9;
+  border-top: 1px solid #f0eeee; }
+
+.instructions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1.5rem 2rem;
+  background-color: #faf9f9;
+  border-bottom: 1px solid #f0eeee;
+  border-top: 1px solid #f0eeee; }
+  .instructions__instruction {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .instructions__instruction-number {
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      padding: 1rem;
+      background: #1798c1;
+      border: 2px solid #127a9a;
+      color: #FFF;
+      text-align: center;
+      font-size: 3.5rem; }
+    .instructions__instruction-text {
+      color: #333;
+      font-size: 1.5rem;
+      margin-left: 2.5rem;
+      text-transform: uppercase; }
+
+.tool {
+  background-color: orangered;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.5rem;
+  margin: 2rem;
+  padding: 2rem; }

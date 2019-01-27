@@ -12,9 +12,12 @@
 @import "base/__utilities.scss";
 
 //Components
-@import "components/__instructions.scss";
+@import "components/__btn.scss";
+@import "components/__dropdown.scss";
 
 //Layout
 @import "layout/__body.scss";
 @import "layout/__header.scss";
 @import "layout/__footer.scss";
+@import "layout/__instructions.scss";
+@import "layout/__tool.scss";

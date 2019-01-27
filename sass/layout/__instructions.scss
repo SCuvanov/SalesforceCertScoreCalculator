@@ -1,0 +1,38 @@
+.instructions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    padding: 1.5rem 2rem;
+
+    background-color: $color-grey-light-1;
+    border-bottom: 1px solid $color-grey-light-3;
+    border-top: 1px solid $color-grey-light-3;
+
+    &__instruction {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &-number {
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            padding: 1rem;
+
+            background: $color-primary;
+            border: 2px solid $color-primary-dark;
+            color: $color-white;
+            text-align: center;
+            font-size: 3.5rem;
+        }
+
+        &-text {
+            color: $color-grey-dark-1;
+            font-size: 1.5rem;
+            margin-left: 2.5rem;
+            text-transform: uppercase;
+        }
+
+    }
+}
