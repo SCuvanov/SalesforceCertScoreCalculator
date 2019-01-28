@@ -5919,6 +5919,9 @@ body {
   color: #333;
   font-size: 2.5rem; }
 
+.hide {
+  display: none !important; }
+
 .btn {
   display: flex;
   align-items: center;
@@ -5932,7 +5935,8 @@ body {
   box-shadow: 0px 1rem 1.5rem -1.5rem rgba(0, 0, 0, 0.5);
   color: #777;
   outline: none;
-  transition: transform 0.05s; }
+  transition: transform 0.05s;
+  font-size: 1.1rem; }
   .btn:hover {
     background-color: #faf9f9; }
   .btn:active {
@@ -5945,9 +5949,29 @@ body {
   width: 20rem; }
   .dropdown-menu {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: 0.25rem; }
   .dropdown-item {
-    background-color: #FFF; }
+    background-color: #FFF;
+    padding: 0.5rem 1rem;
+    z-index: 10;
+    text-decoration: none;
+    color: #777;
+    font-size: 1.1rem; }
+    .dropdown-item:hover {
+      background-color: #faf9f9;
+      border-left: 2px solid #127a9a;
+      color: #127a9a;
+      z-index: 10; }
+  .dropdown-item:not(:last-child) {
+    border-bottom: 1px solid #faf9f9; }
+  .dropdown-item:first-child {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem; }
+  .dropdown-item:last-child {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    box-shadow: 0px 1rem 1.5rem -1.5rem rgba(0, 0, 0, 0.5); }
 
 .main {
   grid-row: 2;
@@ -6027,7 +6051,7 @@ body {
       font-size: 3rem; }
     .instructions__instruction-text {
       color: #777;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-left: 2.5rem;
       text-transform: uppercase; }
 

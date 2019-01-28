@@ -10,6 +10,8 @@
     <link href="resources/css/style.css" rel="stylesheet">
     <!--<link rel="shortcut icon" type="image/png" href="resources/img/favicon.png">-->
 
+    <script src="resources/js/index.js"></script>
+
     <title>Salesforce Certification Score Checker</title>
 </head>
 
@@ -48,14 +50,16 @@
         <section class="tool">
             <div class="dropdown">
                 <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
+                    aria-expanded="false" onclick="hideShowDropdownMenu()">
                     Choose Certification...
                     <i class="far fa-angle-down btn-icon"></i>
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown-menu">
+                    <a class="dropdown-item" href="#">Administrator</a>
+                    <a class="dropdown-item" href="#">Advanced Administrator</a>
+                    <a class="dropdown-item" href="#">Platform App Builder</a>
+                    <a class="dropdown-item" href="#">Platform Developer I</a>
+                    <a class="dropdown-item" href="#">Platform Developer II</a>
                 </div>
             </div>
             <div class="tool__content">
