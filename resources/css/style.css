@@ -6011,15 +6011,17 @@ body {
       padding: 3rem;
       border-radius: 0.5rem; }
     .header__box-text-1 {
-      margin-top: 2rem;
+      margin-top: 3rem;
       line-height: 2rem;
-      font-size: 1.3rem;
-      color: #777; }
+      font-size: 1.75rem;
+      color: #777;
+      word-spacing: .25rem; }
     .header__box-text-2 {
       margin-top: 1rem;
       line-height: 2rem;
-      font-size: 1.3rem;
-      color: #777; }
+      font-size: 1.75rem;
+      color: #777;
+      word-spacing: .25rem; }
 
 .footer {
   grid-row: 3;
@@ -6051,7 +6053,7 @@ body {
       font-size: 3rem; }
     .instructions__instruction-text {
       color: #777;
-      font-size: 1.3rem;
+      font-size: 1.75rem;
       margin-left: 2.5rem;
       text-transform: uppercase; }
 

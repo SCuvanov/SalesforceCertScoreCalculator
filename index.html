@@ -11,7 +11,7 @@
     <!--<link rel="shortcut icon" type="image/png" href="resources/img/favicon.png">-->
 
     <script src="resources/js/index.js"></script>
-
+    
     <title>Salesforce Certification Score Checker</title>
 </head>
 
@@ -51,11 +51,11 @@
             <div class="dropdown">
                 <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false" onclick="hideShowDropdownMenu()">
-                    Choose Certification...
+                    <span id="dropdownMenuButton__text">Choose Certification...</span>
                     <i class="far fa-angle-down btn-icon" id="btn-icon"></i>
                 </button>
                 <div class="dropdown-menu hide" aria-labelledby="dropdownMenuButton" id="dropdown-menu">
-                    <a class="dropdown-item" href="#">Administrator</a>
+                    <a class="dropdown-item" href="#" onclick="handleSelectOption_Admin('Administrator')">Administrator</a>
                     <a class="dropdown-item" href="#">Advanced Administrator</a>
                     <a class="dropdown-item" href="#">Platform App Builder</a>
                     <a class="dropdown-item" href="#">Platform Developer I</a>
@@ -64,7 +64,16 @@
             </div>
             <div class="tool__content">
                 <div class="tool__content-container admin-1">
-
+                    <label for="orgsetup" class="tool_content-category">Organization Setup</label>
+                    <input type="number" name="orgsetup" class="tool__content-categoryvalue">
+                    <label for="usersetup" class="tool_content-category">User Setup</label>
+                    <input type="number" name="usersetup" class="tool__content-categoryvalue">
+                    <label for="securityandaccess" class="tool_content-category">Security and Access</label>
+                    <input type="number" name="securityandaccess" class="tool__content-categoryvalue">
+                    <label for="orgsetup" class="tool_content-category">Organization Setup</label>
+                    <input type="number" name="orgsetup" class="tool__content-categoryvalue">
+                    <label for="orgsetup" class="tool_content-category">Organization Setup</label>
+                    <input type="number" name="orgsetup" class="tool__content-categoryvalue">
                 </div>
             </div>
         </section>

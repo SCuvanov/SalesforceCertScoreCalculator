@@ -41,17 +41,19 @@
         }
 
         &-text-1 {
-            margin-top: 2rem;
+            margin-top: 3rem;
             line-height: 2rem;
-            font-size: 1.3rem;
+            font-size: 1.75rem;
             color: $color-grey-dark-2;
+            word-spacing: .25rem;
         }
 
         &-text-2 {
             margin-top: 1rem;
             line-height: 2rem;
-            font-size: 1.3rem;
+            font-size: 1.75rem;
             color: $color-grey-dark-2;
+            word-spacing: .25rem;
         }
     }
 }

@@ -11,3 +11,14 @@ function hideShowDropdownMenu() {
         btnIcon.classList.add('fa-angle-down');
     }
 }
+
+function handleSelectOption_Admin(certificationName) {
+    switch(certificationName){
+        case 'Administrator':
+            let dropdownMenuButton__text = document.getElementById('dropdownMenuButton__text');
+            dropdownMenuButton__text.innerHTML = 'Administrator';
+            break;
+    }
+
+    hideShowDropdownMenu();
+}
