@@ -1,5 +1,5 @@
 .dropdown {
-    width: 20rem;
+    width: 30rem;
 
     &-menu {
         display: flex;
@@ -13,7 +13,7 @@
         z-index: 10;
         text-decoration: none;
         color: $color-grey-dark-2;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
 
         &:hover {
             background-color: $color-grey-light-1;
