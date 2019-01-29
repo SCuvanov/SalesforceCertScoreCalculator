@@ -15,21 +15,28 @@
 
         margin-top: 5rem;
 
+        &-box {
+            display: flex;
+            flex-direction: column;
+        }
+
         &-container {
             display: flex;
             flex-direction: column;
-            width: 30rem;
         }
 
         &-category {
             font-size: 1.5rem;
             margin-top: 1rem;
 
+            width: 30rem;
+
             color: $color-grey-dark-2;
         }
 
         &-categoryvalue {
             height: 3.5rem;
+            width: 30rem;
 
             margin-top: 0.5rem;
 

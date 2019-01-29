@@ -6069,16 +6069,20 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 5rem; }
+    .tool__content-box {
+      display: flex;
+      flex-direction: column; }
     .tool__content-container {
       display: flex;
-      flex-direction: column;
-      width: 30rem; }
+      flex-direction: column; }
     .tool__content-category {
       font-size: 1.5rem;
       margin-top: 1rem;
+      width: 30rem;
       color: #777; }
     .tool__content-categoryvalue {
       height: 3.5rem;
+      width: 30rem;
       margin-top: 0.5rem;
       outline: none;
       border: none;
