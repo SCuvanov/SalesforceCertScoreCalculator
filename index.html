@@ -10,6 +10,8 @@
     <link href="resources/css/style.css" rel="stylesheet">
     <!--<link rel="shortcut icon" type="image/png" href="resources/img/favicon.png">-->
 
+
+    <script src="resources/js/certification.js"></script>
     <script src="resources/js/index.js"></script>
 
     <title>Salesforce Certification Score Checker</title>
@@ -55,11 +57,15 @@
                     <i class="far fa-angle-down btn-icon" id="btn-icon"></i>
                 </button>
                 <div class="dropdown-menu hide" aria-labelledby="dropdownMenuButton" id="dropdown-menu">
-                    <a class="dropdown-item" href="#" onclick="handleSelectOption_Admin('Administrator')">Administrator</a>
-                    <a class="dropdown-item" href="#">Advanced Administrator</a>
-                    <a class="dropdown-item" href="#">Platform App Builder</a>
-                    <a class="dropdown-item" href="#">Platform Developer I</a>
-                    <a class="dropdown-item" href="#">Platform Developer II</a>
+                    <a class="dropdown-item" href="#" onclick="handleSelectOption('Administrator')">Administrator</a>
+                    <a class="dropdown-item" href="#" onclick="handleSelectOption('Advanced Administrator')">Advanced
+                        Administrator</a>
+                    <a class="dropdown-item" href="#" onclick="handleSelectOption('Platform App Builder')">Platform App
+                        Builder</a>
+                    <a class="dropdown-item" href="#" onclick="handleSelectOption('Platform Developer I')">Platform
+                        Developer I</a>
+                    <a class="dropdown-item" href="#" onclick="handleSelectOption('Platform Developer II')">Platform
+                        Developer II</a>
                 </div>
             </div>
             <div class="tool__content">
