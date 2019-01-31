@@ -16,9 +16,36 @@ const adminCert2CategoryNames = ['Security and Access', 'Extending Custom Object
 const adminCert2CategoryWeights = [20, 8, 6, 10, 10, 10, 3, 10, 10, 13];
 adminCert2.setCategories(adminCert2CategoryNames, adminCert2CategoryWeights);
 
-let platformAppBuilderCert = new Certification('Platform App Builder');
-let developerCert1 = new Certification('Platform Developer I');
-let developerCert2 = new Certification('Platform Developer II');
+let platformAppBuilderCert = new Certification('Platform App Builder', 60, 63);
+const platformAppBuilderCertCategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Security',
+    'Business Logic and Process Automation', 'Social', 'User Interface', 'Reporting', 'Mobile',
+    'App Development'
+];
+const platformAppBuilderCertCategoryWeights = [8, 20, 10, 27, 3, 14, 5, 5, 8];
+platformAppBuilderCert.setCategories(platformAppBuilderCertCategoryNames, platformAppBuilderCertCategoryWeights);
+
+let developerCert1 = new Certification('Platform Developer I', 60, 65);
+const developerCert1CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Logic and Process Automation',
+    'User Interface', 'Testing', 'Debug and Deployment Tools'
+];
+const developerCert1CategoryWeights = [10, 12, 46, 10, 12, 10];
+developerCert1.setCategories(developerCert1CategoryNames, developerCert1CategoryWeights);
+
+let developerCert2 = new Certification('Platform Developer II', 60, 63);
+const developerCert2CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Logic and Process Automation',
+    'User Interface', 'Performance', 'Integration', 'Testing', 'Debug and Deployment Tools'
+];
+const developerCert2CategoryWeights = [5, 7, 33, 20, 7, 11, 12, 5];
+developerCert2.setCategories(developerCert2CategoryNames, developerCert2CategoryWeights);
+
+const certificationMap = new Map();
+certificationMap.set('Administrator', adminCert1);
+certificationMap.set('Advanced Administrator', adminCert2);
+certificationMap.set('Platform App Builder', platformAppBuilderCert);
+certificationMap.set('Platform Developer I', developerCert1);
+certificationMap.set('Platform Developer II', developerCert2);
+
+let selectedCertification = adminCert1;
 
 function hideShowDropdownMenu() {
     let dropdownMenu = document.getElementById('dropdown-menu');
@@ -53,6 +80,8 @@ function handleSelectOption(certificationName) {
             break;
     }
 
+    selectedCertification = certificationMap.get(certificationName);
+    handleCertificationSelection(selectedCertification);
     hideShowDropdownMenu();
 }
 
@@ -62,6 +91,8 @@ function changeDropdownMenuText(certificationName) {
     dropdownMenuButton__text.innerHTML = certificationName;
 }
 
-function handleCertificationSelection(certificationName) {
-    //TODO: Build UI Properly
+function handleCertificationSelection(certification) {
+    if (!certification) return;
+    const certificationCategories = certification.getCategories();
+    //TODO: Build out the UI for the certification.
 }
