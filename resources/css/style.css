@@ -5946,7 +5946,9 @@ body {
     font-size: 2rem; }
 
 .dropdown {
-  width: 30rem; }
+  width: 30rem;
+  margin-left: 2rem;
+  margin-top: 2rem; }
   .dropdown-menu {
     display: flex;
     flex-direction: column;
@@ -6071,18 +6073,18 @@ body {
     margin-top: 5rem; }
     .tool__content-box {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      padding: 1rem 2rem; }
     .tool__content-container {
-      display: flex;
-      flex-direction: column; }
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-content: space-between; }
     .tool__content-category {
       font-size: 1.5rem;
       margin-top: 1rem;
-      width: 30rem;
       color: #777; }
     .tool__content-categoryvalue {
       height: 3.5rem;
-      width: 30rem;
       margin-top: 0.5rem;
       outline: none;
       border: none;

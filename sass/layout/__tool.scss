@@ -18,26 +18,25 @@
         &-box {
             display: flex;
             flex-direction: column;
+            padding: 1rem 2rem;
         }
 
         &-container {
-            display: flex;
-            flex-direction: column;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-content: space-between;
         }
 
         &-category {
             font-size: 1.5rem;
             margin-top: 1rem;
 
-            width: 30rem;
-
             color: $color-grey-dark-2;
         }
 
         &-categoryvalue {
             height: 3.5rem;
-            width: 30rem;
-
             margin-top: 0.5rem;
 
             outline: none;
