@@ -47,6 +47,10 @@ certificationMap.set('Platform Developer II', developerCert2);
 
 let selectedCertification = adminCert1;
 
+window.addEventListener('load', function () {
+    handleSelectOption('Administrator');
+})
+
 function hideShowDropdownMenu() {
     let dropdownMenu = document.getElementById('dropdown-menu');
     let btnIcon = document.getElementById('btn-icon');
@@ -94,5 +98,18 @@ function changeDropdownMenuText(certificationName) {
 function handleCertificationSelection(certification) {
     if (!certification) return;
     const certificationCategories = certification.getCategories();
-    //TODO: Build out the UI for the certification.
+
+    let toolContentContainer = document.getElementById('tool__content-container');
+    toolContentContainer.innerHTML = '';
+
+    for (let i = 0; i < certificationCategories.length; i++) {
+        const category = certificationCategories[i];
+
+        let htmlContent = '<div class="tool__content-box"><label for="category-' + i + '" class="tool__content-category">' + category.name + '</label><input type="number" name="category-' + i + '" class="tool__content-categoryvalue" id="category-' + i + '"></div>';
+        toolContentContainer.insertAdjacentHTML('beforeend', htmlContent);
+    }
+}
+
+function handleCalculate() {
+
 }

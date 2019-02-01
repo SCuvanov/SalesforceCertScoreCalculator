@@ -5926,40 +5926,53 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 3.5rem;
+  height: 5rem;
   width: 100%;
   border: none;
   background-color: #FFF;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0px 1rem 1.5rem -1.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1.5rem 1.5rem -1.5rem rgba(0, 0, 0, 0.25);
   color: #777;
   outline: none;
-  transition: transform 0.05s;
-  font-size: 1.5rem; }
+  transition: transform 0.05s, background-color .2s;
+  font-size: 1.6rem; }
   .btn:hover {
     background-color: #faf9f9; }
   .btn:active {
-    box-shadow: 0px 1rem 1.5rem -1.5rem black;
+    box-shadow: 0px 1.5rem 1.5rem -1.5rem rgba(0, 0, 0, 0.5);
     transform: translateY(0.05rem); }
   .btn-icon {
     font-size: 2rem; }
+  .btn-secondary {
+    background-color: #ea6e48;
+    color: #FFF;
+    transition: all .2s; }
+    .btn-secondary:hover {
+      background-color: #e8673e; }
 
 .dropdown {
   width: 30rem;
   margin-left: 2rem;
   margin-top: 2rem; }
   .dropdown-menu {
+    position: absolute;
+    width: 30rem;
     display: flex;
     flex-direction: column;
-    margin-top: 0.25rem; }
+    margin-top: 0.25rem;
+    box-shadow: 0px 1.5rem 1.5rem -1.5rem rgba(0, 0, 0, 0.5); }
   .dropdown-item {
+    display: flex;
+    align-items: center;
     background-color: #FFF;
     padding: 0.5rem 1rem;
     z-index: 10;
     text-decoration: none;
     color: #777;
-    font-size: 1.5rem; }
+    font-size: 1.6rem;
+    transition: background-color .2s;
+    height: 5rem; }
     .dropdown-item:hover {
       background-color: #faf9f9;
       border-left: 2px solid #127a9a;
@@ -5972,8 +5985,7 @@ body {
     border-top-right-radius: 0.25rem; }
   .dropdown-item:last-child {
     border-bottom-left-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
-    box-shadow: 0px 1rem 1.5rem -1.5rem rgba(0, 0, 0, 0.5); }
+    border-bottom-right-radius: 0.25rem; }
 
 .main {
   grid-row: 2;
@@ -6080,16 +6092,22 @@ body {
       grid-template-columns: 1fr 1fr 1fr;
       align-content: space-between; }
     .tool__content-category {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin-top: 1rem;
       color: #777; }
     .tool__content-categoryvalue {
-      height: 3.5rem;
+      height: 5rem;
       margin-top: 0.5rem;
+      font-size: 1.6rem;
       outline: none;
       border: none;
       border-radius: 0.25rem;
       color: #777;
-      box-shadow: 0px 1rem 1.5rem -1.5rem rgba(0, 0, 0, 0.5); }
+      box-shadow: 0px 1.5rem 1.5rem -1.5rem rgba(0, 0, 0, 0.25);
+      padding-left: 1rem; }
       .tool__content-categoryvalue:hover {
-        box-shadow: 0px 1rem 1.5rem -1.5rem black; }
+        box-shadow: 0px 1.5rem 1.5rem -1.5rem rgba(0, 0, 0, 0.5); }
+    .tool__content button {
+      margin-top: 5rem;
+      width: 30rem;
+      margin-left: 2rem; }
