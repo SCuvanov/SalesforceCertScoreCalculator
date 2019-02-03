@@ -16,14 +16,14 @@ class Certification {
 
     addCategory(categoryName, categoryWeight) {
         if (!categoryName || !categoryWeight) return;
-        this.categories.push(this.buildCategory(categoryName, categoryWeight));
+        this.categories.push(this.buildCategory(categoryName, (categoryWeight / 100)));
     }
 
     setCategories(categoryNames, categoryWeights) {
         if (!categoryNames || !categoryWeights) return;
         if (categoryNames.length !== categoryWeights.length) return;
         for (let i = 0; i < categoryNames.length; i++) {
-            this.categories.push(this.buildCategory(categoryNames[i], categoryWeights[i]));
+            this.categories.push(this.buildCategory(categoryNames[i], (categoryWeights[i] / 100)));
         }
     }
 

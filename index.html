@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="tool__content">
-                <form class="tool__content-container" id="tool__content-container" onsubmit="handleCalculate()"></form>
+                <form class="tool__content-container" id="tool__content-container" onsubmit="return handleCalculate()"></form>
                 <button class="btn btn-secondary" type="submit" form="tool__content-container" id="calculateButton">
                     <span id="calculateButton__text">Calculate</span>
                     <i class="far fa-calculator btn-icon" id="btn-icon"></i>
@@ -77,8 +77,8 @@
             </div>
 
             <div class="tool__content-total hide" id="tool__content-total">
-                <p class="tool__content-total-message">You almost passed!</p>
-                <p class="tool__content-total-score">Final Score: 85</p>
+                <p class="tool__content-total-message" id="tool__content-total-message"></p>
+                <p class="tool__content-total-score" id="tool__content-total-score"></p>
             </div>
         </section>
 

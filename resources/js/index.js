@@ -66,13 +66,9 @@ function hideShowDropdownMenu() {
     }
 }
 
-function hideShowTotal() {
+function showTotal() {
     let totalContainer = document.getElementById('tool__content-total');
-    if (totalContainer.classList.contains('hide')) {
-        totalContainer.classList.remove('hide');
-    } else {
-        totalContainer.classList.add('hide');
-    }
+    totalContainer.classList.remove('hide');
 }
 
 function handleSelectOption(certificationName) {
@@ -121,11 +117,32 @@ function handleCertificationSelection(certification) {
 }
 
 function handleCalculate() {
-    hideShowTotal();
+    showTotal();
 
-    //TODO: Loop through the inputs to get the values, tally those up w/ category weights, modify the appopriate total values;
+    let finalScore = 0;
+
+    const categories = selectedCertification.getCategories();
     const inputs = document.getElementsByTagName('input');
-    for (let index = 0; index < inputs.length; ++index) {
-        console.log('INPUT: ' + inputs[index].value);
+    for (let i = 0; i < inputs.length; ++i) {
+        let inputValue = inputs[i].value;
+        const category = categories[i];
+
+        finalScore += (inputValue * category.weight);
     }
+
+
+    finalScore = Math.round(finalScore);
+
+    let message = document.getElementById('tool__content-total-message');
+    if (finalScore < selectedCertification.passingScore) {
+        message.innerHTML = 'Almost! Keep trying.';
+    } else {
+        message.innerHTML = 'Woohoo! You passed.';
+    }
+
+    let score = document.getElementById('tool__content-total-score');
+    score.innerHTML = 'Final Score: ' + finalScore;
+
+
+    return false;
 }
