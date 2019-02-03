@@ -141,7 +141,7 @@ function handleCalculate() {
     }
 
     let score = document.getElementById('tool__content-total-score');
-    score.innerHTML = 'Final Score: ' + finalScore;
+    score.innerHTML = 'Final Score: ' + finalScore + ' / ' + 'Score Needed: ' + selectedCertification.passingScore;
 
 
     return false;
