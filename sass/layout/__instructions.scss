@@ -28,8 +28,10 @@
         }
 
         &-text {
-            color: $color-grey-dark-2;
-            font-size: 1.75rem;
+            color: $color-grey-dark-1;
+            font-weight: 700;
+
+            font-size: 1.8rem;
             margin-left: 2.5rem;
             text-transform: uppercase;
         }

@@ -29,18 +29,19 @@
         }
 
         &-category {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             margin-top: 1rem;
 
-            color: $color-grey-dark-2;
+            color: $color-grey-dark-1;
+            font-weight: 700;
         }
 
         &-categoryvalue {
             height: 5rem;
             margin-top: 0.5rem;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
 
-            outline: none;
+            outline-color: $color-primary-dark;
             border: none;
             border-radius: 0.25rem;
 
