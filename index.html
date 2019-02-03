@@ -69,13 +69,16 @@
                 </div>
             </div>
             <div class="tool__content">
-                <div class="tool__content-container" id="tool__content-container">
-                </div>
-                <button class="btn btn-secondary" type="button" id="calculateButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false" onclick="handleCalculate">
+                <form class="tool__content-container" id="tool__content-container" onsubmit="handleCalculate()"></form>
+                <button class="btn btn-secondary" type="submit" form="tool__content-container" id="calculateButton">
                     <span id="calculateButton__text">Calculate</span>
                     <i class="far fa-calculator btn-icon" id="btn-icon"></i>
                 </button>
+            </div>
+
+            <div class="tool__content-total hide" id="tool__content-total">
+                <p class="tool__content-total-message">You almost passed!</p>
+                <p class="tool__content-total-score">Final Score: 85</p>
             </div>
         </section>
 
@@ -83,7 +86,6 @@
     <footer class="footer">
         Footer
     </footer>
-
 </body>
 
 </html>

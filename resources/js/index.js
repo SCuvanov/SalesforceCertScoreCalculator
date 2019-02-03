@@ -49,6 +49,7 @@ let selectedCertification = adminCert1;
 
 window.addEventListener('load', function () {
     handleSelectOption('Administrator');
+    hideShowDropdownMenu();
 })
 
 function hideShowDropdownMenu() {
@@ -62,6 +63,15 @@ function hideShowDropdownMenu() {
         dropdownMenu.classList.add('hide');
         btnIcon.classList.remove('fa-angle-up');
         btnIcon.classList.add('fa-angle-down');
+    }
+}
+
+function hideShowTotal() {
+    let totalContainer = document.getElementById('tool__content-total');
+    if (totalContainer.classList.contains('hide')) {
+        totalContainer.classList.remove('hide');
+    } else {
+        totalContainer.classList.add('hide');
     }
 }
 
@@ -105,11 +115,17 @@ function handleCertificationSelection(certification) {
     for (let i = 0; i < certificationCategories.length; i++) {
         const category = certificationCategories[i];
 
-        let htmlContent = '<div class="tool__content-box"><label for="category-' + i + '" class="tool__content-category">' + category.name + '</label><input type="number" name="category-' + i + '" class="tool__content-categoryvalue" id="category-' + i + '"></div>';
+        let htmlContent = '<div class="tool__content-box"><label for="category-' + i + '" class="tool__content-category">' + category.name + '</label><input type="number" name="category-' + i + '" class="tool__content-categoryvalue" id="category-' + i + '" required></div>';
         toolContentContainer.insertAdjacentHTML('beforeend', htmlContent);
     }
 }
 
 function handleCalculate() {
+    hideShowTotal();
 
+    //TODO: Loop through the inputs to get the values, tally those up w/ category weights, modify the appopriate total values;
+    const inputs = document.getElementsByTagName('input');
+    for (let index = 0; index < inputs.length; ++index) {
+        console.log('INPUT: ' + inputs[index].value);
+    }
 }

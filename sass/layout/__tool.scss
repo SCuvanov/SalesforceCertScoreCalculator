@@ -47,17 +47,35 @@
             color: $color-grey-dark-2;
             box-shadow: 0px 1.5rem 1.5rem -1.5rem rgba($color-black, .25);
 
-            padding-left: 1rem;
+            padding: 0 1rem;
 
             &:hover {
                 box-shadow: 0px 1.5rem 1.5rem -1.5rem rgba($color-black, .5);
             }
         }
 
+        &-total {
+            margin: 5rem 2rem;
+            padding: 5rem;
+            color: $color-grey-dark-2;
+            background-color: $color-white;
+            box-shadow: 0px 1.5rem 1.5rem -1.5rem rgba($color-black, .25);
+            border-radius: 0.25rem;
+            text-align: center;
+            font-size: 3.5rem;
+
+            &-score {
+                font-size: 5rem;
+                margin-top: 4.5rem;
+                font-weight: 300;
+            }
+        }
+
         button {
             margin-top: 5rem;
             width: 30rem;
-            margin-left: 2rem;
+            margin-right: 2rem;
+            align-self: flex-end;
         }
     }
 }
