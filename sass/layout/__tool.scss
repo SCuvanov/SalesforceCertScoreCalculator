@@ -26,6 +26,11 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             align-content: space-between;
+
+            @media only screen and (max-width: $bp-small) {
+                grid-template-columns: 1fr 1fr;
+            }
+
         }
 
         &-category {
@@ -40,6 +45,7 @@
             height: 5rem;
             margin-top: 0.5rem;
             font-size: 1.8rem;
+            width: 100%;
 
             outline-color: $color-primary-dark;
             border: none;

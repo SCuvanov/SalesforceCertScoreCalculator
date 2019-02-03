@@ -23,10 +23,20 @@
         justify-items: center;
         margin: auto;
 
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
+
         &-img {
             height: 35rem;
             width: auto;
-            margin: 2.5rem 0;
+            margin: 2.5rem;
+            margin-left: 5rem;
+
+            @media only screen and (max-width: $bp-large) {
+                height: 25rem;
+            }
+
         }
 
         &-text_container {
@@ -38,6 +48,12 @@
             background-color: rgba($color-white, 0.5);
             padding: 5rem;
             border-radius: 0.5rem;
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 2.5rem;
+            }
         }
 
         &-text-1 {

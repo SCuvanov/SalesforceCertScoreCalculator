@@ -5893,6 +5893,12 @@ html {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.6rem; }
+  @media only screen and (max-width: 65.625em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 60em) {
+    html {
+      font-size: 40%; } }
 
 body {
   min-height: 100vh;
@@ -6013,10 +6019,17 @@ body {
     align-items: center;
     justify-items: center;
     margin: auto; }
+    @media only screen and (max-width: 45em) {
+      .header__box {
+        flex-direction: column; } }
     .header__box-img {
       height: 35rem;
       width: auto;
-      margin: 2.5rem 0; }
+      margin: 2.5rem;
+      margin-left: 5rem; }
+      @media only screen and (max-width: 65.625em) {
+        .header__box-img {
+          height: 25rem; } }
     .header__box-text_container {
       display: flex;
       flex-direction: column;
@@ -6025,6 +6038,11 @@ body {
       background-color: rgba(255, 255, 255, 0.5);
       padding: 5rem;
       border-radius: 0.5rem; }
+      @media only screen and (max-width: 45em) {
+        .header__box-text_container {
+          width: 100%;
+          margin-left: 0;
+          margin-bottom: 2.5rem; } }
     .header__box-text-1 {
       margin-top: 3rem;
       line-height: 2rem;
@@ -6052,10 +6070,17 @@ body {
   background-color: #faf9f9;
   border-bottom: 1px solid #f0eeee;
   border-top: 1px solid #f0eeee; }
+  @media only screen and (max-width: 45em) {
+    .instructions {
+      flex-direction: column; } }
   .instructions__instruction {
     display: flex;
     flex-direction: row;
     align-items: center; }
+    @media only screen and (max-width: 45em) {
+      .instructions__instruction {
+        margin-top: 1rem;
+        margin: auto; } }
     .instructions__instruction-number {
       border-radius: 50%;
       width: 5rem;
@@ -6093,6 +6118,9 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       align-content: space-between; }
+      @media only screen and (max-width: 45em) {
+        .tool__content-container {
+          grid-template-columns: 1fr 1fr; } }
     .tool__content-category {
       font-size: 1.8rem;
       margin-top: 1rem;
@@ -6102,6 +6130,7 @@ body {
       height: 5rem;
       margin-top: 0.5rem;
       font-size: 1.8rem;
+      width: 100%;
       outline-color: #127a9a;
       border: none;
       border-radius: 0.25rem;
