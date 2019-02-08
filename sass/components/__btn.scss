@@ -31,13 +31,13 @@
     }
 
     &-secondary {
-        background-color: $color-primary-inverted;
+        background-color: $color-positive-light;
         color: $color-white;
         transition: all .2s;
 
 
         &:hover {
-            background-color: $color-primary-inverted-dark;
+            background-color: $color-positive-dark;
         }
     }
 

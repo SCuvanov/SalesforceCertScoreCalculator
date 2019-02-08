@@ -31,6 +31,10 @@
                 grid-template-columns: 1fr 1fr;
             }
 
+            @media only screen and (max-width: $bp-xsmall) {
+                grid-template-columns: 1fr;
+            }
+
         }
 
         &-category {

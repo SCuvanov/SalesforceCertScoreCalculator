@@ -71,6 +71,11 @@ function showTotal() {
     totalContainer.classList.remove('hide');
 }
 
+function hideTotal() {
+    let totalContainer = document.getElementById('tool__content-total');
+    totalContainer.classList.add('hide');
+}
+
 function handleSelectOption(certificationName) {
     switch (certificationName) {
         case 'Administrator':
@@ -93,6 +98,7 @@ function handleSelectOption(certificationName) {
     selectedCertification = certificationMap.get(certificationName);
     handleCertificationSelection(selectedCertification);
     hideShowDropdownMenu();
+    hideTotal();
 }
 
 function changeDropdownMenuText(certificationName) {
@@ -141,8 +147,10 @@ function handleCalculate() {
     }
 
     let score = document.getElementById('tool__content-total-score');
-    score.innerHTML = 'Final Score: ' + finalScore + ' / ' + 'Score Needed: ' + selectedCertification.passingScore;
+    score.innerHTML = 'Final Score: ' + finalScore;
 
+    let scoreneeded = document.getElementById('tool__content-total-scoreneeded');
+    scoreneeded.innerHTML = 'Score Needed: ' + selectedCertification.passingScore;
 
     return false;
 }
