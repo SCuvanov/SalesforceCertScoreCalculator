@@ -35,8 +35,8 @@
 
             @media only screen and (max-width: $bp-large) {
                 height: 25rem;
+                margin-left: 0;
             }
-
         }
 
         &-text_container {
@@ -54,12 +54,16 @@
                 margin-left: 0;
                 margin-bottom: 2.5rem;
             }
+
+            @media only screen and (max-width: $bp-xsmall) {
+                margin-bottom: 0;
+            }
         }
 
         &-text-1 {
             margin-top: 3rem;
             line-height: 2rem;
-            font-size: 1.75rem;
+            font-size: 2rem;
             color: $color-grey-dark-2;
             word-spacing: .25rem;
         }
@@ -67,7 +71,7 @@
         &-text-2 {
             margin-top: 2rem;
             line-height: 2rem;
-            font-size: 1.75rem;
+            font-size: 2rem;
             color: $color-grey-dark-2;
             word-spacing: .25rem;
         }

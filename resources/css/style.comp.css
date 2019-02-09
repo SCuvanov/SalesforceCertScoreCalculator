@@ -5952,11 +5952,11 @@ body {
   .btn-icon {
     font-size: 2rem; }
   .btn-secondary {
-    background-color: #ea6e48;
+    background-color: #28B463;
     color: #FFF;
     transition: all .2s; }
     .btn-secondary:hover {
-      background-color: #e8673e; }
+      background-color: #25a75b; }
 
 .dropdown {
   width: 30rem;
@@ -6029,7 +6029,8 @@ body {
       margin-left: 5rem; }
       @media only screen and (max-width: 65.625em) {
         .header__box-img {
-          height: 25rem; } }
+          height: 25rem;
+          margin-left: 0; } }
     .header__box-text_container {
       display: flex;
       flex-direction: column;
@@ -6043,16 +6044,19 @@ body {
           width: 100%;
           margin-left: 0;
           margin-bottom: 2.5rem; } }
+      @media only screen and (max-width: 30em) {
+        .header__box-text_container {
+          margin-bottom: 0; } }
     .header__box-text-1 {
       margin-top: 3rem;
       line-height: 2rem;
-      font-size: 1.75rem;
+      font-size: 2rem;
       color: #777;
       word-spacing: .25rem; }
     .header__box-text-2 {
       margin-top: 2rem;
       line-height: 2rem;
-      font-size: 1.75rem;
+      font-size: 2rem;
       color: #777;
       word-spacing: .25rem; }
 
@@ -6110,6 +6114,9 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 5rem; }
+    @media only screen and (max-width: 30em) {
+      .tool__content {
+        margin-top: 3rem; } }
     .tool__content-box {
       display: flex;
       flex-direction: column;
@@ -6121,11 +6128,17 @@ body {
       @media only screen and (max-width: 45em) {
         .tool__content-container {
           grid-template-columns: 1fr 1fr; } }
+      @media only screen and (max-width: 30em) {
+        .tool__content-container {
+          grid-template-columns: 1fr; } }
     .tool__content-category {
       font-size: 1.8rem;
       margin-top: 1rem;
       color: #333;
       font-weight: 700; }
+      @media only screen and (max-width: 30em) {
+        .tool__content-category {
+          margin-top: 0; } }
     .tool__content-categoryvalue {
       height: 5rem;
       margin-top: 0.5rem;
@@ -6148,10 +6161,20 @@ body {
       border-radius: 0.25rem;
       text-align: center;
       font-size: 3.5rem; }
+      @media only screen and (max-width: 30em) {
+        .tool__content-total {
+          padding: 2.5rem; } }
+      @media only screen and (max-width: 30em) {
+        .tool__content-total-message {
+          font-size: 3rem; } }
       .tool__content-total-score {
         font-size: 5rem;
         margin-top: 4.5rem;
         font-weight: 300; }
+        @media only screen and (max-width: 30em) {
+          .tool__content-total-score {
+            font-size: 3rem;
+            margin-top: 2.5rem; } }
     .tool__content button {
       margin-top: 5rem;
       width: 30rem;

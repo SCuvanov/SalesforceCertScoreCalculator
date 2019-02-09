@@ -15,6 +15,10 @@
 
         margin-top: 5rem;
 
+        @media only screen and (max-width: $bp-xsmall) {
+            margin-top: 3rem;
+        }
+
         &-box {
             display: flex;
             flex-direction: column;
@@ -43,6 +47,10 @@
 
             color: $color-grey-dark-1;
             font-weight: 700;
+
+            @media only screen and (max-width: $bp-xsmall) {
+                margin-top: 0;
+            }
         }
 
         &-categoryvalue {
@@ -75,10 +83,27 @@
             text-align: center;
             font-size: 3.5rem;
 
+            @media only screen and (max-width: $bp-xsmall) {
+                padding: 2.5rem;
+            }
+
+            &-message {
+
+                @media only screen and (max-width: $bp-xsmall) {
+                    font-size: 3rem;
+                }
+
+            }
+
             &-score {
                 font-size: 5rem;
                 margin-top: 4.5rem;
                 font-weight: 300;
+
+                @media only screen and (max-width: $bp-xsmall) {
+                    font-size: 3rem;
+                    margin-top: 2.5rem;
+                }
             }
         }
 
