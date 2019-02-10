@@ -35,6 +35,9 @@
 
             @media only screen and (max-width: $bp-large) {
                 height: 25rem;
+            }
+
+            @media only screen and (max-width: $bp-small) {
                 margin-left: 0;
             }
         }

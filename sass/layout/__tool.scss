@@ -73,6 +73,10 @@
             }
         }
 
+        &-categoryvalue:invalid {
+            outline-color: red;
+        }
+
         &-total {
             margin: 5rem 2rem;
             padding: 5rem;
@@ -85,6 +89,10 @@
 
             @media only screen and (max-width: $bp-xsmall) {
                 padding: 2.5rem;
+                margin-top: 5rem;
+                margin-right: 2rem;
+                margin-left: 2rem;
+                margin-bottom: 2rem;
             }
 
             &-message {

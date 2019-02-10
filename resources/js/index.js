@@ -1,3 +1,4 @@
+//ADMIN
 let adminCert1 = new Certification('Administrator', 60, 65);
 const adminCert1CategoryNames = ['Organization Setup', 'User Setup', 'Security and Access', 'Standard and Custom Objects',
     'Sales and Marketing Applications', 'Service and Support Applications', 'Activity Management and Collaboration',
@@ -16,6 +17,7 @@ const adminCert2CategoryNames = ['Security and Access', 'Extending Custom Object
 const adminCert2CategoryWeights = [20, 8, 6, 10, 10, 10, 3, 10, 10, 13];
 adminCert2.setCategories(adminCert2CategoryNames, adminCert2CategoryWeights);
 
+//APPBUILDER
 let platformAppBuilderCert = new Certification('Platform App Builder', 60, 63);
 const platformAppBuilderCertCategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Security',
     'Business Logic and Process Automation', 'Social', 'User Interface', 'Reporting', 'Mobile',
@@ -24,6 +26,7 @@ const platformAppBuilderCertCategoryNames = ['Salesforce Fundamentals', 'Data Mo
 const platformAppBuilderCertCategoryWeights = [8, 20, 10, 27, 3, 14, 5, 5, 8];
 platformAppBuilderCert.setCategories(platformAppBuilderCertCategoryNames, platformAppBuilderCertCategoryWeights);
 
+//DEVELOPER
 let developerCert1 = new Certification('Platform Developer I', 60, 65);
 const developerCert1CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Logic and Process Automation',
     'User Interface', 'Testing', 'Debug and Deployment Tools'
@@ -38,12 +41,44 @@ const developerCert2CategoryNames = ['Salesforce Fundamentals', 'Data Modeling a
 const developerCert2CategoryWeights = [5, 7, 33, 20, 7, 11, 12, 5];
 developerCert2.setCategories(developerCert2CategoryNames, developerCert2CategoryWeights);
 
+//CONSULTANT
+let communityCloudConsCert = new Certification('Community Cloud Consultant', 60, 57);
+const communityCloudConsCertCategoryNames = ['Implementation', 'Sharing and Security', 'Community Setup', 'Community Builder', 'Community Management'];
+const communityCloudConsCertCategoryWeights = [32, 22, 17, 18, 12];
+communityCloudConsCert.setCategories(communityCloudConsCertCategoryNames, communityCloudConsCertCategoryWeights);
+
+let marketingCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 68);
+const marketingCloudConsCertCategoryNames = ['Discovery', 'Conceptual Design', 'Marketing Cloud Connect', 'Account Configuration', 'Reporting', 'Data Design',
+    'Automation', 'Email Build', 'Contact Builder', 'Journey Builder'
+];
+const marketingCloudConsCertCategoryWeights = [13, 12, 6, 10, 7, 13, 8, 6, 14, 11];
+marketingCloudConsCert.setCategories(marketingCloudConsCertCategoryNames, marketingCloudConsCertCategoryWeights);
+
+let salesCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 68);
+const salesCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation Strategies', 'Sales Cloud Solution Design', 'Marketing and Leads',
+    'Account and Contact Management', 'Opportunity Management', 'Sales Productivity', 'Communities and Site Management', 'Sales Cloud Analytics', 'Integration and Data Management'
+];
+const salesCloudConsCertCategoryWeights = [5, 6, 25, 7, 12, 15, 12, 5, 5, 8];
+salesCloudConsCert.setCategories(salesCloudConsCertCategoryNames, salesCloudConsCertCategoryWeights);
+
+let serviceCloudConsCert = new Certification('Service Cloud Consultant', 60, 68);
+const serviceCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation Strategies', 'Service Cloud Solution Design', 'Knowledge Management',
+    'Interaction Channels', 'Case Management', 'Contact Center Analytics', 'Integration and Data Management', 'Service Console'
+];
+const serviceCloudConsCertCategoryWeights = [10, 15, 16, 9, 10, 15, 5, 5, 15];
+serviceCloudConsCert.setCategories(serviceCloudConsCertCategoryNames, serviceCloudConsCertCategoryWeights);
+
+
 const certificationMap = new Map();
 certificationMap.set('Administrator', adminCert1);
 certificationMap.set('Advanced Administrator', adminCert2);
 certificationMap.set('Platform App Builder', platformAppBuilderCert);
 certificationMap.set('Platform Developer I', developerCert1);
 certificationMap.set('Platform Developer II', developerCert2);
+certificationMap.set('Community Cloud Consultant', communityCloudConsCert);
+certificationMap.set('Marketing Cloud Consultant', marketingCloudConsCert);
+certificationMap.set('Sales Cloud Consultant', salesCloudConsCert);
+certificationMap.set('Service Cloud Consultant', serviceCloudConsCert);
 
 let selectedCertification = adminCert1;
 
@@ -93,6 +128,18 @@ function handleSelectOption(certificationName) {
         case 'Platform Developer II':
             changeDropdownMenuText('Platform Developer II');
             break;
+        case 'Community Cloud Consultant':
+            changeDropdownMenuText('Community Cloud Consultant');
+            break;
+        case 'Marketing Cloud Consultant':
+            changeDropdownMenuText('Marketing Cloud Consultant');
+            break;
+        case 'Sales Cloud Consultant':
+            changeDropdownMenuText('Sales Cloud Consultant');
+            break;
+        case 'Service Cloud Consultant':
+            changeDropdownMenuText('Service Cloud Consultant');
+            break;
     }
 
     selectedCertification = certificationMap.get(certificationName);
@@ -139,9 +186,26 @@ function handleCalculate() {
 
     finalScore = Math.round(finalScore);
 
+
+    const totalScoreDifference = Math.abs(finalScore - selectedCertification.passingScore);
+
+
     let message = document.getElementById('tool__content-total-message');
+
     if (finalScore < selectedCertification.passingScore) {
-        message.innerHTML = 'Almost! Keep trying.';
+        if (totalScoreDifference < 5) {
+            message.innerHTML = 'Almost! Keep trying.';
+        } else if (totalScoreDifference < 10) {
+            message.innerHTML = 'Keep Studying! You will get it next time.';
+        } else if (totalScoreDifference < 15) {
+            message.innerHTML = 'Time to bust out the study guides.';
+        } else if (totalScoreDifference < 20) {
+            message.innerHTML = 'Oof! You definately got this next time.';
+        } else if (totalScoreDifference < 25) {
+            message.innerHTML = '=/ No big deal! Practice makes perfect.';
+        } else {
+            message.innerHTML = 'Whatever you do, don\'t give up. You got this.';
+        }
     } else {
         message.innerHTML = 'Woohoo! You passed.';
     }
