@@ -68,6 +68,13 @@ const serviceCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation
 const serviceCloudConsCertCategoryWeights = [10, 15, 16, 9, 10, 15, 5, 5, 15];
 serviceCloudConsCert.setCategories(serviceCloudConsCertCategoryNames, serviceCloudConsCertCategoryWeights);
 
+let identityAndAccessMgmtCert = new Certification('Identity and Access Management Designer', 60, 65);
+const identityCertCategoryNames = ['Salesforce as an Identity Provider', 'Access Management Best Practices', 'Community (Partner and Customer)', 
+'Salesforce Identity', 'Accepting 3rd Party Identity in Salesforce', 'Identity Management Concepts'
+];
+
+const identityCertCategoryWeights = [18, 12, 7, 8, 21, 34];
+identityAndAccessMgmtCert.setCategories(identityCertCategoryNames, identityCertCategoryWeights);
 
 const certificationMap = new Map();
 certificationMap.set('Administrator', adminCert1);
@@ -79,6 +86,7 @@ certificationMap.set('Community Cloud Consultant', communityCloudConsCert);
 certificationMap.set('Marketing Cloud Consultant', marketingCloudConsCert);
 certificationMap.set('Sales Cloud Consultant', salesCloudConsCert);
 certificationMap.set('Service Cloud Consultant', serviceCloudConsCert);
+certificationMap.set('Identity and Access Management Designer', identityAndAccessMgmtCert);
 
 let selectedCertification = adminCert1;
 
@@ -139,6 +147,9 @@ function handleSelectOption(certificationName) {
             break;
         case 'Service Cloud Consultant':
             changeDropdownMenuText('Service Cloud Consultant');
+            break;
+        case 'Identity and Access Management Designer':
+            changeDropdownMenuText('Identity and Access Management Designer');
             break;
     }
 
