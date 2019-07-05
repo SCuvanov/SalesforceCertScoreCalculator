@@ -5,7 +5,7 @@ const adminCert1CategoryNames = ['Organization Setup', 'User Setup', 'Security a
     'Data Management', 'Analytics - Reports and Dashboards', 'Workflow/Process Automation',
     'Desktop and Mobile Administration', 'AppExchange'
 ];
-const adminCert1CategoryWeights = [3, 6, 14, 15, 15, 12, 3, 8, 10, 12, 1, 1];
+const adminCert1CategoryWeights = [3, 7, 13, 14, 14, 13, 3, 10, 10, 8, 3, 2];
 adminCert1.setCategories(adminCert1CategoryNames, adminCert1CategoryWeights);
 
 let adminCert2 = new Certification('Advanced Administrator', 60, 65);
