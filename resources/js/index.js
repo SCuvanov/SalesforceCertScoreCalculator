@@ -42,9 +42,9 @@ const developerCert2CategoryWeights = [5, 7, 33, 20, 7, 11, 12, 5];
 developerCert2.setCategories(developerCert2CategoryNames, developerCert2CategoryWeights);
 
 //CONSULTANT
-let communityCloudConsCert = new Certification('Community Cloud Consultant', 60, 57);
-const communityCloudConsCertCategoryNames = ['Implementation', 'Sharing and Security', 'Community Setup', 'Community Builder', 'Community Management'];
-const communityCloudConsCertCategoryWeights = [32, 22, 17, 18, 12];
+let communityCloudConsCert = new Certification('Community Cloud Consultant', 60, 62);
+const communityCloudConsCertCategoryNames = ['Implementation', 'Sharing and Security', 'Community Setup', 'Community Builder', 'Community Management', 'Content', 'Templates and Use Cases'];
+const communityCloudConsCertCategoryWeights = [22, 20, 18, 12, 11, 9, 8];
 communityCloudConsCert.setCategories(communityCloudConsCertCategoryNames, communityCloudConsCertCategoryWeights);
 
 let marketingCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 68);
