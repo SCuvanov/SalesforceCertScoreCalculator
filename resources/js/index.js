@@ -70,7 +70,7 @@ serviceCloudConsCert.setCategories(serviceCloudConsCertCategoryNames, serviceClo
 
 let identityAndAccessMgmtCert = new Certification('Identity and Access Management Designer', 60, 65);
 const identityCertCategoryNames = ['Salesforce as an Identity Provider', 'Access Management Best Practices', 'Community (Partner and Customer)', 
-'Salesforce Identity', 'Accepting 3rd Party Identity in Salesforce', 'Identity Management Concepts'
+    'Salesforce Identity', 'Accepting 3rd Party Identity in Salesforce', 'Identity Management Concepts'
 ];
 const identityCertCategoryWeights = [18, 12, 7, 8, 21, 34];
 identityAndAccessMgmtCert.setCategories(identityCertCategoryNames, identityCertCategoryWeights);
@@ -80,21 +80,21 @@ let dataArchitectureAndManagementDesignerCert = new Certification('Data Architec
 const dataArchitectureAndManagementDesignerCategoryNames = ['Data Modeling', 'Conceptual Design', 'Master Data Management', 'Metadata Management',
     'Data Archiving', 'Data Governance', 'Business Intelligence, Reporting & Analytics', 'Data Migration', 'Performance Tuning'
 ];
-const dataArchitectureAndManagementDesignerCertWeights = [20, 15, 10, 7, 10, 7, 10, 10, 11];
-dataArchitectureAndManagementDesignerCert.setCategories(dataArchitectureAndManagementDesignerCategoryNames, dataArchitectureAndManagementDesignerCertWeights);
+const dataArchitectureAndManagementDesignerCategoryWeights = [20, 15, 10, 7, 10, 7, 10, 10, 11];
+dataArchitectureAndManagementDesignerCert.setCategories(dataArchitectureAndManagementDesignerCategoryNames, dataArchitectureAndManagementDesignerCategoryWeights);
 
 const certificationMap = new Map();
-certificationMap.set(adminCert1.getName(), adminCert1);
-certificationMap.set(adminCert2.getName(), adminCert2);
-certificationMap.set(platformAppBuilderCert.getName(), platformAppBuilderCert);
-certificationMap.set(developerCert1.getName(), developerCert1);
-certificationMap.set(developerCert2.getName(), developerCert2);
-certificationMap.set(communityCloudConsCert.getName(), communityCloudConsCert);
-certificationMap.set(marketingCloudConsCert.getName(), marketingCloudConsCert);
-certificationMap.set(salesCloudConsCert.getName(), salesCloudConsCert);
-certificationMap.set(serviceCloudConsCert.getName(), serviceCloudConsCert);
-certificationMap.set(identityAndAccessMgmtCert.getName(), identityAndAccessMgmtCert);
-certificationMap.set(dataArchitectureAndManagementDesignerCert.getName(), dataArchitectureAndManagementDesignerCert);
+certificationMap.set('Administrator', adminCert1);
+certificationMap.set('Advanced Administrator', adminCert2);
+certificationMap.set('Platform App Builder', platformAppBuilderCert);
+certificationMap.set('Platform Developer I', developerCert1);
+certificationMap.set('Platform Developer II', developerCert2);
+certificationMap.set('Community Cloud Consultant', communityCloudConsCert);
+certificationMap.set('Marketing Cloud Consultant', marketingCloudConsCert);
+certificationMap.set('Sales Cloud Consultant', salesCloudConsCert);
+certificationMap.set('Service Cloud Consultant', serviceCloudConsCert);
+certificationMap.set('Identity and Access Management Designer', identityAndAccessMgmtCert);
+certificationMap.set('Data Architecture and Management Designer', dataArchitectureAndManagementDesignerCert);
 
 let selectedCertification = adminCert1;
 
@@ -162,7 +162,6 @@ function handleSelectOption(certificationName) {
         case 'Data Architecture and Management Designer':
             changeDropdownMenuText('Data Architecture and Management Designer');
             break;
-        
     }
 
     selectedCertification = certificationMap.get(certificationName);
