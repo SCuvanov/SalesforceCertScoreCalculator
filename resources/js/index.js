@@ -41,6 +41,14 @@ const developerCert2CategoryNames = ['Salesforce Fundamentals', 'Data Modeling a
 const developerCert2CategoryWeights = [5, 7, 33, 20, 7, 11, 12, 5];
 developerCert2.setCategories(developerCert2CategoryNames, developerCert2CategoryWeights);
 
+//MARKETING
+let marketingEmailSpecialist = new Certification('Marketing Cloud Email Specialist', 60, 65);
+const marketingEmailSpecialistCategoryNames = ['Email Marketing Best Practices', 'Email Message Design', 'Content Creation and Delivery',
+    'Marketing Automation', 'Subscriber and Data Management', 'Tracking and Reporting'
+];
+const marketingEmailSpecialistCategoryWeights = [15, 13, 18, 19, 28, 7];
+marketingEmailSpecialist.setCategories(marketingEmailSpecialistCategoryNames, marketingEmailSpecialistCategoryWeights);
+
 //CONSULTANT
 let communityCloudConsCert = new Certification('Community Cloud Consultant', 60, 62);
 const communityCloudConsCertCategoryNames = ['Implementation', 'Sharing and Security', 'Community Setup', 'Community Builder', 'Community Management', 'Content', 'Templates and Use Cases'];
@@ -89,6 +97,7 @@ certificationMap.set(adminCert2.getName(), adminCert2);
 certificationMap.set(platformAppBuilderCert.getName(), platformAppBuilderCert);
 certificationMap.set(developerCert1.getName(), developerCert1);
 certificationMap.set(developerCert2.getName(), developerCert2);
+certificationMap.set(marketingEmailSpecialist.getName(), marketingEmailSpecialist);
 certificationMap.set(communityCloudConsCert.getName(), communityCloudConsCert);
 certificationMap.set(marketingCloudConsCert.getName(), marketingCloudConsCert);
 certificationMap.set(salesCloudConsCert.getName(), salesCloudConsCert);
@@ -143,6 +152,9 @@ function handleSelectOption(certificationName) {
             break;
         case 'Platform Developer II':
             changeDropdownMenuText('Platform Developer II');
+            break;
+        case 'Marketing Cloud Email Specialist':
+            changeDropdownMenuText('Marketing Cloud Email Specialist');
             break;
         case 'Community Cloud Consultant':
             changeDropdownMenuText('Community Cloud Consultant');
