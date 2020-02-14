@@ -27,18 +27,18 @@ const platformAppBuilderCertCategoryWeights = [8, 20, 10, 27, 3, 14, 5, 5, 8];
 platformAppBuilderCert.setCategories(platformAppBuilderCertCategoryNames, platformAppBuilderCertCategoryWeights);
 
 //DEVELOPER
-let developerCert1 = new Certification('Platform Developer I', 60, 65);
-const developerCert1CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Logic and Process Automation',
-    'User Interface', 'Testing', 'Debug and Deployment Tools'
+let developerCert1 = new Certification('Platform Developer I', 60, 62);
+const developerCert1CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Process Automation and Logic',
+    'User Interface', 'Testing, Debugging, and Deployment'
 ];
-const developerCert1CategoryWeights = [10, 12, 46, 10, 12, 10];
+const developerCert1CategoryWeights = [7, 13, 38, 25, 17];
 developerCert1.setCategories(developerCert1CategoryNames, developerCert1CategoryWeights);
 
-let developerCert2 = new Certification('Platform Developer II', 60, 63);
+let developerCert2 = new Certification('Platform Developer II', 60, 70);
 const developerCert2CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Logic and Process Automation',
     'User Interface', 'Performance', 'Integration', 'Testing', 'Debug and Deployment Tools'
 ];
-const developerCert2CategoryWeights = [5, 7, 33, 20, 7, 11, 12, 5];
+const developerCert2CategoryWeights = [8, 5, 20, 20, 15, 14, 13, 5];
 developerCert2.setCategories(developerCert2CategoryNames, developerCert2CategoryWeights);
 
 //MARKETING
@@ -59,31 +59,31 @@ let marketingCloudConsCert = new Certification('Marketing Cloud Consultant', 60,
 const marketingCloudConsCertCategoryNames = ['Discovery', 'Conceptual Design', 'Marketing Cloud Connect', 'Account Configuration', 'Reporting', 'Data Design',
     'Automation', 'Email Build', 'Contact Builder', 'Journey Builder'
 ];
-const marketingCloudConsCertCategoryWeights = [13, 12, 6, 10, 7, 13, 8, 6, 14, 11];
+const marketingCloudConsCertCategoryWeights = [15, 12, 6, 10, 5, 12, 8, 7, 15, 10];
 marketingCloudConsCert.setCategories(marketingCloudConsCertCategoryNames, marketingCloudConsCertCategoryWeights);
 
-let salesCloudConsCert = new Certification('Sales Cloud Consultant', 60, 68);
+let salesCloudConsCert = new Certification('Sales Cloud Consultant', 60, 62);
 const salesCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation Strategies', 'Sales Cloud Solution Design', 'Marketing and Leads',
-    'Account and Contact Management', 'Opportunity Management', 'Sales Productivity', 'Communities and Site Management', 'Sales Cloud Analytics', 'Integration and Data Management'
+    'Account and Contact Management', 'Opportunity Management', 'Sales Productivity', 'Sales Cloud Analytics', 'Integration and Data Management'
 ];
-const salesCloudConsCertCategoryWeights = [5, 6, 25, 7, 12, 15, 12, 5, 5, 8];
+const salesCloudConsCertCategoryWeights = [7, 12, 21, 8, 13, 13, 9, 9, 8];
 salesCloudConsCert.setCategories(salesCloudConsCertCategoryNames, salesCloudConsCertCategoryWeights);
 
-let serviceCloudConsCert = new Certification('Service Cloud Consultant', 60, 68);
+let serviceCloudConsCert = new Certification('Service Cloud Consultant', 60, 67);
 const serviceCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation Strategies', 'Service Cloud Solution Design', 'Knowledge Management',
     'Interaction Channels', 'Case Management', 'Contact Center Analytics', 'Integration and Data Management', 'Service Console'
 ];
 const serviceCloudConsCertCategoryWeights = [10, 15, 16, 9, 10, 15, 5, 5, 15];
 serviceCloudConsCert.setCategories(serviceCloudConsCertCategoryNames, serviceCloudConsCertCategoryWeights);
 
+//ARCHITECTURE
 let identityAndAccessMgmtCert = new Certification('Identity and Access Management Designer', 60, 65);
-const identityCertCategoryNames = ['Salesforce as an Identity Provider', 'Access Management Best Practices', 'Community (Partner and Customer)', 
-    'Salesforce Identity', 'Accepting 3rd Party Identity in Salesforce', 'Identity Management Concepts'
+const identityCertCategoryNames = ['Identity Management Concepts', 'Accepting Third-Party Identity in Salesforce', 'Salesforce as an Identity Provider', 
+    'Access Management Best Practices', 'Salesforce Identity', 'Community (Partner and Customer)'
 ];
-const identityCertCategoryWeights = [18, 12, 7, 8, 21, 34];
+const identityCertCategoryWeights = [28, 22, 23, 15, 7, 5];
 identityAndAccessMgmtCert.setCategories(identityCertCategoryNames, identityCertCategoryWeights);
 
-//ARCHITECTURE
 let dataArchitectureAndManagementDesignerCert = new Certification('Data Architecture and Management Designer', 60, 67);
 const dataArchitectureAndManagementDesignerCategoryNames = ['Data Modeling', 'Conceptual Design', 'Master Data Management', 'Metadata Management',
     'Data Archiving', 'Data Governance', 'Business Intelligence, Reporting & Analytics', 'Data Migration', 'Performance Tuning'
