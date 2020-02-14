@@ -62,7 +62,7 @@ const marketingCloudConsCertCategoryNames = ['Discovery', 'Conceptual Design', '
 const marketingCloudConsCertCategoryWeights = [13, 12, 6, 10, 7, 13, 8, 6, 14, 11];
 marketingCloudConsCert.setCategories(marketingCloudConsCertCategoryNames, marketingCloudConsCertCategoryWeights);
 
-let salesCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 68);
+let salesCloudConsCert = new Certification('Sales Cloud Consultant', 60, 68);
 const salesCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation Strategies', 'Sales Cloud Solution Design', 'Marketing and Leads',
     'Account and Contact Management', 'Opportunity Management', 'Sales Productivity', 'Communities and Site Management', 'Sales Cloud Analytics', 'Integration and Data Management'
 ];
