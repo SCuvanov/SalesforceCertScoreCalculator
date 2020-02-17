@@ -27,19 +27,27 @@ const platformAppBuilderCertCategoryWeights = [8, 20, 10, 27, 3, 14, 5, 5, 8];
 platformAppBuilderCert.setCategories(platformAppBuilderCertCategoryNames, platformAppBuilderCertCategoryWeights);
 
 //DEVELOPER
-let developerCert1 = new Certification('Platform Developer I', 60, 65);
-const developerCert1CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Logic and Process Automation',
-    'User Interface', 'Testing', 'Debug and Deployment Tools'
+let developerCert1 = new Certification('Platform Developer I', 60, 62);
+const developerCert1CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Process Automation and Logic',
+    'User Interface', 'Testing, Debugging, and Deployment'
 ];
-const developerCert1CategoryWeights = [10, 12, 46, 10, 12, 10];
+const developerCert1CategoryWeights = [7, 13, 38, 25, 17];
 developerCert1.setCategories(developerCert1CategoryNames, developerCert1CategoryWeights);
 
-let developerCert2 = new Certification('Platform Developer II', 60, 63);
+let developerCert2 = new Certification('Platform Developer II', 60, 70);
 const developerCert2CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Logic and Process Automation',
     'User Interface', 'Performance', 'Integration', 'Testing', 'Debug and Deployment Tools'
 ];
-const developerCert2CategoryWeights = [5, 7, 33, 20, 7, 11, 12, 5];
+const developerCert2CategoryWeights = [8, 5, 20, 20, 15, 14, 13, 5];
 developerCert2.setCategories(developerCert2CategoryNames, developerCert2CategoryWeights);
+
+//MARKETING
+let marketingEmailSpecialist = new Certification('Marketing Cloud Email Specialist', 60, 65);
+const marketingEmailSpecialistCategoryNames = ['Email Marketing Best Practices', 'Email Message Design', 'Content Creation and Delivery',
+    'Marketing Automation', 'Subscriber and Data Management', 'Tracking and Reporting'
+];
+const marketingEmailSpecialistCategoryWeights = [15, 13, 18, 19, 28, 7];
+marketingEmailSpecialist.setCategories(marketingEmailSpecialistCategoryNames, marketingEmailSpecialistCategoryWeights);
 
 //CONSULTANT
 let communityCloudConsCert = new Certification('Community Cloud Consultant', 60, 62);
@@ -51,31 +59,31 @@ let marketingCloudConsCert = new Certification('Marketing Cloud Consultant', 60,
 const marketingCloudConsCertCategoryNames = ['Discovery', 'Conceptual Design', 'Marketing Cloud Connect', 'Account Configuration', 'Reporting', 'Data Design',
     'Automation', 'Email Build', 'Contact Builder', 'Journey Builder'
 ];
-const marketingCloudConsCertCategoryWeights = [13, 12, 6, 10, 7, 13, 8, 6, 14, 11];
+const marketingCloudConsCertCategoryWeights = [15, 12, 6, 10, 5, 12, 8, 7, 15, 10];
 marketingCloudConsCert.setCategories(marketingCloudConsCertCategoryNames, marketingCloudConsCertCategoryWeights);
 
-let salesCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 68);
+let salesCloudConsCert = new Certification('Sales Cloud Consultant', 60, 62);
 const salesCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation Strategies', 'Sales Cloud Solution Design', 'Marketing and Leads',
-    'Account and Contact Management', 'Opportunity Management', 'Sales Productivity', 'Communities and Site Management', 'Sales Cloud Analytics', 'Integration and Data Management'
+    'Account and Contact Management', 'Opportunity Management', 'Sales Productivity', 'Sales Cloud Analytics', 'Integration and Data Management'
 ];
-const salesCloudConsCertCategoryWeights = [5, 6, 25, 7, 12, 15, 12, 5, 5, 8];
+const salesCloudConsCertCategoryWeights = [7, 12, 21, 8, 13, 13, 9, 9, 8];
 salesCloudConsCert.setCategories(salesCloudConsCertCategoryNames, salesCloudConsCertCategoryWeights);
 
-let serviceCloudConsCert = new Certification('Service Cloud Consultant', 60, 68);
+let serviceCloudConsCert = new Certification('Service Cloud Consultant', 60, 67);
 const serviceCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation Strategies', 'Service Cloud Solution Design', 'Knowledge Management',
     'Interaction Channels', 'Case Management', 'Contact Center Analytics', 'Integration and Data Management', 'Service Console'
 ];
 const serviceCloudConsCertCategoryWeights = [10, 15, 16, 9, 10, 15, 5, 5, 15];
 serviceCloudConsCert.setCategories(serviceCloudConsCertCategoryNames, serviceCloudConsCertCategoryWeights);
 
+//ARCHITECTURE
 let identityAndAccessMgmtCert = new Certification('Identity and Access Management Designer', 60, 65);
-const identityCertCategoryNames = ['Salesforce as an Identity Provider', 'Access Management Best Practices', 'Community (Partner and Customer)', 
-    'Salesforce Identity', 'Accepting 3rd Party Identity in Salesforce', 'Identity Management Concepts'
+const identityCertCategoryNames = ['Identity Management Concepts', 'Accepting Third-Party Identity in Salesforce', 'Salesforce as an Identity Provider',
+    'Access Management Best Practices', 'Salesforce Identity', 'Community (Partner and Customer)'
 ];
-const identityCertCategoryWeights = [18, 12, 7, 8, 21, 34];
+const identityCertCategoryWeights = [28, 22, 23, 15, 7, 5];
 identityAndAccessMgmtCert.setCategories(identityCertCategoryNames, identityCertCategoryWeights);
 
-//ARCHITECTURE
 let dataArchitectureAndManagementDesignerCert = new Certification('Data Architecture and Management Designer', 60, 67);
 const dataArchitectureAndManagementDesignerCategoryNames = ['Data Modeling', 'Conceptual Design', 'Master Data Management', 'Metadata Management',
     'Data Archiving', 'Data Governance', 'Business Intelligence, Reporting & Analytics', 'Data Migration', 'Performance Tuning'
@@ -89,12 +97,21 @@ certificationMap.set(adminCert2.getName(), adminCert2);
 certificationMap.set(platformAppBuilderCert.getName(), platformAppBuilderCert);
 certificationMap.set(developerCert1.getName(), developerCert1);
 certificationMap.set(developerCert2.getName(), developerCert2);
+certificationMap.set(marketingEmailSpecialist.getName(), marketingEmailSpecialist);
 certificationMap.set(communityCloudConsCert.getName(), communityCloudConsCert);
 certificationMap.set(marketingCloudConsCert.getName(), marketingCloudConsCert);
 certificationMap.set(salesCloudConsCert.getName(), salesCloudConsCert);
 certificationMap.set(serviceCloudConsCert.getName(), serviceCloudConsCert);
 certificationMap.set(identityAndAccessMgmtCert.getName(), identityAndAccessMgmtCert);
 certificationMap.set(dataArchitectureAndManagementDesignerCert.getName(), dataArchitectureAndManagementDesignerCert);
+
+// Here we map certifications to one or more Roles that can be filtered on
+const RoleMap = new Map();
+RoleMap.set('Salesforce Administrator', [adminCert1, adminCert2, platformAppBuilderCert]);
+RoleMap.set('Salesforce Developer', [platformAppBuilderCert, developerCert1, developerCert2]);
+RoleMap.set('Salesforce Architect', [identityAndAccessMgmtCert, dataArchitectureAndManagementDesignerCert]);
+RoleMap.set('Salesforce Marketer', [marketingEmailSpecialist, marketingCloudConsCert]);
+RoleMap.set('Salesforce Consultant', [communityCloudConsCert, marketingCloudConsCert, salesCloudConsCert, serviceCloudConsCert]);
 
 let selectedCertification = adminCert1;
 
@@ -117,6 +134,20 @@ function hideShowDropdownMenu() {
     }
 }
 
+function hideShowRoleDropdownMenu() {
+    let dropdownMenu = document.getElementById('dropdown-menu2');
+    let btnIcon = document.getElementById('btn-icon2');
+    if (dropdownMenu.classList.contains('hide')) {
+        dropdownMenu.classList.remove('hide');
+        btnIcon.classList.remove('fa-angle-down');
+        btnIcon.classList.add('fa-angle-up');
+    } else {
+        dropdownMenu.classList.add('hide');
+        btnIcon.classList.remove('fa-angle-up');
+        btnIcon.classList.add('fa-angle-down');
+    }
+}
+
 function showTotal() {
     let totalContainer = document.getElementById('tool__content-total');
     totalContainer.classList.remove('hide');
@@ -128,46 +159,35 @@ function hideTotal() {
 }
 
 function handleSelectOption(certificationName) {
-    switch (certificationName) {
-        case 'Administrator':
-            changeDropdownMenuText('Administrator');
-            break;
-        case 'Advanced Administrator':
-            changeDropdownMenuText('Advanced Administrator');
-            break;
-        case 'Platform App Builder':
-            changeDropdownMenuText('Platform App Builder');
-            break;
-        case 'Platform Developer I':
-            changeDropdownMenuText('Platform Developer I');
-            break;
-        case 'Platform Developer II':
-            changeDropdownMenuText('Platform Developer II');
-            break;
-        case 'Community Cloud Consultant':
-            changeDropdownMenuText('Community Cloud Consultant');
-            break;
-        case 'Marketing Cloud Consultant':
-            changeDropdownMenuText('Marketing Cloud Consultant');
-            break;
-        case 'Sales Cloud Consultant':
-            changeDropdownMenuText('Sales Cloud Consultant');
-            break;
-        case 'Service Cloud Consultant':
-            changeDropdownMenuText('Service Cloud Consultant');
-            break;
-        case 'Identity and Access Management Designer':
-            changeDropdownMenuText('Identity and Access Management Designer');
-            break;
-        case 'Data Architecture and Management Designer':
-            changeDropdownMenuText('Data Architecture and Management Designer');
-            break;
-    }
-
-    selectedCertification = certificationMap.get(certificationName);
-    handleCertificationSelection(selectedCertification);
+    changeDropdownMenuText(certificationName);
+    handleCertificationSelection(certificationMap.get(certificationName));
     hideShowDropdownMenu();
     hideTotal();
+}
+
+function handleRoleSelectOption(mainCategory) {
+    if (!mainCategory) return;
+    document.getElementById('dropdownMenuButton__text2').innerHTML = mainCategory;
+    handleSelectOption(RoleMap.get(mainCategory)[0].name);
+    hideShowRoleDropdownMenu();
+    hideShowDropdownMenu();
+    showRelevantCertifications(mainCategory);
+}
+
+function showRelevantCertifications(mainCategory) {
+    var divs = document.querySelectorAll('*[id^="pick"]');
+    let certs = RoleMap.get(mainCategory);
+    let certsText = [];
+    for (let i = 0; i < certs.length; i++) {
+        certsText[i] = certs[i].name;
+    }
+    for (var i = 0; i < divs.length; i++) {
+        if (certsText.includes(divs[i].textContent)) {
+            divs[i].classList.remove('hide');
+        } else {
+            divs[i].classList.add('hide');
+        }
+    }
 }
 
 function changeDropdownMenuText(certificationName) {
@@ -199,10 +219,7 @@ function handleCalculate() {
     const categories = selectedCertification.getCategories();
     const inputs = document.getElementsByTagName('input');
     for (let i = 0; i < inputs.length; ++i) {
-        let inputValue = inputs[i].value;
-        const category = categories[i];
-
-        finalScore += (inputValue * category.weight);
+        finalScore += inputs[i].value * categories[i].weight;
     }
 
 
