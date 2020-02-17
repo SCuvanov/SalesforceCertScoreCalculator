@@ -78,7 +78,7 @@ serviceCloudConsCert.setCategories(serviceCloudConsCertCategoryNames, serviceClo
 
 //ARCHITECTURE
 let identityAndAccessMgmtCert = new Certification('Identity and Access Management Designer', 60, 65);
-const identityCertCategoryNames = ['Identity Management Concepts', 'Accepting Third-Party Identity in Salesforce', 'Salesforce as an Identity Provider', 
+const identityCertCategoryNames = ['Identity Management Concepts', 'Accepting Third-Party Identity in Salesforce', 'Salesforce as an Identity Provider',
     'Access Management Best Practices', 'Salesforce Identity', 'Community (Partner and Customer)'
 ];
 const identityCertCategoryWeights = [28, 22, 23, 15, 7, 5];
@@ -105,6 +105,14 @@ certificationMap.set(serviceCloudConsCert.getName(), serviceCloudConsCert);
 certificationMap.set(identityAndAccessMgmtCert.getName(), identityAndAccessMgmtCert);
 certificationMap.set(dataArchitectureAndManagementDesignerCert.getName(), dataArchitectureAndManagementDesignerCert);
 
+// Here we map certifications to one or more Roles that can be filtered on
+const RoleMap = new Map();
+RoleMap.set('Salesforce Administrator', [adminCert1, adminCert2, platformAppBuilderCert]);
+RoleMap.set('Salesforce Developer', [platformAppBuilderCert, developerCert1, developerCert2]);
+RoleMap.set('Salesforce Architect', [identityAndAccessMgmtCert, dataArchitectureAndManagementDesignerCert]);
+RoleMap.set('Salesforce Marketer', [marketingEmailSpecialist, marketingCloudConsCert]);
+RoleMap.set('Salesforce Consultant', [communityCloudConsCert, marketingCloudConsCert, salesCloudConsCert, serviceCloudConsCert]);
+
 let selectedCertification = adminCert1;
 
 window.addEventListener('load', function () {
@@ -115,6 +123,20 @@ window.addEventListener('load', function () {
 function hideShowDropdownMenu() {
     let dropdownMenu = document.getElementById('dropdown-menu');
     let btnIcon = document.getElementById('btn-icon');
+    if (dropdownMenu.classList.contains('hide')) {
+        dropdownMenu.classList.remove('hide');
+        btnIcon.classList.remove('fa-angle-down');
+        btnIcon.classList.add('fa-angle-up');
+    } else {
+        dropdownMenu.classList.add('hide');
+        btnIcon.classList.remove('fa-angle-up');
+        btnIcon.classList.add('fa-angle-down');
+    }
+}
+
+function hideShowRoleDropdownMenu() {
+    let dropdownMenu = document.getElementById('dropdown-menu2');
+    let btnIcon = document.getElementById('btn-icon2');
     if (dropdownMenu.classList.contains('hide')) {
         dropdownMenu.classList.remove('hide');
         btnIcon.classList.remove('fa-angle-down');
@@ -137,49 +159,35 @@ function hideTotal() {
 }
 
 function handleSelectOption(certificationName) {
-    switch (certificationName) {
-        case 'Administrator':
-            changeDropdownMenuText('Administrator');
-            break;
-        case 'Advanced Administrator':
-            changeDropdownMenuText('Advanced Administrator');
-            break;
-        case 'Platform App Builder':
-            changeDropdownMenuText('Platform App Builder');
-            break;
-        case 'Platform Developer I':
-            changeDropdownMenuText('Platform Developer I');
-            break;
-        case 'Platform Developer II':
-            changeDropdownMenuText('Platform Developer II');
-            break;
-        case 'Marketing Cloud Email Specialist':
-            changeDropdownMenuText('Marketing Cloud Email Specialist');
-            break;
-        case 'Community Cloud Consultant':
-            changeDropdownMenuText('Community Cloud Consultant');
-            break;
-        case 'Marketing Cloud Consultant':
-            changeDropdownMenuText('Marketing Cloud Consultant');
-            break;
-        case 'Sales Cloud Consultant':
-            changeDropdownMenuText('Sales Cloud Consultant');
-            break;
-        case 'Service Cloud Consultant':
-            changeDropdownMenuText('Service Cloud Consultant');
-            break;
-        case 'Identity and Access Management Designer':
-            changeDropdownMenuText('Identity and Access Management Designer');
-            break;
-        case 'Data Architecture and Management Designer':
-            changeDropdownMenuText('Data Architecture and Management Designer');
-            break;
-    }
-
-    selectedCertification = certificationMap.get(certificationName);
-    handleCertificationSelection(selectedCertification);
+    changeDropdownMenuText(certificationName);
+    handleCertificationSelection(certificationMap.get(certificationName));
     hideShowDropdownMenu();
     hideTotal();
+}
+
+function handleRoleSelectOption(mainCategory) {
+    if (!mainCategory) return;
+    document.getElementById('dropdownMenuButton__text2').innerHTML = mainCategory;
+    handleSelectOption(RoleMap.get(mainCategory)[0].name);
+    hideShowRoleDropdownMenu();
+    hideShowDropdownMenu();
+    showRelevantCertifications(mainCategory);
+}
+
+function showRelevantCertifications(mainCategory) {
+    var divs = document.querySelectorAll('*[id^="pick"]');
+    let certs = RoleMap.get(mainCategory);
+    let certsText = [];
+    for (let i = 0; i < certs.length; i++) {
+        certsText[i] = certs[i].name;
+    }
+    for (var i = 0; i < divs.length; i++) {
+        if (certsText.includes(divs[i].textContent)) {
+            divs[i].classList.remove('hide');
+        } else {
+            divs[i].classList.add('hide');
+        }
+    }
 }
 
 function changeDropdownMenuText(certificationName) {
@@ -211,10 +219,7 @@ function handleCalculate() {
     const categories = selectedCertification.getCategories();
     const inputs = document.getElementsByTagName('input');
     for (let i = 0; i < inputs.length; ++i) {
-        let inputValue = inputs[i].value;
-        const category = categories[i];
-
-        finalScore += (inputValue * category.weight);
+        finalScore += inputs[i].value * categories[i].weight;
     }
 
 
