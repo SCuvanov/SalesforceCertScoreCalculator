@@ -310,6 +310,7 @@ function changeDropdownMenuText(certificationName) {
 
 function handleCertificationSelection(certification) {
     if (!certification) return;
+    selectedCertification = certification;
     const certificationCategories = certification.getCategories();
 
     let toolContentContainer = document.getElementById('tool__content-container');
