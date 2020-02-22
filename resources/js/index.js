@@ -255,8 +255,11 @@ function hideShowRoleDropdownMenu() {
         btnIcon.classList.add('fa-angle-up');
         // Hide the certification drop down if it's shown, when you click the Role drop down
         let certDropDownMenu = document.getElementById('dropdown-menu');
+        let certBtnIcon = document.getElementById('btn-icon');
         if (!certDropDownMenu.classList.contains('hide')) {
             certDropDownMenu.classList.add('hide');
+            certBtnIcon.classList.remove('fa-angle-up');
+            certBtnIcon.classList.add('fa-angle-down');
         }
     } else {
         dropdownMenu.classList.add('hide');
