@@ -327,7 +327,7 @@ function handleCertificationSelection(certification) {
     for (let i = 0; i < certificationCategories.length; i++) {
         const category = certificationCategories[i];
 
-        let htmlContent = '<div class="tool__content-box"><label for="category-' + i + '" class="tool__content-category">' + category.name + '</label><input type="number" name="category-' + i + '" class="tool__content-categoryvalue" id="category-' + i + '" required></div>';
+        let htmlContent = '<div class="tool__content-box"><label for="category-' + i + '" class="tool__content-category">' + category.name + '</label><input type="number" min=0 max=100 name="category-' + i + '" class="tool__content-categoryvalue" id="category-' + i + '" required></div>';
         toolContentContainer.insertAdjacentHTML('beforeend', htmlContent);
     }
 }
