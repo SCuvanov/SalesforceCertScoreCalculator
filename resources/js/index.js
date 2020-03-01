@@ -320,7 +320,7 @@ function handleCertificationSelection(certification) {
     if (!certification) return;
     selectedCertification = certification;
     const certificationCategories = certification.getCategories();
-
+    hideMoreStats();
     let toolContentContainer = document.getElementById('tool__content-container');
     toolContentContainer.innerHTML = '';
 
@@ -332,16 +332,52 @@ function handleCertificationSelection(certification) {
     }
 }
 
+function showMoreStats() {
+    if (document.getElementById('categoryLabel-1').innerHTML.endsWith('%)')) {
+        resetCategoryLabels();
+    }
+    const categories = selectedCertification.getCategories();
+    const inputs = document.getElementsByTagName('input');
+    let moreStatsTag = document.getElementById('tool__content-moreStats-message');
+    let bullet = '•';
+    document.getElementById('tool__content-moreStats').classList.remove('hide');
+    moreStatsTag.innerHTML = '';
+    let explenation = '<i class="far fa-info"></i> </br><i>Each <font color="#530040">•</font> represents the negative impact each category had on your result. The dots translates to how many percentages away you were from the maximum it could give. Keep on studying on the categories that have the most dots (negative impact), and you\'ll do even better in no time!</i>';
+    for (let i = 0; i < inputs.length; ++i) {
+        document.getElementById('categoryLabel-' + i).innerHTML += ' (' + Math.round(inputs[i].value * categories[i].weight) + '% / ' + Math.round(categories[i].weight * 100) + '%)';
+        moreStatsTag.innerHTML += '</br>' + categories[i].name + '</br><font color="#530040">' + bullet.repeat(Math.round(categories[i].weight * 100) - Math.round(inputs[i].value * categories[i].weight)) + '</font>';
+    }
+    moreStatsTag.innerHTML += '</br></br></br>' + explenation;
+    document.getElementById('moreStatsButton').classList.add('hide');
+    
+    return false;
+}
+
+function hideMoreStats() {
+    document.getElementById('tool__content-moreStats').classList.add('hide');
+    document.getElementById('moreStatsButton').classList.remove('hide');
+}
+
+function resetCategoryLabels() {
+    const inputs = document.getElementsByTagName('input');
+    const categories = selectedCertification.getCategories();
+    for (let i = 0; i < inputs.length; ++i) {
+        document.getElementById('categoryLabel-' + i).innerHTML = categories[i].name;
+    }
+}
+
 function handleCalculate() {
     showTotal();
-
+    if (!document.getElementById('tool__content-moreStats').classList.contains('hide')) {
+        resetCategoryLabels();
+        showMoreStats();
+    }
     let finalScore = 0;
 
     const categories = selectedCertification.getCategories();
     const inputs = document.getElementsByTagName('input');
     for (let i = 0; i < inputs.length; ++i) {
         finalScore += inputs[i].value * categories[i].weight;
-        document.getElementById('categoryLabel-' + i).innerHTML += ' (' + Math.round(inputs[i].value * categories[i].weight) + '% / ' + Math.round(categories[i].weight * 100) + '%)';
     }
 
 

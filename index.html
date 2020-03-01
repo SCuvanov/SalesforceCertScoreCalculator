@@ -142,6 +142,19 @@
                 <p class="tool__content-total-message" id="tool__content-total-message"></p>
                 <p class="tool__content-total-score" id="tool__content-total-score"></p>
                 <p class="tool__content-total-score" id="tool__content-total-scoreneeded"></p>
+                <div class="tool__content-total hide" id="tool__content-moreStats">
+                    <p class="tool__content-total-message">Impact per Category</p>
+                    <p class="tool__content-category" id="tool__content-moreStats-message"></p>
+                </div>
+                <div id="moreStatsButton">
+                    </br>
+                    <form class="tool__content-container" id="moreStatsForm" onsubmit="return showMoreStats()">
+                    </form>
+                    <button class="btn" type="submit" form="moreStatsForm">
+                        Show me more statistics
+                        <i class="far fa-chart-bar btn-icon"></i>
+                    </button>
+                </div>
             </div>
         </section>
 
