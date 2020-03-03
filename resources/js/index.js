@@ -320,21 +320,58 @@ function handleCertificationSelection(certification) {
     if (!certification) return;
     selectedCertification = certification;
     const certificationCategories = certification.getCategories();
-
+    hideMoreStats();
     let toolContentContainer = document.getElementById('tool__content-container');
     toolContentContainer.innerHTML = '';
 
     for (let i = 0; i < certificationCategories.length; i++) {
         const category = certificationCategories[i];
 
-        let htmlContent = '<div class="tool__content-box"><label for="category-' + i + '" class="tool__content-category">' + category.name + '</label><input type="number" name="category-' + i + '" class="tool__content-categoryvalue" id="category-' + i + '" required></div>';
+        let htmlContent = '<div class="tool__content-box"><label for="category-' + i + '" id="categoryLabel-' + i + '" class="tool__content-category">' + category.name + '</label><input type="number" min=0 max=100 name="category-' + i + '" class="tool__content-categoryvalue" id="category-' + i + '" required></div>';
         toolContentContainer.insertAdjacentHTML('beforeend', htmlContent);
+    }
+}
+
+function showMoreStats() {
+    if (document.getElementById('categoryLabel-1').innerHTML.endsWith('%)')) {
+        resetCategoryLabels();
+    }
+    const categories = selectedCertification.getCategories();
+    const inputs = document.getElementsByTagName('input');
+    let moreStatsTag = document.getElementById('tool__content-moreStats-message');
+    let bullet = '•';
+    document.getElementById('tool__content-moreStats').classList.remove('hide');
+    moreStatsTag.innerHTML = '';
+    let explenation = '<i class="far fa-info"></i> </br><i>Each <font color="#530040">•</font> represents the negative impact each category had on your result. The dots translates to how many percentages away you were from the maximum it could give. Keep on studying on the categories that have the most dots (negative impact), and you\'ll do even better in no time!</i>';
+    for (let i = 0; i < inputs.length; ++i) {
+        document.getElementById('categoryLabel-' + i).innerHTML += ' (' + Math.round(inputs[i].value * categories[i].weight) + '% / ' + Math.round(categories[i].weight * 100) + '%)';
+        moreStatsTag.innerHTML += '</br>' + categories[i].name + '</br><font color="#530040">' + bullet.repeat(Math.round(categories[i].weight * 100) - Math.round(inputs[i].value * categories[i].weight)) + '</font>';
+    }
+    moreStatsTag.innerHTML += '</br></br></br>' + explenation;
+    document.getElementById('moreStatsButton').classList.add('hide');
+    
+    return false;
+}
+
+function hideMoreStats() {
+    document.getElementById('tool__content-moreStats').classList.add('hide');
+    document.getElementById('moreStatsButton').classList.remove('hide');
+}
+
+function resetCategoryLabels() {
+    const inputs = document.getElementsByTagName('input');
+    const categories = selectedCertification.getCategories();
+    for (let i = 0; i < inputs.length; ++i) {
+        document.getElementById('categoryLabel-' + i).innerHTML = categories[i].name;
     }
 }
 
 function handleCalculate() {
     showTotal();
-
+    if (!document.getElementById('tool__content-moreStats').classList.contains('hide')) {
+        resetCategoryLabels();
+        showMoreStats();
+    }
     let finalScore = 0;
 
     const categories = selectedCertification.getCategories();
