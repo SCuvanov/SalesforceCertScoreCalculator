@@ -6066,7 +6066,11 @@ body {
   grid-row: 3;
   grid-column: 1 / -1;
   background-color: #faf9f9;
-  border-top: 1px solid #f0eeee; }
+  border-top: 1px solid #f0eeee;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
 
 .instructions {
   display: flex;
@@ -6103,6 +6107,11 @@ body {
       font-size: 1.8rem;
       margin-left: 2.5rem;
       text-transform: uppercase; }
+
+.social-media__content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #127a9a; }
 
 .tool {
   display: flex;

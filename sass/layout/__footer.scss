@@ -4,4 +4,9 @@
 
     background-color: $color-grey-light-1;
     border-top: 1px solid $color-grey-light-3;
+    padding-top: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
