@@ -140,10 +140,10 @@ const einsteinAnalyticsConsultantCategoryWeights = [24, 11, 9, 19, 18, 19];
 einsteinAnalyticsConsultant.setCategories(einsteinAnalyticsConsultantCategoryNames, einsteinAnalyticsConsultantCategoryWeights);
 
 let nonprofitCloudConsultant = new Certification('Nonprofit Cloud Consultant', 60, 63);
-const nonprofitCloudConsultantCategoryNames = ['NPSP Settings and Administration', 'Nonprofit Cloud Data Management', 'Nonprofit Cloud Analytics', 'Domain Expertise',
-    'Nonprofit Cloud Solution Design', 'Nonprofit Implementation Strategies and Best Practices'
+const nonprofitCloudConsultantCategoryNames = ['Domain Expertise', 'Nonprofit Cloud Product Configuration', 'Implementation Strategies and Best Practices', 'Solution Design', 
+    'Integration and Data Management', 'Analytics'
 ];
-const nonprofitCloudConsultantCategoryWeights = [20, 11, 6, 18, 24, 21];
+const nonprofitCloudConsultantCategoryWeights = [20, 22, 18, 20, 15, 5];
 nonprofitCloudConsultant.setCategories(nonprofitCloudConsultantCategoryNames, nonprofitCloudConsultantCategoryWeights);
 
 let educationCloudConsultant = new Certification('Education Cloud Consultant', 60, 68);
