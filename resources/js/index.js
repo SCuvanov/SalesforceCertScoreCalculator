@@ -167,10 +167,10 @@ const identityCertCategoryWeights = [28, 22, 23, 15, 7, 5];
 identityAndAccessMgmtCert.setCategories(identityCertCategoryNames, identityCertCategoryWeights);
 
 let dataArchitectureAndManagementDesignerCert = new Certification('Data Architecture and Management Designer', 60, 67);
-const dataArchitectureAndManagementDesignerCategoryNames = ['Data Modeling', 'Conceptual Design', 'Master Data Management', 'Metadata Management',
-    'Data Archiving', 'Data Governance', 'Business Intelligence, Reporting & Analytics', 'Data Migration', 'Performance Tuning'
+const dataArchitectureAndManagementDesignerCategoryNames = ['Data Modeling/Database Design', 'Master Data Management', 'Salesforce Data Management',
+    'Data Governance', 'Large Data Volume Considerations', 'Data Migration'
 ];
-const dataArchitectureAndManagementDesignerCategoryWeights = [20, 15, 10, 7, 10, 7, 10, 10, 11];
+const dataArchitectureAndManagementDesignerCategoryWeights = [25, 5, 25, 10, 20, 15];
 dataArchitectureAndManagementDesignerCert.setCategories(dataArchitectureAndManagementDesignerCategoryNames, dataArchitectureAndManagementDesignerCategoryWeights);
 
 let integrationArchitectureDesignerCert = new Certification('Integration Architecture Designer', 60, 67);
