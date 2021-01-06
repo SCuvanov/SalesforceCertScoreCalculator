@@ -166,7 +166,7 @@ const identityCertCategoryNames = ['Identity Management Concepts', 'Accepting Th
 const identityCertCategoryWeights = [28, 22, 23, 15, 7, 5];
 identityAndAccessMgmtCert.setCategories(identityCertCategoryNames, identityCertCategoryWeights);
 
-let dataArchitectureAndManagementDesignerCert = new Certification('Data Architecture and Management Designer', 60, 67);
+let dataArchitectureAndManagementDesignerCert = new Certification('Data Architecture and Management Designer', 60, 58);
 const dataArchitectureAndManagementDesignerCategoryNames = ['Data Modeling/Database Design', 'Master Data Management', 'Salesforce Data Management',
     'Data Governance', 'Large Data Volume Considerations', 'Data Migration'
 ];
