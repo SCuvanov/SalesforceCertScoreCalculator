@@ -194,6 +194,18 @@ const herokuArchitectureDesignerCategoryNames = ['Heroku Platform', 'Data', 'Sec
 const herokuArchitectureDesignerCategoryWeights = [10, 17, 15, 28, 15, 15];
 herokuArchitectureDesigner.setCategories(herokuArchitectureDesignerCategoryNames, herokuArchitectureDesignerCategoryWeights);
 
+let b2CSolutionArchitect = new Certification('B2C Solution Architect', 60, 63);
+const b2CSolutionArchitectCategoryNames = ['Discovery and Customer Success', 'Functional Capabilities and Business Value', 'Architecture Design', 'Data Models and Management',
+    'Integration'
+];
+const b2CSolutionArchitectCategoryWeights = [18, 19, 23, 21, 19];
+b2CSolutionArchitect.setCategories(b2CSolutionArchitectCategoryNames, b2CSolutionArchitectCategoryWeights);
+
+let b2CCommerceArchitect = new Certification('B2C Commerce Architect', 60, 65);
+const b2CCommerceArchitectCategoryNames = ['Design/Discovery', 'Build', 'Monitoring/Troubleshooting', 'Integrations and Customizations', 'Launch'];
+const b2CCommerceArchitectCategoryWeights = [29, 19, 14, 22, 16];
+b2CCommerceArchitect.setCategories(b2CCommerceArchitectCategoryNames, b2CCommerceArchitectCategoryWeights);
+
 const certificationMap = new Map();
 certificationMap.set(adminCert1.getName(), adminCert1);
 certificationMap.set(adminCert2.getName(), adminCert2);
@@ -216,6 +228,8 @@ certificationMap.set(integrationArchitectureDesignerCert.getName(), integrationA
 certificationMap.set(developmentLifecycleandDeploymentDesigner.getName(), developmentLifecycleandDeploymentDesigner);
 certificationMap.set(herokuArchitectureDesigner.getName(), herokuArchitectureDesigner);
 certificationMap.set(b2CCommerceDeveloper.getName(), b2CCommerceDeveloper);
+certificationMap.set(b2CSolutionArchitect.getName(), b2CSolutionArchitect);
+certificationMap.set(b2CCommerceArchitect.getName(), b2CCommerceArchitect);
 certificationMap.set(pardotConsultant.getName(), pardotConsultant);
 certificationMap.set(pardotSpecialist.getName(), pardotSpecialist);
 certificationMap.set(fieldServiceLightningConsultant.getName(), fieldServiceLightningConsultant);
@@ -227,7 +241,7 @@ certificationMap.set(educationCloudConsultant.getName(), educationCloudConsultan
 const RoleMap = new Map();
 RoleMap.set('Salesforce Administrator', [adminCert1, adminCert2, platformAppBuilderCert, cPQSpecialist, marketingCloudAdministrator]);
 RoleMap.set('Salesforce Developer', [platformAppBuilderCert, developerCert1, developerCert2, javaScriptDeveloperI, marketingCloudDeveloper, b2CCommerceDeveloper]);
-RoleMap.set('Salesforce Architect', [platformAppBuilderCert, developerCert1, sharingAndVisibilityDesigner, identityAndAccessMgmtCert, dataArchitectureAndManagementDesignerCert, 
+RoleMap.set('Salesforce Architect', [b2CSolutionArchitect, b2CCommerceArchitect, platformAppBuilderCert, developerCert1, sharingAndVisibilityDesigner, identityAndAccessMgmtCert, dataArchitectureAndManagementDesignerCert, 
     integrationArchitectureDesignerCert,developmentLifecycleandDeploymentDesigner, herokuArchitectureDesigner]);
 RoleMap.set('Salesforce Marketer', [marketingCloudAdministrator, marketingEmailSpecialist, marketingCloudConsCert, marketingCloudDeveloper, pardotConsultant, pardotSpecialist]);
 RoleMap.set('Salesforce Consultant', [salesCloudConsCert, serviceCloudConsCert, communityCloudConsCert, marketingCloudConsCert, pardotConsultant, fieldServiceLightningConsultant,
