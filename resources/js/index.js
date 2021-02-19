@@ -26,11 +26,10 @@ cPQSpecialist.setCategories(cPQSpecialistCategoryNames, cPQSpecialistCategoryWei
 
 //APPBUILDER
 let platformAppBuilderCert = new Certification('Platform App Builder', 60, 63);
-const platformAppBuilderCertCategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Security',
-    'Business Logic and Process Automation', 'Social', 'User Interface', 'Reporting', 'Mobile',
-    'App Development'
+const platformAppBuilderCertCategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management',
+    'Business Logic and Process Automation', 'User Interface', 'App Development'
 ];
-const platformAppBuilderCertCategoryWeights = [8, 20, 10, 27, 3, 14, 5, 5, 8];
+const platformAppBuilderCertCategoryWeights = [23, 22, 28, 17, 10];
 platformAppBuilderCert.setCategories(platformAppBuilderCertCategoryNames, platformAppBuilderCertCategoryWeights);
 
 //DEVELOPER
