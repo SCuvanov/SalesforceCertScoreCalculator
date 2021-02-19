@@ -13,6 +13,7 @@
 
     <script src="resources/js/certification.js"></script>
     <script src="resources/js/index.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
     <title>Salesforce Certification Score Checker</title>
 </head>
@@ -48,8 +49,26 @@
                 <p class="instructions__instruction-text">Calculate!</p>
             </div>
         </section>
-
         <section class="tool">
+            <div class="dropdown">
+                <button class="btn" type="button" id="mainCategorydropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" onclick="hideShowRoleDropdownMenu()">
+                    <span id="dropdownMenuButton__text2">Filter by role...</span>
+                    <i class="far fa-angle-down btn-icon" id="btn-icon2"></i>
+                </button>
+                <div class="dropdown-menu hide" aria-labelledby="mainCategorydropdownMenuButton" id="dropdown-menu2">
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleRoleSelectOption('Salesforce Administrator')">Salesforce Administrator</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleRoleSelectOption('Salesforce Developer')">Salesforce Developer</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleRoleSelectOption('Salesforce Architect')">Salesforce Architect</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleRoleSelectOption('Salesforce Marketer')">Salesforce Marketer</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleRoleSelectOption('Salesforce Consultant')">Salesforce Consultant</a>
+                </div>
+            </div>
             <div class="dropdown">
                 <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false" onclick="hideShowDropdownMenu()">
@@ -57,28 +76,69 @@
                     <i class="far fa-angle-down btn-icon" id="btn-icon"></i>
                 </button>
                 <div class="dropdown-menu hide" aria-labelledby="dropdownMenuButton" id="dropdown-menu">
-                    <a class="dropdown-item" href="javascript:void();" onclick="handleSelectOption('Administrator')">Administrator</a>
-                    <a class="dropdown-item" href="javascript:void();" onclick="handleSelectOption('Advanced Administrator')">Advanced
-                        Administrator</a>
-                    <a class="dropdown-item" href="javascript:void();" onclick="handleSelectOption('Platform App Builder')">Platform
-                        App
-                        Builder</a>
-                    <a class="dropdown-item" href="javascript:void();" onclick="handleSelectOption('Platform Developer I')">Platform
-                        Developer I</a>
-                    <a class="dropdown-item" href="javascript:void();" onclick="handleSelectOption('Platform Developer II')">Platform
-                        Developer II</a>
-                    <a class="dropdown-item" href="javascript:void();" onclick="handleSelectOption('Community Cloud Consultant')">Community
-                        Cloud Consultant</a>
-                    <a class="dropdown-item" href="javascript:void();" onclick="handleSelectOption('Marketing Cloud Consultant')">Marketing
-                        Cloud Consultant</a>
-                    <a class="dropdown-item" href="javascript:void();" onclick="handleSelectOption('Sales Cloud Consultant')">Sales
-                        Cloud Consultant</a>
-                    <a class="dropdown-item" href="javascript:void();" onclick="handleSelectOption('Service Cloud Consultant')">Service
-                        Cloud Consultant</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('B2C Solution Architect')" id="pick">B2C Solution Architect</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('B2C Commerce Architect')" id="pick">B2C Commerce Architect</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Administrator')" id="pick">Administrator</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Advanced Administrator')" id="pick">Advanced Administrator</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Platform App Builder')" id="pick">Platform App Builder</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('CPQ Specialist')" id="pick">CPQ Specialist</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Marketing Cloud Administrator')" id="pick">Marketing Cloud Administrator</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Platform Developer I')" id="pick">Platform Developer I</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Platform Developer II')" id="pick">Platform Developer II</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('JavaScript Developer I')" id="pick">JavaScript Developer I</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Marketing Cloud Email Specialist')" id="pick">Marketing Cloud Email Specialist</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Sales Cloud Consultant')" id="pick">Sales Cloud Consultant</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Service Cloud Consultant')" id="pick">Service Cloud Consultant</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Community Cloud Consultant')" id="pick">Community Cloud Consultant</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Marketing Cloud Consultant')" id="pick">Marketing Cloud Consultant</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Sharing and Visibility Designer')" id="pick">Sharing and Visibility Designer</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Data Architecture and Management Designer')" id="pick">Data Architecture and Management Designer</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Identity and Access Management Designer')" id="pick">Identity and Access Management Designer</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Integration Architecture Designer')" id="pick">Integration Architecture Designer</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Development Lifecycle and Deployment Designer')" id="pick">Development Lifecycle and Deployment Designer</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Heroku Architecture Designer')" id="pick">Heroku Architecture Designer</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Marketing Cloud Developer')" id="pick">Marketing Cloud Developer</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Pardot Consultant')" id="pick">Pardot Consultant</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Pardot Specialist')" id="pick">Pardot Specialist</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('B2C Commerce Developer')" id="pick">B2C Commerce Developer</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Field Service Lightning Consultant')" id="pick">Field Service Lightning Consultant</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Einstein Analytics and Discovery Consultant')" id="pick">Einstein Analytics and Discovery Consultant</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Nonprofit Cloud Consultant')" id="pick">Nonprofit Cloud Consultant</a>
+                    <a class="dropdown-item" href="javascript:void();"
+                        onclick="handleSelectOption('Education Cloud Consultant')" id="pick">Education Cloud Consultant</a>
                 </div>
             </div>
             <div class="tool__content">
-                <form class="tool__content-container" id="tool__content-container" onsubmit="return handleCalculate()"></form>
+                <form class="tool__content-container" id="tool__content-container" onsubmit="return handleCalculate()">
+                </form>
                 <button class="btn btn-secondary" type="submit" form="tool__content-container" id="calculateButton">
                     <span id="calculateButton__text">Calculate</span>
                     <i class="far fa-calculator btn-icon" id="btn-icon"></i>
@@ -89,15 +149,28 @@
                 <p class="tool__content-total-message" id="tool__content-total-message"></p>
                 <p class="tool__content-total-score" id="tool__content-total-score"></p>
                 <p class="tool__content-total-score" id="tool__content-total-scoreneeded"></p>
+                <div class="tool__content-total hide" id="tool__content-moreStats">
+                    <p class="tool__content-total-message">Impact per Category</p>
+                    <p class="tool__content-category" id="tool__content-moreStats-message"></p>
+                </div>
+                <div id="moreStatsButton">
+                    </br>
+                    <form class="tool__content-container" id="moreStatsForm" onsubmit="return showMoreStats()">
+                    </form>
+                    <button class="btn" type="submit" form="moreStatsForm">
+                        Show me more statistics
+                        <i class="far fa-chart-bar btn-icon"></i>
+                    </button>
+                </div>
             </div>
         </section>
 
     </main>
     <footer class="footer">
         <div class="social-media__container">
-            <a href="https://github.com/SCuvanov" class="social-media__content"><i class="fab fa-github"></i></a>
-            <a href="http://scuvanov.com/" class="social-media__content"><i class="fal fa-globe"></i></a>
-            <a href="https://www.linkedin.com/in/sean-cuvanov-80520189/" class="social-media__content"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/SCuvanov" class="social-media__content"><ion-icon name="logo-github" size="small"></ion-icon></a>
+            <a href="http://scuvanov.com/" class="social-media__content"><ion-icon name="globe" size="small"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/sean-cuvanov-80520189/" class="social-media__content"><ion-icon name="logo-linkedin" size="small"></ion-icon></a>
         </div>
     </footer>
 </body>
