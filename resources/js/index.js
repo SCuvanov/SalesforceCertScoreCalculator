@@ -153,9 +153,9 @@ const educationCloudConsultantCategoryWeights = [23, 18, 19, 19, 17, 5];
 educationCloudConsultant.setCategories(educationCloudConsultantCategoryNames, educationCloudConsultantCategoryWeights);
 
 //ARCHITECTURE
-let sharingAndVisibilityDesigner = new Certification('Sharing and Visibility Designer', 60, 68);
-const sharingAndVisibilityCategoryNames = ['Declarative Sharing', 'Performance', 'Programmatic Sharing'];
-const sharingAndVisibilityCategoryWeights = [64, 8, 28];
+let sharingAndVisibilityDesigner = new Certification('Sharing and Visibility Designer', 60, 67);
+const sharingAndVisibilityCategoryNames = ['Declarative Sharing', 'Performance and Scalability', 'Programmatic Sharing'];
+const sharingAndVisibilityCategoryWeights = [76, 7, 17];
 sharingAndVisibilityDesigner.setCategories(sharingAndVisibilityCategoryNames, sharingAndVisibilityCategoryWeights);
 
 let identityAndAccessMgmtCert = new Certification('Identity and Access Management Designer', 60, 65);
