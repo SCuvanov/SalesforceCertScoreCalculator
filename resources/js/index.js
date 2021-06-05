@@ -131,9 +131,9 @@ const fieldServiceLightningConsultantCategoryNames = ['Managing Resources', 'Man
 const fieldServiceLightningConsultantCategoryWeights = [16, 23, 28, 10, 8, 5, 5, 5];
 fieldServiceLightningConsultant.setCategories(fieldServiceLightningConsultantCategoryNames, fieldServiceLightningConsultantCategoryWeights);
 
-let einsteinAnalyticsConsultant = new Certification('Einstein Analytics and Discovery Consultant', 60, 68);
-const einsteinAnalyticsConsultantCategoryNames = ['Data Layer', 'Security', 'Admin', 'Analytics Dashboard Design',
-    'Analytics Dashboard Implementation', 'Einstein Discovery Story Design'
+let einsteinAnalyticsConsultant = new Certification('Tableau CRM and Einstein Discovery Consultant', 60, 68);
+const einsteinAnalyticsConsultantCategoryNames = ['Data Layer', 'Security', 'Administration', 'Tableau CRM Dashboard Design',
+    'Tableau CRM Dashboard Implementation', 'Einstein Discovery Story Design'
 ];
 const einsteinAnalyticsConsultantCategoryWeights = [24, 11, 9, 19, 18, 19];
 einsteinAnalyticsConsultant.setCategories(einsteinAnalyticsConsultantCategoryNames, einsteinAnalyticsConsultantCategoryWeights);
