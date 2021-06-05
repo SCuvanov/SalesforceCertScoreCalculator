@@ -91,9 +91,9 @@ const pardotSpecialistCategoryWeights = [8, 11, 20, 24, 20, 17];
 pardotSpecialist.setCategories(pardotSpecialistCategoryNames, pardotSpecialistCategoryWeights);
 
 //CONSULTANT
-let communityCloudConsCert = new Certification('Community Cloud Consultant', 60, 62);
-const communityCloudConsCertCategoryNames = ['Implementation', 'Sharing and Security', 'Community Setup', 'Community Builder', 'Community Management', 'Content', 'Templates and Use Cases'];
-const communityCloudConsCertCategoryWeights = [22, 20, 18, 12, 11, 9, 8];
+let communityCloudConsCert = new Certification('Experience Cloud Consultant', 60, 65);
+const communityCloudConsCertCategoryNames = ['Experience Cloud Basics', 'Sharing, Visibility, and Licensing', 'Branding, Personalization, and Content', 'Templates and Themes', 'User Creation and Authentication', 'Adoption and Analytics', 'Administration, Setup and Configuration', 'Customization Considerations, and Limitations'];
+const communityCloudConsCertCategoryWeights = [8, 17, 15, 10, 13, 5, 25, 7];
 communityCloudConsCert.setCategories(communityCloudConsCertCategoryNames, communityCloudConsCertCategoryWeights);
 
 let marketingCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 68);
