@@ -124,7 +124,7 @@ const pardotConsultantCategoryNames = ['Discovery', 'Account Configuration', 'Le
 const pardotConsultantCategoryWeights = [13, 13, 12, 15, 15, 13, 7, 7, 5];
 pardotConsultant.setCategories(pardotConsultantCategoryNames, pardotConsultantCategoryWeights);
 
-let fieldServiceLightningConsultant = new Certification('Field Service Lightning Consultant', 60, 63);
+let fieldServiceLightningConsultant = new Certification('Field Service Consultant', 60, 63);
 const fieldServiceLightningConsultantCategoryNames = ['Managing Resources', 'Managing Work Orders', 'Managing Scheduling and Optimization', 'Configuring Mobility',
     'Managing Inventory', 'Managing Assets', 'Configuring Maintenance Plans', 'Permissions and Sharing'
 ];
