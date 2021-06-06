@@ -166,6 +166,11 @@ const educationCloudConsultantCategoryNames = ['Education Cloud Applications, Se
 const educationCloudConsultantCategoryWeights = [23, 18, 19, 19, 17, 5];
 educationCloudConsultant.setCategories(educationCloudConsultantCategoryNames, educationCloudConsultantCategoryWeights);
 
+let omniStudioConsultant = new Certification('OmniStudio Consultant', 60, 63);
+const omniStudioConsultantCategoryNames = ['FlexCards', 'OmniScripts', 'Data Tools', 'Best Fit Solutioning'];
+const omniStudioConsultantCategoryWeights = [23, 27, 23, 27];
+omniStudioConsultant.setCategories(omniStudioConsultantCategoryNames, omniStudioConsultantCategoryWeights);
+
 //ARCHITECTURE
 let sharingAndVisibilityDesigner = new Certification('Sharing and Visibility Designer', 60, 67);
 const sharingAndVisibilityCategoryNames = ['Declarative Sharing', 'Performance and Scalability', 'Programmatic Sharing'];
@@ -251,6 +256,7 @@ certificationMap.set(nonprofitCloudConsultant.getName(), nonprofitCloudConsultan
 certificationMap.set(educationCloudConsultant.getName(), educationCloudConsultant);
 certificationMap.set(industriesCPQDeveloper.getName(), industriesCPQDeveloper);
 certificationMap.set(omniStudioDeveloper.getName(), omniStudioDeveloper);
+certificationMap.set(omniStudioConsultant.getName(), omniStudioConsultant);
 
 // Here we map certifications to one or more Roles that can be filtered on
 const RoleMap = new Map();
@@ -260,7 +266,7 @@ RoleMap.set('Salesforce Architect', [b2CSolutionArchitect, b2CCommerceArchitect,
     integrationArchitectureDesignerCert,developmentLifecycleandDeploymentDesigner, herokuArchitectureDesigner]);
 RoleMap.set('Salesforce Marketer', [marketingCloudAdministrator, marketingEmailSpecialist, marketingCloudConsCert, marketingCloudDeveloper, pardotConsultant, pardotSpecialist]);
 RoleMap.set('Salesforce Consultant', [salesCloudConsCert, serviceCloudConsCert, communityCloudConsCert, marketingCloudConsCert, pardotConsultant, fieldServiceLightningConsultant,
-    einsteinAnalyticsConsultant, nonprofitCloudConsultant, educationCloudConsultant]);
+    einsteinAnalyticsConsultant, nonprofitCloudConsultant, educationCloudConsultant, omniStudioConsultant]);
 
 let selectedCertification = adminCert1;
 
