@@ -68,6 +68,13 @@ const industriesCPQDeveloperCategoryNames = ['Products', 'Promotions and Discoun
 const industriesCPQDeveloperCategoryWeights = [20, 7, 17, 12, 12, 12, 20];
 industriesCPQDeveloper.setCategories(industriesCPQDeveloperCategoryNames, industriesCPQDeveloperCategoryWeights);
 
+let omniStudioDeveloper = new Certification('OmniStudio Developer', 60, 67);
+const omniStudioDeveloperCategoryNames = ['Flex Cards', 'OmniScripts', 'Integration Procedures', 'Data Raptors', 'Calculation Procedures & Matrices',
+    'Integrated Troubleshooting and Deployment'
+];
+const omniStudioDeveloperCategoryWeights = [15, 20, 17, 20, 8, 20];
+omniStudioDeveloper.setCategories(omniStudioDeveloperCategoryNames, omniStudioDeveloperCategoryWeights);
+
 //MARKETING
 let marketingEmailSpecialist = new Certification('Marketing Cloud Email Specialist', 60, 65);
 const marketingEmailSpecialistCategoryNames = ['Email Marketing Best Practices', 'Email Message Design', 'Content Creation and Delivery',
@@ -243,11 +250,12 @@ certificationMap.set(einsteinAnalyticsConsultant.getName(), einsteinAnalyticsCon
 certificationMap.set(nonprofitCloudConsultant.getName(), nonprofitCloudConsultant);
 certificationMap.set(educationCloudConsultant.getName(), educationCloudConsultant);
 certificationMap.set(industriesCPQDeveloper.getName(), industriesCPQDeveloper);
+certificationMap.set(omniStudioDeveloper.getName(), omniStudioDeveloper);
 
 // Here we map certifications to one or more Roles that can be filtered on
 const RoleMap = new Map();
 RoleMap.set('Salesforce Administrator', [adminCert1, adminCert2, platformAppBuilderCert, cPQSpecialist, marketingCloudAdministrator]);
-RoleMap.set('Salesforce Developer', [platformAppBuilderCert, developerCert1, developerCert2, javaScriptDeveloperI, marketingCloudDeveloper, b2CCommerceDeveloper, industriesCPQDeveloper]);
+RoleMap.set('Salesforce Developer', [platformAppBuilderCert, developerCert1, developerCert2, javaScriptDeveloperI, marketingCloudDeveloper, b2CCommerceDeveloper, industriesCPQDeveloper, omniStudioDeveloper]);
 RoleMap.set('Salesforce Architect', [b2CSolutionArchitect, b2CCommerceArchitect, platformAppBuilderCert, developerCert1, sharingAndVisibilityDesigner, identityAndAccessMgmtCert, dataArchitectureAndManagementDesignerCert, 
     integrationArchitectureDesignerCert,developmentLifecycleandDeploymentDesigner, herokuArchitectureDesigner]);
 RoleMap.set('Salesforce Marketer', [marketingCloudAdministrator, marketingEmailSpecialist, marketingCloudConsCert, marketingCloudDeveloper, pardotConsultant, pardotSpecialist]);
