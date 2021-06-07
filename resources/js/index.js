@@ -91,9 +91,9 @@ const pardotSpecialistCategoryWeights = [8, 11, 20, 24, 20, 17];
 pardotSpecialist.setCategories(pardotSpecialistCategoryNames, pardotSpecialistCategoryWeights);
 
 //CONSULTANT
-let communityCloudConsCert = new Certification('Community Cloud Consultant', 60, 62);
-const communityCloudConsCertCategoryNames = ['Implementation', 'Sharing and Security', 'Community Setup', 'Community Builder', 'Community Management', 'Content', 'Templates and Use Cases'];
-const communityCloudConsCertCategoryWeights = [22, 20, 18, 12, 11, 9, 8];
+let communityCloudConsCert = new Certification('Experience Cloud Consultant', 60, 65);
+const communityCloudConsCertCategoryNames = ['Experience Cloud Basics', 'Sharing, Visibility, and Licensing', 'Branding, Personalization, and Content', 'Templates and Themes', 'User Creation and Authentication', 'Adoption and Analytics', 'Administration, Setup and Configuration', 'Customization Considerations, and Limitations'];
+const communityCloudConsCertCategoryWeights = [8, 17, 15, 10, 13, 5, 25, 7];
 communityCloudConsCert.setCategories(communityCloudConsCertCategoryNames, communityCloudConsCertCategoryWeights);
 
 let marketingCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 68);
@@ -124,16 +124,16 @@ const pardotConsultantCategoryNames = ['Discovery', 'Account Configuration', 'Le
 const pardotConsultantCategoryWeights = [13, 13, 12, 15, 15, 13, 7, 7, 5];
 pardotConsultant.setCategories(pardotConsultantCategoryNames, pardotConsultantCategoryWeights);
 
-let fieldServiceLightningConsultant = new Certification('Field Service Lightning Consultant', 60, 63);
+let fieldServiceLightningConsultant = new Certification('Field Service Consultant', 60, 63);
 const fieldServiceLightningConsultantCategoryNames = ['Managing Resources', 'Managing Work Orders', 'Managing Scheduling and Optimization', 'Configuring Mobility',
     'Managing Inventory', 'Managing Assets', 'Configuring Maintenance Plans', 'Permissions and Sharing'
 ];
 const fieldServiceLightningConsultantCategoryWeights = [16, 23, 28, 10, 8, 5, 5, 5];
 fieldServiceLightningConsultant.setCategories(fieldServiceLightningConsultantCategoryNames, fieldServiceLightningConsultantCategoryWeights);
 
-let einsteinAnalyticsConsultant = new Certification('Einstein Analytics and Discovery Consultant', 60, 68);
-const einsteinAnalyticsConsultantCategoryNames = ['Data Layer', 'Security', 'Admin', 'Analytics Dashboard Design',
-    'Analytics Dashboard Implementation', 'Einstein Discovery Story Design'
+let einsteinAnalyticsConsultant = new Certification('Tableau CRM and Einstein Discovery Consultant', 60, 68);
+const einsteinAnalyticsConsultantCategoryNames = ['Data Layer', 'Security', 'Administration', 'Tableau CRM Dashboard Design',
+    'Tableau CRM Dashboard Implementation', 'Einstein Discovery Story Design'
 ];
 const einsteinAnalyticsConsultantCategoryWeights = [24, 11, 9, 19, 18, 19];
 einsteinAnalyticsConsultant.setCategories(einsteinAnalyticsConsultantCategoryNames, einsteinAnalyticsConsultantCategoryWeights);
