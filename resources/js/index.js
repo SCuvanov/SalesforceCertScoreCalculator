@@ -61,6 +61,20 @@ const b2CCommerceDeveloperCategoryNames = ['B2C Commerce Setup', 'Work With a B2
 const b2CCommerceDeveloperCategoryWeights = [11, 12, 24, 53];
 b2CCommerceDeveloper.setCategories(b2CCommerceDeveloperCategoryNames, b2CCommerceDeveloperCategoryWeights);
 
+let industriesCPQDeveloper = new Certification('Industries CPQ Developer', 60, 63);
+const industriesCPQDeveloperCategoryNames = ['Products', 'Promotions and Discounts', 'Pricing', 'Rules', 'APIs', 'Ordering and Quoting',
+    'Troubleshooting'
+];
+const industriesCPQDeveloperCategoryWeights = [20, 7, 17, 12, 12, 12, 20];
+industriesCPQDeveloper.setCategories(industriesCPQDeveloperCategoryNames, industriesCPQDeveloperCategoryWeights);
+
+let omniStudioDeveloper = new Certification('OmniStudio Developer', 60, 67);
+const omniStudioDeveloperCategoryNames = ['Flex Cards', 'OmniScripts', 'Integration Procedures', 'Data Raptors', 'Calculation Procedures & Matrices',
+    'Integrated Troubleshooting and Deployment'
+];
+const omniStudioDeveloperCategoryWeights = [15, 20, 17, 20, 8, 20];
+omniStudioDeveloper.setCategories(omniStudioDeveloperCategoryNames, omniStudioDeveloperCategoryWeights);
+
 //MARKETING
 let marketingEmailSpecialist = new Certification('Marketing Cloud Email Specialist', 60, 65);
 const marketingEmailSpecialistCategoryNames = ['Email Marketing Best Practices', 'Email Message Design', 'Content Creation and Delivery',
@@ -152,6 +166,11 @@ const educationCloudConsultantCategoryNames = ['Education Cloud Applications, Se
 const educationCloudConsultantCategoryWeights = [23, 18, 19, 19, 17, 5];
 educationCloudConsultant.setCategories(educationCloudConsultantCategoryNames, educationCloudConsultantCategoryWeights);
 
+let omniStudioConsultant = new Certification('OmniStudio Consultant', 60, 63);
+const omniStudioConsultantCategoryNames = ['FlexCards', 'OmniScripts', 'Data Tools', 'Best Fit Solutioning'];
+const omniStudioConsultantCategoryWeights = [23, 27, 23, 27];
+omniStudioConsultant.setCategories(omniStudioConsultantCategoryNames, omniStudioConsultantCategoryWeights);
+
 //ARCHITECTURE
 let sharingAndVisibilityDesigner = new Certification('Sharing and Visibility Designer', 60, 67);
 const sharingAndVisibilityCategoryNames = ['Declarative Sharing', 'Performance and Scalability', 'Programmatic Sharing'];
@@ -235,16 +254,19 @@ certificationMap.set(fieldServiceLightningConsultant.getName(), fieldServiceLigh
 certificationMap.set(einsteinAnalyticsConsultant.getName(), einsteinAnalyticsConsultant);
 certificationMap.set(nonprofitCloudConsultant.getName(), nonprofitCloudConsultant);
 certificationMap.set(educationCloudConsultant.getName(), educationCloudConsultant);
+certificationMap.set(industriesCPQDeveloper.getName(), industriesCPQDeveloper);
+certificationMap.set(omniStudioDeveloper.getName(), omniStudioDeveloper);
+certificationMap.set(omniStudioConsultant.getName(), omniStudioConsultant);
 
 // Here we map certifications to one or more Roles that can be filtered on
 const RoleMap = new Map();
 RoleMap.set('Salesforce Administrator', [adminCert1, adminCert2, platformAppBuilderCert, cPQSpecialist, marketingCloudAdministrator]);
-RoleMap.set('Salesforce Developer', [platformAppBuilderCert, developerCert1, developerCert2, javaScriptDeveloperI, marketingCloudDeveloper, b2CCommerceDeveloper]);
+RoleMap.set('Salesforce Developer', [platformAppBuilderCert, developerCert1, developerCert2, javaScriptDeveloperI, marketingCloudDeveloper, b2CCommerceDeveloper, industriesCPQDeveloper, omniStudioDeveloper]);
 RoleMap.set('Salesforce Architect', [b2CSolutionArchitect, b2CCommerceArchitect, platformAppBuilderCert, developerCert1, sharingAndVisibilityDesigner, identityAndAccessMgmtCert, dataArchitectureAndManagementDesignerCert, 
     integrationArchitectureDesignerCert,developmentLifecycleandDeploymentDesigner, herokuArchitectureDesigner]);
 RoleMap.set('Salesforce Marketer', [marketingCloudAdministrator, marketingEmailSpecialist, marketingCloudConsCert, marketingCloudDeveloper, pardotConsultant, pardotSpecialist]);
 RoleMap.set('Salesforce Consultant', [salesCloudConsCert, serviceCloudConsCert, communityCloudConsCert, marketingCloudConsCert, pardotConsultant, fieldServiceLightningConsultant,
-    einsteinAnalyticsConsultant, nonprofitCloudConsultant, educationCloudConsultant]);
+    einsteinAnalyticsConsultant, nonprofitCloudConsultant, educationCloudConsultant, omniStudioConsultant]);
 
 let selectedCertification = adminCert1;
 
