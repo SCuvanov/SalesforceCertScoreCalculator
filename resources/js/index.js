@@ -173,10 +173,10 @@ const dataArchitectureAndManagementDesignerCategoryWeights = [25, 5, 25, 10, 20,
 dataArchitectureAndManagementDesignerCert.setCategories(dataArchitectureAndManagementDesignerCategoryNames, dataArchitectureAndManagementDesignerCategoryWeights);
 
 let integrationArchitectureDesignerCert = new Certification('Integration Architecture Designer', 60, 67);
-const integrationArchitectureDesignerCategoryNames = ['Salesforce Integration Capabilities', 'Salesforce Integration Patterns', 'Enterprise Integration Architecture Concepts', 'Salesforce Integration Testing',
-    'Integrating with Salesforce Security', 'Tools', 'Monitoring'
+const integrationArchitectureDesignerCategoryNames = ['Evaluate the Current System Landscape', 'Evaluate Business Needs', 'Translate Needs to Integration Requirements', 'Design Integration Solutions',
+    'Build Solution', 'Maintain Integration'
 ];
-const integrationArchitectureDesignerCategoryWeights = [28, 17, 15, 10, 15, 10, 5];
+const integrationArchitectureDesignerCategoryWeights = [8, 11, 22, 28, 23, 8];
 integrationArchitectureDesignerCert.setCategories(integrationArchitectureDesignerCategoryNames, integrationArchitectureDesignerCategoryWeights);
 
 let developmentLifecycleandDeploymentDesigner = new Certification('Development Lifecycle and Deployment Designer', 60, 68);
