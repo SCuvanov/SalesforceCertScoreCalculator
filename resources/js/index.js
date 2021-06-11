@@ -110,11 +110,9 @@ const communityCloudConsCertCategoryNames = ['Experience Cloud Basics', 'Sharing
 const communityCloudConsCertCategoryWeights = [8, 17, 15, 10, 13, 5, 25, 7];
 communityCloudConsCert.setCategories(communityCloudConsCertCategoryNames, communityCloudConsCertCategoryWeights);
 
-let marketingCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 68);
-const marketingCloudConsCertCategoryNames = ['Discovery', 'Conceptual Design', 'Marketing Cloud Connect', 'Account Configuration', 'Reporting', 'Data Design',
-    'Automation', 'Email Build', 'Contact Builder', 'Journey Builder'
-];
-const marketingCloudConsCertCategoryWeights = [15, 12, 6, 10, 5, 12, 8, 7, 15, 10];
+let marketingCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 67);
+const marketingCloudConsCertCategoryNames = ['Discovery and Architecture', 'Integration', 'Account Configuration', 'Automation', 'Data Modeling and Management', 'Messaging'];
+const marketingCloudConsCertCategoryWeights = [16, 20, 12, 20, 21, 11];
 marketingCloudConsCert.setCategories(marketingCloudConsCertCategoryNames, marketingCloudConsCertCategoryWeights);
 
 let salesCloudConsCert = new Certification('Sales Cloud Consultant', 60, 62);
@@ -224,6 +222,12 @@ const b2CCommerceArchitectCategoryNames = ['Design/Discovery', 'Build', 'Monitor
 const b2CCommerceArchitectCategoryWeights = [29, 19, 14, 22, 16];
 b2CCommerceArchitect.setCategories(b2CCommerceArchitectCategoryNames, b2CCommerceArchitectCategoryWeights);
 
+// Salesforce Designer Certs
+let userExperienceDesigner = new Certification('User Experience Designer', 60, 65);
+const userExperienceDesignerCategoryNames = ['Discovery', 'UX Fundamentals', 'Human-Centered Design', 'Declarative Design', 'Testing', 'Salesforce Lightning Design System (SLDS)'];
+const userExperienceDesignerCategoryWeights = [13, 16, 12, 27, 11, 21];
+userExperienceDesigner.setCategories(userExperienceDesignerCategoryNames, userExperienceDesignerCategoryWeights);
+
 const certificationMap = new Map();
 certificationMap.set(adminCert1.getName(), adminCert1);
 certificationMap.set(adminCert2.getName(), adminCert2);
@@ -257,6 +261,7 @@ certificationMap.set(educationCloudConsultant.getName(), educationCloudConsultan
 certificationMap.set(industriesCPQDeveloper.getName(), industriesCPQDeveloper);
 certificationMap.set(omniStudioDeveloper.getName(), omniStudioDeveloper);
 certificationMap.set(omniStudioConsultant.getName(), omniStudioConsultant);
+certificationMap.set(userExperienceDesigner.getName(), userExperienceDesigner);
 
 // Here we map certifications to one or more Roles that can be filtered on
 const RoleMap = new Map();
@@ -267,6 +272,7 @@ RoleMap.set('Salesforce Architect', [b2CSolutionArchitect, b2CCommerceArchitect,
 RoleMap.set('Salesforce Marketer', [marketingCloudAdministrator, marketingEmailSpecialist, marketingCloudConsCert, marketingCloudDeveloper, pardotConsultant, pardotSpecialist]);
 RoleMap.set('Salesforce Consultant', [salesCloudConsCert, serviceCloudConsCert, communityCloudConsCert, marketingCloudConsCert, pardotConsultant, fieldServiceLightningConsultant,
     einsteinAnalyticsConsultant, nonprofitCloudConsultant, educationCloudConsultant, omniStudioConsultant]);
+RoleMap.set('Salesforce Designer', [userExperienceDesigner]);
 
 let selectedCertification = adminCert1;
 
