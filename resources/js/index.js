@@ -224,6 +224,12 @@ const b2CCommerceArchitectCategoryNames = ['Design/Discovery', 'Build', 'Monitor
 const b2CCommerceArchitectCategoryWeights = [29, 19, 14, 22, 16];
 b2CCommerceArchitect.setCategories(b2CCommerceArchitectCategoryNames, b2CCommerceArchitectCategoryWeights);
 
+// Salesforce Designer Certs
+let userExperienceDesigner = new Certification('User Experience Designer', 60, 65);
+const userExperienceDesignerCategoryNames = ['Discovery', 'UX Fundamentals', 'Human-Centered Design', 'Declarative Design', 'Testing', 'Salesforce Lightning Design System (SLDS)'];
+const userExperienceDesignerCategoryWeights = [13, 16, 12, 27, 11, 21];
+userExperienceDesigner.setCategories(userExperienceDesignerCategoryNames, userExperienceDesignerCategoryWeights);
+
 const certificationMap = new Map();
 certificationMap.set(adminCert1.getName(), adminCert1);
 certificationMap.set(adminCert2.getName(), adminCert2);
@@ -257,6 +263,7 @@ certificationMap.set(educationCloudConsultant.getName(), educationCloudConsultan
 certificationMap.set(industriesCPQDeveloper.getName(), industriesCPQDeveloper);
 certificationMap.set(omniStudioDeveloper.getName(), omniStudioDeveloper);
 certificationMap.set(omniStudioConsultant.getName(), omniStudioConsultant);
+certificationMap.set(userExperienceDesigner.getName(), userExperienceDesigner);
 
 // Here we map certifications to one or more Roles that can be filtered on
 const RoleMap = new Map();
@@ -267,6 +274,7 @@ RoleMap.set('Salesforce Architect', [b2CSolutionArchitect, b2CCommerceArchitect,
 RoleMap.set('Salesforce Marketer', [marketingCloudAdministrator, marketingEmailSpecialist, marketingCloudConsCert, marketingCloudDeveloper, pardotConsultant, pardotSpecialist]);
 RoleMap.set('Salesforce Consultant', [salesCloudConsCert, serviceCloudConsCert, communityCloudConsCert, marketingCloudConsCert, pardotConsultant, fieldServiceLightningConsultant,
     einsteinAnalyticsConsultant, nonprofitCloudConsultant, educationCloudConsultant, omniStudioConsultant]);
+RoleMap.set('Salesforce Designer', [userExperienceDesigner]);
 
 let selectedCertification = adminCert1;
 
