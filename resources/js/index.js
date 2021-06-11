@@ -110,11 +110,9 @@ const communityCloudConsCertCategoryNames = ['Experience Cloud Basics', 'Sharing
 const communityCloudConsCertCategoryWeights = [8, 17, 15, 10, 13, 5, 25, 7];
 communityCloudConsCert.setCategories(communityCloudConsCertCategoryNames, communityCloudConsCertCategoryWeights);
 
-let marketingCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 68);
-const marketingCloudConsCertCategoryNames = ['Discovery', 'Conceptual Design', 'Marketing Cloud Connect', 'Account Configuration', 'Reporting', 'Data Design',
-    'Automation', 'Email Build', 'Contact Builder', 'Journey Builder'
-];
-const marketingCloudConsCertCategoryWeights = [15, 12, 6, 10, 5, 12, 8, 7, 15, 10];
+let marketingCloudConsCert = new Certification('Marketing Cloud Consultant', 60, 67);
+const marketingCloudConsCertCategoryNames = ['Discovery and Architecture', 'Integration', 'Account Configuration', 'Automation', 'Data Modeling and Management', 'Messaging'];
+const marketingCloudConsCertCategoryWeights = [16, 20, 12, 20, 21, 11];
 marketingCloudConsCert.setCategories(marketingCloudConsCertCategoryNames, marketingCloudConsCertCategoryWeights);
 
 let salesCloudConsCert = new Certification('Sales Cloud Consultant', 60, 62);
