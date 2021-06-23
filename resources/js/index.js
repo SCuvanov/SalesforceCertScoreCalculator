@@ -1,11 +1,9 @@
 //ADMIN
 let adminCert1 = new Certification('Administrator', 60, 65);
-const adminCert1CategoryNames = ['Organization Setup', 'User Setup', 'Security and Access', 'Standard and Custom Objects',
-    'Sales and Marketing Applications', 'Service and Support Applications', 'Activity Management and Collaboration',
-    'Data Management', 'Analytics - Reports and Dashboards', 'Workflow/Process Automation',
-    'Desktop and Mobile Administration', 'AppExchange'
+const adminCert1CategoryNames = ['Configuration and Setup', 'Object Manager and Lightning App Builder', 'Sales and Marketing Applications',
+    'Service and Support Applications', 'Productivity and Collaboration', 'Data and Analytics Management', 'Workflow/Process Automation'
 ];
-const adminCert1CategoryWeights = [3, 7, 13, 14, 14, 13, 3, 10, 10, 8, 3, 2];
+const adminCert1CategoryWeights = [20, 20, 12, 11, 7, 14, 16];
 adminCert1.setCategories(adminCert1CategoryNames, adminCert1CategoryWeights);
 
 let adminCert2 = new Certification('Advanced Administrator', 60, 65);
