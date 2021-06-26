@@ -215,6 +215,12 @@ const b2CSolutionArchitectCategoryNames = ['Discovery and Customer Success', 'Fu
 const b2CSolutionArchitectCategoryWeights = [18, 19, 23, 21, 19];
 b2CSolutionArchitect.setCategories(b2CSolutionArchitectCategoryNames, b2CSolutionArchitectCategoryWeights);
 
+let b2BSolutionArchitect = new Certification('B2B Solution Architect', 60, 58);
+const b2BSolutionArchitectCategoryNames = ['Discovery and Customer Success', 'Data Governance and Integration', 'Design', 'Delivery', 'Operationalize the Solution'
+];
+const b2BSolutionArchitectCategoryWeights = [25, 26, 29, 12, 8];
+b2BSolutionArchitect.setCategories(b2BSolutionArchitectCategoryNames, b2BSolutionArchitectCategoryWeights);
+
 let b2CCommerceArchitect = new Certification('B2C Commerce Architect', 60, 65);
 const b2CCommerceArchitectCategoryNames = ['Design/Discovery', 'Build', 'Monitoring/Troubleshooting', 'Integrations and Customizations', 'Launch'];
 const b2CCommerceArchitectCategoryWeights = [29, 19, 14, 22, 16];
@@ -249,6 +255,7 @@ certificationMap.set(developmentLifecycleandDeploymentDesigner.getName(), develo
 certificationMap.set(herokuArchitectureDesigner.getName(), herokuArchitectureDesigner);
 certificationMap.set(b2CCommerceDeveloper.getName(), b2CCommerceDeveloper);
 certificationMap.set(b2CSolutionArchitect.getName(), b2CSolutionArchitect);
+certificationMap.set(b2BSolutionArchitect.getName(), b2BSolutionArchitect);
 certificationMap.set(b2CCommerceArchitect.getName(), b2CCommerceArchitect);
 certificationMap.set(pardotConsultant.getName(), pardotConsultant);
 certificationMap.set(pardotSpecialist.getName(), pardotSpecialist);
@@ -265,7 +272,7 @@ certificationMap.set(userExperienceDesigner.getName(), userExperienceDesigner);
 const RoleMap = new Map();
 RoleMap.set('Salesforce Administrator', [adminCert1, adminCert2, platformAppBuilderCert, cPQSpecialist, marketingCloudAdministrator]);
 RoleMap.set('Salesforce Developer', [platformAppBuilderCert, developerCert1, developerCert2, javaScriptDeveloperI, marketingCloudDeveloper, b2CCommerceDeveloper, industriesCPQDeveloper, omniStudioDeveloper]);
-RoleMap.set('Salesforce Architect', [b2CSolutionArchitect, b2CCommerceArchitect, platformAppBuilderCert, developerCert1, sharingAndVisibilityDesigner, identityAndAccessMgmtCert, dataArchitectureAndManagementDesignerCert, 
+RoleMap.set('Salesforce Architect', [b2BSolutionArchitect, b2CSolutionArchitect, b2CCommerceArchitect, platformAppBuilderCert, developerCert1, sharingAndVisibilityDesigner, identityAndAccessMgmtCert, dataArchitectureAndManagementDesignerCert, 
     integrationArchitectureDesignerCert,developmentLifecycleandDeploymentDesigner, herokuArchitectureDesigner]);
 RoleMap.set('Salesforce Marketer', [marketingCloudAdministrator, marketingEmailSpecialist, marketingCloudConsCert, marketingCloudDeveloper, pardotConsultant, pardotSpecialist]);
 RoleMap.set('Salesforce Consultant', [salesCloudConsCert, serviceCloudConsCert, communityCloudConsCert, marketingCloudConsCert, pardotConsultant, fieldServiceLightningConsultant,
