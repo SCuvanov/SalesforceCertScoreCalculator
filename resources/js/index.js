@@ -451,7 +451,7 @@ function handleCalculate() {
         } else if (totalScoreDifference < 15) {
             message.innerHTML = 'Time to bust out the study guides.';
         } else if (totalScoreDifference < 20) {
-            message.innerHTML = 'Oof! You definately got this next time.';
+            message.innerHTML = 'Oof! You definitely got this next time.';
         } else if (totalScoreDifference < 25) {
             message.innerHTML = '=/ No big deal! Practice makes perfect.';
         } else {
