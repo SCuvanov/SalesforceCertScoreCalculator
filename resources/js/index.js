@@ -194,11 +194,10 @@ const integrationArchitectureDesignerCategoryNames = ['Evaluate the Current Syst
 const integrationArchitectureDesignerCategoryWeights = [8, 11, 22, 28, 23, 8];
 integrationArchitectureDesignerCert.setCategories(integrationArchitectureDesignerCategoryNames, integrationArchitectureDesignerCategoryWeights);
 
-let developmentLifecycleandDeploymentDesigner = new Certification('Development Lifecycle and Deployment Designer', 60, 68);
-const developmentLifecycleandDeploymentDesignerCategoryNames = ['Environments', 'Application Lifecycle Management', 'Testing', 'Governance',
-    'Risk Identification and Mitigation', 'Change Sets', 'Metadata API', 'Continuous Integration Techniques', 'Methodology Tools', 'Understanding Packages'
-];
-const developmentLifecycleandDeploymentDesignerCategoryWeights = [15, 17, 10, 17, 12, 5, 10, 8, 3, 3];
+let developmentLifecycleandDeploymentDesigner = new Certification('Development Lifecycle and Deployment Designer', 60, 65);
+const developmentLifecycleandDeploymentDesignerCategoryNames = ['Application Lifecycle Management', 'Planning', 'System Design', 'Building', 'Deploying', 'Testing',
+'Releasing', 'Operating'];
+const developmentLifecycleandDeploymentDesignerCategoryWeights = [8, 13, 15, 14, 14, 13, 13, 10];
 developmentLifecycleandDeploymentDesigner.setCategories(developmentLifecycleandDeploymentDesignerCategoryNames, developmentLifecycleandDeploymentDesignerCategoryWeights);
 
 let herokuArchitectureDesigner = new Certification('Heroku Architecture Designer', 60, 72);
