@@ -35,7 +35,7 @@ let developerCert1 = new Certification('Platform Developer I', 60, 62);
 const developerCert1CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Process Automation and Logic',
     'User Interface', 'Testing, Debugging, and Deployment'
 ];
-const developerCert1CategoryWeights = [7, 13, 38, 25, 17];
+const developerCert1CategoryWeights = [7, 13, 40, 23, 17];
 developerCert1.setCategories(developerCert1CategoryNames, developerCert1CategoryWeights);
 
 let developerCert2 = new Certification('Platform Developer II', 60, 70);
