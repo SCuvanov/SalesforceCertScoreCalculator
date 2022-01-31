@@ -31,7 +31,7 @@ const platformAppBuilderCertCategoryWeights = [23, 22, 28, 17, 10];
 platformAppBuilderCert.setCategories(platformAppBuilderCertCategoryNames, platformAppBuilderCertCategoryWeights);
 
 //DEVELOPER
-let developerCert1 = new Certification('Platform Developer I', 60, 62);
+let developerCert1 = new Certification('Platform Developer I', 60, 68);
 const developerCert1CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Process Automation and Logic',
     'User Interface', 'Testing, Debugging, and Deployment'
 ];
