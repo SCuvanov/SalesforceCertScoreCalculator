@@ -113,11 +113,11 @@ const marketingCloudConsCertCategoryNames = ['Discovery and Architecture', 'Inte
 const marketingCloudConsCertCategoryWeights = [16, 20, 12, 20, 21, 11];
 marketingCloudConsCert.setCategories(marketingCloudConsCertCategoryNames, marketingCloudConsCertCategoryWeights);
 
-let salesCloudConsCert = new Certification('Sales Cloud Consultant', 60, 62);
-const salesCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation Strategies', 'Sales Cloud Solution Design', 'Marketing and Leads',
-    'Account and Contact Management', 'Opportunity Management', 'Sales Productivity', 'Sales Cloud Analytics', 'Integration and Data Management'
+let salesCloudConsCert = new Certification('Sales Cloud Consultant', 60, 68);
+const salesCloudConsCertCategoryNames = ['Sales Practices', 'Implementation Strategies', 'Application of Product Knowledge', 'Lead Management',
+    'Account and Contact Management', 'Opportunity Management', 'Sales Productivity and Integration', 'Consulting Practices', 'Sales Metrics, Reports & Dashboards', 'Data Management'
 ];
-const salesCloudConsCertCategoryWeights = [7, 12, 21, 8, 13, 13, 9, 9, 8];
+const salesCloudConsCertCategoryWeights = [11, 13, 18, 7, 11, 10, 8, 7, 7, 8];
 salesCloudConsCert.setCategories(salesCloudConsCertCategoryNames, salesCloudConsCertCategoryWeights);
 
 let serviceCloudConsCert = new Certification('Service Cloud Consultant', 60, 67);
