@@ -7,12 +7,8 @@ const adminCert1CategoryWeights = [20, 20, 12, 11, 7, 14, 16];
 adminCert1.setCategories(adminCert1CategoryNames, adminCert1CategoryWeights);
 
 let adminCert2 = new Certification('Advanced Administrator', 60, 65);
-const adminCert2CategoryNames = ['Security and Access', 'Extending Custom Objects and Applications', 'Auditing and Monitoring',
-    'Sales Cloud Applications', 'Service Cloud Applications', 'Data Management',
-    'Content Management', 'Change Management', 'Analytics, Reports and Dashboards',
-    'Process Automation'
-];
-const adminCert2CategoryWeights = [20, 8, 6, 10, 10, 10, 3, 10, 10, 13];
+const adminCert2CategoryNames = ['Security and Access', 'Objects and Applications', 'Auditing and Monitoring', 'Cloud Applications', 'Data and Analytics Management', 'Environment Management and Deployment', 'Process Automation'];
+const adminCert2CategoryWeights = [20, 19, 10, 11, 13, 7, 20];
 adminCert2.setCategories(adminCert2CategoryNames, adminCert2CategoryWeights);
 
 let cPQSpecialist = new Certification('CPQ Specialist', 60, 65);
