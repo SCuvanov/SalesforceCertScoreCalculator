@@ -7,12 +7,8 @@ const adminCert1CategoryWeights = [20, 20, 12, 11, 7, 14, 16];
 adminCert1.setCategories(adminCert1CategoryNames, adminCert1CategoryWeights);
 
 let adminCert2 = new Certification('Advanced Administrator', 60, 65);
-const adminCert2CategoryNames = ['Security and Access', 'Extending Custom Objects and Applications', 'Auditing and Monitoring',
-    'Sales Cloud Applications', 'Service Cloud Applications', 'Data Management',
-    'Content Management', 'Change Management', 'Analytics, Reports and Dashboards',
-    'Process Automation'
-];
-const adminCert2CategoryWeights = [20, 8, 6, 10, 10, 10, 3, 10, 10, 13];
+const adminCert2CategoryNames = ['Security and Access', 'Objects and Applications', 'Auditing and Monitoring', 'Cloud Applications', 'Data and Analytics Management', 'Environment Management and Deployment', 'Process Automation'];
+const adminCert2CategoryWeights = [20, 19, 10, 11, 13, 7, 20];
 adminCert2.setCategories(adminCert2CategoryNames, adminCert2CategoryWeights);
 
 let cPQSpecialist = new Certification('CPQ Specialist', 60, 65);
@@ -32,17 +28,13 @@ platformAppBuilderCert.setCategories(platformAppBuilderCertCategoryNames, platfo
 
 //DEVELOPER
 let developerCert1 = new Certification('Platform Developer I', 60, 68);
-const developerCert1CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Process Automation and Logic',
-    'User Interface', 'Testing, Debugging, and Deployment'
-];
-const developerCert1CategoryWeights = [7, 13, 40, 23, 17];
+const developerCert1CategoryNames = ['Developer Fundamentals', 'Process Automation and Logic', 'User Interface', 'Testing, Debugging, and Deployment'];
+const developerCert1CategoryWeights = [23, 30, 25, 22];
 developerCert1.setCategories(developerCert1CategoryNames, developerCert1CategoryWeights);
 
 let developerCert2 = new Certification('Platform Developer II', 60, 70);
-const developerCert2CategoryNames = ['Salesforce Fundamentals', 'Data Modeling and Management', 'Logic and Process Automation',
-    'User Interface', 'Performance', 'Integration', 'Testing', 'Debug and Deployment Tools'
-];
-const developerCert2CategoryWeights = [8, 5, 20, 20, 15, 14, 13, 5];
+const developerCert2CategoryNames = ['Advanced Developer Fundamentals', 'Process Automation, Logic, and Integration', 'User Interface', 'Testing, Debugging, and Deployment', 'Performance'];
+const developerCert2CategoryWeights = [18, 24, 20, 20, 18];
 developerCert2.setCategories(developerCert2CategoryNames, developerCert2CategoryWeights);
 
 let javaScriptDeveloperI = new Certification('JavaScript Developer I', 60, 65);
@@ -74,11 +66,9 @@ const omniStudioDeveloperCategoryWeights = [15, 20, 17, 20, 8, 20];
 omniStudioDeveloper.setCategories(omniStudioDeveloperCategoryNames, omniStudioDeveloperCategoryWeights);
 
 //MARKETING
-let marketingEmailSpecialist = new Certification('Marketing Cloud Email Specialist', 60, 65);
-const marketingEmailSpecialistCategoryNames = ['Email Marketing Best Practices', 'Email Message Design', 'Content Creation and Delivery',
-    'Marketing Automation', 'Subscriber and Data Management', 'Tracking and Reporting'
-];
-const marketingEmailSpecialistCategoryWeights = [15, 13, 18, 19, 28, 7];
+let marketingEmailSpecialist = new Certification('Marketing Cloud Email Specialist', 60, 67);
+const marketingEmailSpecialistCategoryNames = ['Email Marketing Best Practices', 'Content Creation and Delivery', 'Marketing Automation', 'Subscriber and Data Management', 'Insights and Analytics'];
+const marketingEmailSpecialistCategoryWeights = [10, 24, 26, 26, 14];
 marketingEmailSpecialist.setCategories(marketingEmailSpecialistCategoryNames, marketingEmailSpecialistCategoryWeights);
 
 let marketingCloudAdministrator = new Certification('Marketing Cloud Administrator', 60, 67);
@@ -103,6 +93,11 @@ const pardotSpecialistCategoryWeights = [8, 11, 20, 24, 20, 17];
 pardotSpecialist.setCategories(pardotSpecialistCategoryNames, pardotSpecialistCategoryWeights);
 
 //CONSULTANT
+let businessAnalyst = new Certification('Business Analyst', 60, 62);
+const businessAnalystCategoryNames = ['Customer Discovery', 'Collaboration with Stakeholders', 'Business Process Mapping', 'Requirements', 'User Stories', 'User Acceptance'];
+const businessAnalystCategoryWeights = [17, 24, 16, 17, 18, 8];
+businessAnalyst.setCategories(businessAnalystCategoryNames, businessAnalystCategoryWeights);
+
 let communityCloudConsCert = new Certification('Experience Cloud Consultant', 60, 65);
 const communityCloudConsCertCategoryNames = ['Experience Cloud Basics', 'Sharing, Visibility, and Licensing', 'Branding, Personalization, and Content', 'Templates and Themes', 'User Creation and Authentication', 'Adoption and Analytics', 'Administration, Setup and Configuration', 'Customization Considerations, and Limitations'];
 const communityCloudConsCertCategoryWeights = [8, 17, 15, 10, 13, 5, 25, 7];
@@ -127,11 +122,9 @@ const serviceCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation
 const serviceCloudConsCertCategoryWeights = [10, 15, 16, 9, 10, 15, 5, 5, 15];
 serviceCloudConsCert.setCategories(serviceCloudConsCertCategoryNames, serviceCloudConsCertCategoryWeights);
 
-let pardotConsultant = new Certification('Pardot Consultant', 60, 70);
-const pardotConsultantCategoryNames = ['Discovery', 'Account Configuration', 'Lead Generation', 'Automating Business Processes',
-    'Email Marketing', 'Lead Qualification', 'Personalizing the Prospect Experience', 'Reporting', 'Salesforce Engage'
-];
-const pardotConsultantCategoryWeights = [13, 13, 12, 15, 15, 13, 7, 7, 5];
+let pardotConsultant = new Certification('Pardot Consultant', 60, 68);
+const pardotConsultantCategoryNames = ['Evaluation', 'Account Configuration', 'Automating Business Processes', 'Email Marketing', 'Lead Management', 'Personalizing the Prospect Experience', 'Reporting, Metrics & Analytics', 'Salesforce Engage'];
+const pardotConsultantCategoryWeights = [17, 20, 17, 10, 14, 8, 11, 3];
 pardotConsultant.setCategories(pardotConsultantCategoryNames, pardotConsultantCategoryWeights);
 
 let fieldServiceLightningConsultant = new Certification('Field Service Consultant', 60, 63);
@@ -148,18 +141,16 @@ const einsteinAnalyticsConsultantCategoryNames = ['Data Layer', 'Security', 'Adm
 const einsteinAnalyticsConsultantCategoryWeights = [24, 11, 9, 19, 18, 19];
 einsteinAnalyticsConsultant.setCategories(einsteinAnalyticsConsultantCategoryNames, einsteinAnalyticsConsultantCategoryWeights);
 
-let nonprofitCloudConsultant = new Certification('Nonprofit Cloud Consultant', 60, 63);
+let nonprofitCloudConsultant = new Certification('Nonprofit Cloud Consultant', 60, 67);
 const nonprofitCloudConsultantCategoryNames = ['Domain Expertise', 'Nonprofit Cloud Product Configuration', 'Implementation Strategies and Best Practices', 'Solution Design', 
     'Integration and Data Management', 'Analytics'
 ];
 const nonprofitCloudConsultantCategoryWeights = [20, 22, 18, 20, 15, 5];
 nonprofitCloudConsultant.setCategories(nonprofitCloudConsultantCategoryNames, nonprofitCloudConsultantCategoryWeights);
 
-let educationCloudConsultant = new Certification('Education Cloud Consultant', 60, 68);
-const educationCloudConsultantCategoryNames = ['Education Cloud Applications, Settings, and Configuration', 'Implementation Strategies', 'Solution Design',
-'Domain Expertise', 'Integration and Data Management', 'Analytics'
-];
-const educationCloudConsultantCategoryWeights = [23, 18, 19, 19, 17, 5];
+let educationCloudConsultant = new Certification('Education Cloud Consultant', 60, 67);
+const educationCloudConsultantCategoryNames = ['Domain Expertise', 'Education Cloud Configuration', 'Implementation Strategies and Best Practices', 'Solution Design', 'Integration and Data Management', 'Analytics'];
+const educationCloudConsultantCategoryWeights = [18, 22, 18, 19, 16, 7];
 educationCloudConsultant.setCategories(educationCloudConsultantCategoryNames, educationCloudConsultantCategoryWeights);
 
 let omniStudioConsultant = new Certification('OmniStudio Consultant', 60, 63);
@@ -168,33 +159,33 @@ const omniStudioConsultantCategoryWeights = [23, 27, 23, 27];
 omniStudioConsultant.setCategories(omniStudioConsultantCategoryNames, omniStudioConsultantCategoryWeights);
 
 //ARCHITECTURE
-let sharingAndVisibilityDesigner = new Certification('Sharing and Visibility Designer', 60, 67);
+let sharingAndVisibilityDesigner = new Certification('Sharing and Visibility Architect', 60, 67);
 const sharingAndVisibilityCategoryNames = ['Declarative Sharing', 'Performance and Scalability', 'Programmatic Sharing'];
 const sharingAndVisibilityCategoryWeights = [76, 7, 17];
 sharingAndVisibilityDesigner.setCategories(sharingAndVisibilityCategoryNames, sharingAndVisibilityCategoryWeights);
 
-let identityAndAccessMgmtCert = new Certification('Identity and Access Management Designer', 60, 65);
+let identityAndAccessMgmtCert = new Certification('Identity and Access Management Architect', 60, 67);
 const identityCertCategoryNames = ['Identity Management Concepts', 'Accepting Third-Party Identity in Salesforce', 'Salesforce as an Identity Provider',
     'Access Management Best Practices', 'Salesforce Identity', 'Community (Partner and Customer)'
 ];
-const identityCertCategoryWeights = [28, 22, 23, 15, 7, 5];
+const identityCertCategoryWeights = [17, 21, 17, 15, 12, 18];
 identityAndAccessMgmtCert.setCategories(identityCertCategoryNames, identityCertCategoryWeights);
 
-let dataArchitectureAndManagementDesignerCert = new Certification('Data Architecture and Management Designer', 60, 58);
+let dataArchitectureAndManagementDesignerCert = new Certification('Data Architect', 60, 58);
 const dataArchitectureAndManagementDesignerCategoryNames = ['Data Modeling/Database Design', 'Master Data Management', 'Salesforce Data Management',
     'Data Governance', 'Large Data Volume Considerations', 'Data Migration'
 ];
 const dataArchitectureAndManagementDesignerCategoryWeights = [25, 5, 25, 10, 20, 15];
 dataArchitectureAndManagementDesignerCert.setCategories(dataArchitectureAndManagementDesignerCategoryNames, dataArchitectureAndManagementDesignerCategoryWeights);
 
-let integrationArchitectureDesignerCert = new Certification('Integration Architecture Designer', 60, 67);
+let integrationArchitectureDesignerCert = new Certification('Integration Architect', 60, 67);
 const integrationArchitectureDesignerCategoryNames = ['Evaluate the Current System Landscape', 'Evaluate Business Needs', 'Translate Needs to Integration Requirements', 'Design Integration Solutions',
     'Build Solution', 'Maintain Integration'
 ];
 const integrationArchitectureDesignerCategoryWeights = [8, 11, 22, 28, 23, 8];
 integrationArchitectureDesignerCert.setCategories(integrationArchitectureDesignerCategoryNames, integrationArchitectureDesignerCategoryWeights);
 
-let developmentLifecycleandDeploymentDesigner = new Certification('Development Lifecycle and Deployment Designer', 60, 65);
+let developmentLifecycleandDeploymentDesigner = new Certification('Development Lifecycle and Deployment Architect', 60, 65);
 const developmentLifecycleandDeploymentDesignerCategoryNames = ['Application Lifecycle Management', 'Planning', 'System Design', 'Building', 'Deploying', 'Testing',
 'Releasing', 'Operating'];
 const developmentLifecycleandDeploymentDesignerCategoryWeights = [8, 13, 15, 14, 14, 13, 13, 10];
@@ -231,6 +222,11 @@ const userExperienceDesignerCategoryNames = ['Discovery', 'UX Fundamentals', 'Hu
 const userExperienceDesignerCategoryWeights = [13, 16, 12, 27, 11, 21];
 userExperienceDesigner.setCategories(userExperienceDesignerCategoryNames, userExperienceDesignerCategoryWeights);
 
+let strategyDesigner = new Certification('Strategy Designer', 60, 70);
+const strategyDesignerCategoryNames = ['Value Design', 'Tools and Artifacts', 'Intangible Deliverables', 'Leveraging Adjacent Roles/Skills'];
+const strategyDesignerCategoryWeights = [32, 23, 26, 19];
+strategyDesigner.setCategories(strategyDesignerCategoryNames, strategyDesignerCategoryWeights);
+
 const certificationMap = new Map();
 certificationMap.set(adminCert1.getName(), adminCert1);
 certificationMap.set(adminCert2.getName(), adminCert2);
@@ -266,17 +262,19 @@ certificationMap.set(industriesCPQDeveloper.getName(), industriesCPQDeveloper);
 certificationMap.set(omniStudioDeveloper.getName(), omniStudioDeveloper);
 certificationMap.set(omniStudioConsultant.getName(), omniStudioConsultant);
 certificationMap.set(userExperienceDesigner.getName(), userExperienceDesigner);
+certificationMap.set(businessAnalyst.getName(), businessAnalyst);
+certificationMap.set(strategyDesigner.getName(), strategyDesigner);
 
 // Here we map certifications to one or more Roles that can be filtered on
 const RoleMap = new Map();
-RoleMap.set('Salesforce Administrator', [adminCert1, adminCert2, platformAppBuilderCert, cPQSpecialist, marketingCloudAdministrator]);
+RoleMap.set('Salesforce Administrator', [adminCert1, adminCert2, businessAnalyst, platformAppBuilderCert, cPQSpecialist, marketingCloudAdministrator]);
 RoleMap.set('Salesforce Developer', [platformAppBuilderCert, developerCert1, developerCert2, javaScriptDeveloperI, marketingCloudDeveloper, b2CCommerceDeveloper, industriesCPQDeveloper, omniStudioDeveloper]);
 RoleMap.set('Salesforce Architect', [b2BSolutionArchitect, b2CSolutionArchitect, b2CCommerceArchitect, platformAppBuilderCert, developerCert1, sharingAndVisibilityDesigner, identityAndAccessMgmtCert, dataArchitectureAndManagementDesignerCert, 
     integrationArchitectureDesignerCert,developmentLifecycleandDeploymentDesigner, herokuArchitectureDesigner]);
 RoleMap.set('Salesforce Marketer', [marketingCloudAdministrator, marketingEmailSpecialist, marketingCloudConsCert, marketingCloudDeveloper, pardotConsultant, pardotSpecialist]);
-RoleMap.set('Salesforce Consultant', [salesCloudConsCert, serviceCloudConsCert, communityCloudConsCert, marketingCloudConsCert, pardotConsultant, fieldServiceLightningConsultant,
+RoleMap.set('Salesforce Consultant', [businessAnalyst, salesCloudConsCert, serviceCloudConsCert, communityCloudConsCert, marketingCloudConsCert, pardotConsultant, fieldServiceLightningConsultant,
     einsteinAnalyticsConsultant, nonprofitCloudConsultant, educationCloudConsultant, omniStudioConsultant]);
-RoleMap.set('Salesforce Designer', [userExperienceDesigner]);
+RoleMap.set('Salesforce Designer', [userExperienceDesigner, strategyDesigner]);
 
 let selectedCertification = adminCert1;
 
