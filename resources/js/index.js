@@ -148,11 +148,9 @@ const nonprofitCloudConsultantCategoryNames = ['Domain Expertise', 'Nonprofit Cl
 const nonprofitCloudConsultantCategoryWeights = [20, 22, 18, 20, 15, 5];
 nonprofitCloudConsultant.setCategories(nonprofitCloudConsultantCategoryNames, nonprofitCloudConsultantCategoryWeights);
 
-let educationCloudConsultant = new Certification('Education Cloud Consultant', 60, 68);
-const educationCloudConsultantCategoryNames = ['Education Cloud Applications, Settings, and Configuration', 'Implementation Strategies', 'Solution Design',
-'Domain Expertise', 'Integration and Data Management', 'Analytics'
-];
-const educationCloudConsultantCategoryWeights = [23, 18, 19, 19, 17, 5];
+let educationCloudConsultant = new Certification('Education Cloud Consultant', 60, 67);
+const educationCloudConsultantCategoryNames = ['Domain Expertise', 'Education Cloud Configuration', 'Implementation Strategies and Best Practices', 'Solution Design', 'Integration and Data Management', 'Analytics'];
+const educationCloudConsultantCategoryWeights = [18, 22, 18, 19, 16, 7];
 educationCloudConsultant.setCategories(educationCloudConsultantCategoryNames, educationCloudConsultantCategoryWeights);
 
 let omniStudioConsultant = new Certification('OmniStudio Consultant', 60, 63);
