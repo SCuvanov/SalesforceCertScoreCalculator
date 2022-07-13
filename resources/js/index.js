@@ -172,11 +172,11 @@ const sharingAndVisibilityCategoryNames = ['Declarative Sharing', 'Performance a
 const sharingAndVisibilityCategoryWeights = [76, 7, 17];
 sharingAndVisibilityDesigner.setCategories(sharingAndVisibilityCategoryNames, sharingAndVisibilityCategoryWeights);
 
-let identityAndAccessMgmtCert = new Certification('Identity and Access Management Designer', 60, 65);
+let identityAndAccessMgmtCert = new Certification('Identity and Access Management Architect', 60, 67);
 const identityCertCategoryNames = ['Identity Management Concepts', 'Accepting Third-Party Identity in Salesforce', 'Salesforce as an Identity Provider',
     'Access Management Best Practices', 'Salesforce Identity', 'Community (Partner and Customer)'
 ];
-const identityCertCategoryWeights = [28, 22, 23, 15, 7, 5];
+const identityCertCategoryWeights = [17, 21, 17, 15, 12, 18];
 identityAndAccessMgmtCert.setCategories(identityCertCategoryNames, identityCertCategoryWeights);
 
 let dataArchitectureAndManagementDesignerCert = new Certification('Data Architect', 60, 58);
