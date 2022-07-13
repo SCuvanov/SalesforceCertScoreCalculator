@@ -193,7 +193,7 @@ const integrationArchitectureDesignerCategoryNames = ['Evaluate the Current Syst
 const integrationArchitectureDesignerCategoryWeights = [8, 11, 22, 28, 23, 8];
 integrationArchitectureDesignerCert.setCategories(integrationArchitectureDesignerCategoryNames, integrationArchitectureDesignerCategoryWeights);
 
-let developmentLifecycleandDeploymentDesigner = new Certification('Development Lifecycle and Deployment Designer', 60, 65);
+let developmentLifecycleandDeploymentDesigner = new Certification('Development Lifecycle and Deployment Architect', 60, 65);
 const developmentLifecycleandDeploymentDesignerCategoryNames = ['Application Lifecycle Management', 'Planning', 'System Design', 'Building', 'Deploying', 'Testing',
 'Releasing', 'Operating'];
 const developmentLifecycleandDeploymentDesignerCategoryWeights = [8, 13, 15, 14, 14, 13, 13, 10];
