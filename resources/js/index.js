@@ -122,11 +122,9 @@ const serviceCloudConsCertCategoryNames = ['Industry Knowledge', 'Implementation
 const serviceCloudConsCertCategoryWeights = [10, 15, 16, 9, 10, 15, 5, 5, 15];
 serviceCloudConsCert.setCategories(serviceCloudConsCertCategoryNames, serviceCloudConsCertCategoryWeights);
 
-let pardotConsultant = new Certification('Pardot Consultant', 60, 70);
-const pardotConsultantCategoryNames = ['Discovery', 'Account Configuration', 'Lead Generation', 'Automating Business Processes',
-    'Email Marketing', 'Lead Qualification', 'Personalizing the Prospect Experience', 'Reporting', 'Salesforce Engage'
-];
-const pardotConsultantCategoryWeights = [13, 13, 12, 15, 15, 13, 7, 7, 5];
+let pardotConsultant = new Certification('Pardot Consultant', 60, 68);
+const pardotConsultantCategoryNames = ['Evaluation', 'Account Configuration', 'Automating Business Processes', 'Email Marketing', 'Lead Management', 'Personalizing the Prospect Experience', 'Reporting, Metrics & Analytics', 'Salesforce Engage'];
+const pardotConsultantCategoryWeights = [17, 20, 17, 10, 14, 8, 11, 3];
 pardotConsultant.setCategories(pardotConsultantCategoryNames, pardotConsultantCategoryWeights);
 
 let fieldServiceLightningConsultant = new Certification('Field Service Consultant', 60, 63);
