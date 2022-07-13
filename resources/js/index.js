@@ -186,7 +186,7 @@ const dataArchitectureAndManagementDesignerCategoryNames = ['Data Modeling/Datab
 const dataArchitectureAndManagementDesignerCategoryWeights = [25, 5, 25, 10, 20, 15];
 dataArchitectureAndManagementDesignerCert.setCategories(dataArchitectureAndManagementDesignerCategoryNames, dataArchitectureAndManagementDesignerCategoryWeights);
 
-let integrationArchitectureDesignerCert = new Certification('Integration Architecture Designer', 60, 67);
+let integrationArchitectureDesignerCert = new Certification('Integration Architect', 60, 67);
 const integrationArchitectureDesignerCategoryNames = ['Evaluate the Current System Landscape', 'Evaluate Business Needs', 'Translate Needs to Integration Requirements', 'Design Integration Solutions',
     'Build Solution', 'Maintain Integration'
 ];
