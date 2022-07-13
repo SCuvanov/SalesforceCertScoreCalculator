@@ -169,7 +169,7 @@ const omniStudioConsultantCategoryWeights = [23, 27, 23, 27];
 omniStudioConsultant.setCategories(omniStudioConsultantCategoryNames, omniStudioConsultantCategoryWeights);
 
 //ARCHITECTURE
-let sharingAndVisibilityDesigner = new Certification('Sharing and Visibility Designer', 60, 67);
+let sharingAndVisibilityDesigner = new Certification('Sharing and Visibility Architect', 60, 67);
 const sharingAndVisibilityCategoryNames = ['Declarative Sharing', 'Performance and Scalability', 'Programmatic Sharing'];
 const sharingAndVisibilityCategoryWeights = [76, 7, 17];
 sharingAndVisibilityDesigner.setCategories(sharingAndVisibilityCategoryNames, sharingAndVisibilityCategoryWeights);
