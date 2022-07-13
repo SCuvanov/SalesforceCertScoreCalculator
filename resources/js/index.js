@@ -141,7 +141,7 @@ const einsteinAnalyticsConsultantCategoryNames = ['Data Layer', 'Security', 'Adm
 const einsteinAnalyticsConsultantCategoryWeights = [24, 11, 9, 19, 18, 19];
 einsteinAnalyticsConsultant.setCategories(einsteinAnalyticsConsultantCategoryNames, einsteinAnalyticsConsultantCategoryWeights);
 
-let nonprofitCloudConsultant = new Certification('Nonprofit Cloud Consultant', 60, 63);
+let nonprofitCloudConsultant = new Certification('Nonprofit Cloud Consultant', 60, 67);
 const nonprofitCloudConsultantCategoryNames = ['Domain Expertise', 'Nonprofit Cloud Product Configuration', 'Implementation Strategies and Best Practices', 'Solution Design', 
     'Integration and Data Management', 'Analytics'
 ];
