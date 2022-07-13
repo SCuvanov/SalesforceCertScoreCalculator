@@ -66,11 +66,9 @@ const omniStudioDeveloperCategoryWeights = [15, 20, 17, 20, 8, 20];
 omniStudioDeveloper.setCategories(omniStudioDeveloperCategoryNames, omniStudioDeveloperCategoryWeights);
 
 //MARKETING
-let marketingEmailSpecialist = new Certification('Marketing Cloud Email Specialist', 60, 65);
-const marketingEmailSpecialistCategoryNames = ['Email Marketing Best Practices', 'Email Message Design', 'Content Creation and Delivery',
-    'Marketing Automation', 'Subscriber and Data Management', 'Tracking and Reporting'
-];
-const marketingEmailSpecialistCategoryWeights = [15, 13, 18, 19, 28, 7];
+let marketingEmailSpecialist = new Certification('Marketing Cloud Email Specialist', 60, 67);
+const marketingEmailSpecialistCategoryNames = ['Email Marketing Best Practices', 'Content Creation and Delivery', 'Marketing Automation', 'Subscriber and Data Management', 'Insights and Analytics'];
+const marketingEmailSpecialistCategoryWeights = [10, 24, 26, 26, 14];
 marketingEmailSpecialist.setCategories(marketingEmailSpecialistCategoryNames, marketingEmailSpecialistCategoryWeights);
 
 let marketingCloudAdministrator = new Certification('Marketing Cloud Administrator', 60, 67);
