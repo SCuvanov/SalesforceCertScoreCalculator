@@ -222,6 +222,11 @@ const userExperienceDesignerCategoryNames = ['Discovery', 'UX Fundamentals', 'Hu
 const userExperienceDesignerCategoryWeights = [13, 16, 12, 27, 11, 21];
 userExperienceDesigner.setCategories(userExperienceDesignerCategoryNames, userExperienceDesignerCategoryWeights);
 
+let strategyDesigner = new Certification('Strategy Designer', 60, 70);
+const strategyDesignerCategoryNames = ['Value Design', 'Tools and Artifacts', 'Intangible Deliverables', 'Leveraging Adjacent Roles/Skills'];
+const strategyDesignerCategoryWeights = [32, 23, 26, 19];
+strategyDesigner.setCategories(strategyDesignerCategoryNames, strategyDesignerCategoryWeights);
+
 const certificationMap = new Map();
 certificationMap.set(adminCert1.getName(), adminCert1);
 certificationMap.set(adminCert2.getName(), adminCert2);
@@ -258,6 +263,7 @@ certificationMap.set(omniStudioDeveloper.getName(), omniStudioDeveloper);
 certificationMap.set(omniStudioConsultant.getName(), omniStudioConsultant);
 certificationMap.set(userExperienceDesigner.getName(), userExperienceDesigner);
 certificationMap.set(businessAnalyst.getName(), businessAnalyst);
+certificationMap.set(strategyDesigner.getName(), strategyDesigner);
 
 // Here we map certifications to one or more Roles that can be filtered on
 const RoleMap = new Map();
@@ -268,7 +274,7 @@ RoleMap.set('Salesforce Architect', [b2BSolutionArchitect, b2CSolutionArchitect,
 RoleMap.set('Salesforce Marketer', [marketingCloudAdministrator, marketingEmailSpecialist, marketingCloudConsCert, marketingCloudDeveloper, pardotConsultant, pardotSpecialist]);
 RoleMap.set('Salesforce Consultant', [businessAnalyst, salesCloudConsCert, serviceCloudConsCert, communityCloudConsCert, marketingCloudConsCert, pardotConsultant, fieldServiceLightningConsultant,
     einsteinAnalyticsConsultant, nonprofitCloudConsultant, educationCloudConsultant, omniStudioConsultant]);
-RoleMap.set('Salesforce Designer', [userExperienceDesigner]);
+RoleMap.set('Salesforce Designer', [userExperienceDesigner, strategyDesigner]);
 
 let selectedCertification = adminCert1;
 
