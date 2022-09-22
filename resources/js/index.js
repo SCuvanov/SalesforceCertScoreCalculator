@@ -129,7 +129,7 @@ certificationMap.set('Pardot Specialist', new Certification('Pardot Specialist',
 ])));
 
 // //CONSULTANT
-certificationMap.set('Business Analyst', new Certification('Business Analyst', 60, 62, [ADMIN, CONSULTANT], new Map([
+certificationMap.set('Business Analyst', new Certification('Business Analyst', 60, 72, [ADMIN, CONSULTANT], new Map([
     ['Customer Discovery', 17],
     ['Collaboration with Stakeholders', 24],
     ['Business Process Mapping', 16],
