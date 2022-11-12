@@ -284,7 +284,7 @@ certificationMap.set('Development Lifecycle and Deployment Architect', new Certi
     ['Operating', 10]
 ])));
 
-certificationMap.set('Heroku Architecture Designer', new Certification('Heroku Architecture Designer', 60, 72, [ARCHITECT], new Map([
+certificationMap.set('Heroku Architect', new Certification('Heroku Architect', 60, 72, [ARCHITECT], new Map([
     ['Heroku Platform', 10],
     ['Data', 17],
     ['Security', 15],
