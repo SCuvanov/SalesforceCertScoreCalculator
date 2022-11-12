@@ -86,11 +86,11 @@ certificationMap.set('Industries CPQ Developer', new Certification('Industries C
 ])));
 
 certificationMap.set('OmniStudio Developer', new Certification('OmniStudio Developer', 60, 67, [DEVELOPER], new Map([
-    ['Flex Cards', 15],
+    ['FlexCards', 15],
     ['OmniScripts', 20],
     ['Integration Procedures', 17],
     ['Data Raptors', 20],
-    ['Calculation Procedures & Matrices', 8],
+    ['Expression Sets & Decision Matrices', 8],
     ['Integrated Troubleshooting and Deployment', 20]
 ])));
 
