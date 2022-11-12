@@ -51,8 +51,8 @@ certificationMap.set('Platform Developer I', new Certification('Platform Develop
 ])));
 
 certificationMap.set('Platform Developer II', new Certification('Platform Developer II', 60, 70, [DEVELOPER], new Map([
-    ['Advanced Developer Fundamentals', 18],
-    ['Process Automation, Logic, and Integration', 24],
+    ['Advanced Developer Fundamentals', 15],
+    ['Process Automation, Logic, and Integration', 27],
     ['User Interface', 20],
     ['Testing, Debugging, and Deployment', 20],
     ['Performance', 18]
