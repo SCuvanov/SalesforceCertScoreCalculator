@@ -51,8 +51,8 @@ certificationMap.set('Platform Developer I', new Certification('Platform Develop
 ])));
 
 certificationMap.set('Platform Developer II', new Certification('Platform Developer II', 60, 70, [DEVELOPER], new Map([
-    ['Advanced Developer Fundamentals', 18],
-    ['Process Automation, Logic, and Integration', 24],
+    ['Advanced Developer Fundamentals', 15],
+    ['Process Automation, Logic, and Integration', 27],
     ['User Interface', 20],
     ['Testing, Debugging, and Deployment', 20],
     ['Performance', 18]
@@ -86,11 +86,11 @@ certificationMap.set('Industries CPQ Developer', new Certification('Industries C
 ])));
 
 certificationMap.set('OmniStudio Developer', new Certification('OmniStudio Developer', 60, 67, [DEVELOPER], new Map([
-    ['Flex Cards', 15],
+    ['FlexCards', 15],
     ['OmniScripts', 20],
     ['Integration Procedures', 17],
     ['Data Raptors', 20],
-    ['Calculation Procedures & Matrices', 8],
+    ['Expression Sets & Decision Matrices', 8],
     ['Integrated Troubleshooting and Deployment', 20]
 ])));
 
@@ -284,7 +284,7 @@ certificationMap.set('Development Lifecycle and Deployment Architect', new Certi
     ['Operating', 10]
 ])));
 
-certificationMap.set('Heroku Architecture Designer', new Certification('Heroku Architecture Designer', 60, 72, [ARCHITECT], new Map([
+certificationMap.set('Heroku Architect', new Certification('Heroku Architect', 60, 72, [ARCHITECT], new Map([
     ['Heroku Platform', 10],
     ['Data', 17],
     ['Security', 15],
