@@ -1,5 +1,12 @@
-const ADMIN = 'Salesforce Administrator', DEVELOPER = 'Salesforce Developer', ARCHITECT = 'Salesforce Architect', MARKETER = 'Salesforce Marketer', CONSULTANT = 'Salesforce Consultant', DESIGNER = 'Salesforce Designer';
+const ADMIN = 'Salesforce Administrator', DEVELOPER = 'Salesforce Developer', ARCHITECT = 'Salesforce Architect', MARKETER = 'Salesforce Marketer', CONSULTANT = 'Salesforce Consultant', DESIGNER = 'Salesforce Designer', ASSOCIATE = 'Salesforce Associate';
 let certificationMap = new Map();
+
+certificationMap.set('Salesforce Associate', new Certification('Salesforce Associate', 40, 62, [ASSOCIATE], new Map([
+    ['Salesforce Ecosystem', 32],
+    ['Navigation', 28],
+    ['Data Model', 25],
+    ['Reports & Dashboards', 15]
+])));
 
 //ADMIN
 certificationMap.set('Administrator', new Certification('Administrator', 60, 65, [ADMIN], new Map([
@@ -366,7 +373,7 @@ for (const cert of certificationMap.values()) {
 RoleMap = new Map([...RoleMap].sort());
 
 // Set default certification
-let selectedCertification = certificationMap.get('Administrator');
+let selectedCertification = certificationMap.get('Salesforce Associate');
 
 window.addEventListener('load', function () {
     // Auto-populate the Roles on the canvas
@@ -384,7 +391,7 @@ window.addEventListener('load', function () {
     }
 
     // Load default certification
-    handleSelectOption('Administrator');
+    handleSelectOption(selectedCertification.getName());
     hideShowDropdownMenu();
 })
 
