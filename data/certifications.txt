@@ -1,0 +1,73 @@
+Administrator
+- https://help.salesforce.com/s/articleView?id=005298764&type=1
+- https://help.salesforce.com/s/articleView?id=005298939&type=1
+- https://help.salesforce.com/s/articleView?id=005298937&type=1
+- https://help.salesforce.com/s/articleView?id=005298952&type=1
+- https://help.salesforce.com/s/articleView?id=005298966&type=1
+- https://help.salesforce.com/s/articleView?id=005298969&type=1
+- https://help.salesforce.com/s/articleView?id=005298964&type=1
+- https://help.salesforce.com/s/articleView?id=005298990&type=1
+
+Architect
+- https://help.salesforce.com/s/articleView?id=005298924&type=1
+- https://help.salesforce.com/s/articleView?id=005299472&type=1
+- https://help.salesforce.com/s/articleView?id=005298936&type=1
+- https://help.salesforce.com/s/articleView?id=005298942&type=1
+- https://help.salesforce.com/s/articleView?id=005298948&type=1
+- https://help.salesforce.com/s/articleView?id=005298963&type=1
+- https://help.salesforce.com/s/articleView?id=005298956&type=1
+- https://help.salesforce.com/s/articleView?id=005298957&type=1
+- https://help.salesforce.com/s/articleView?id=005298972&type=1
+- https://help.salesforce.com/s/articleView?id=005298968&type=1
+- https://help.salesforce.com/s/articleView?id=005298975&type=1
+- https://help.salesforce.com/s/articleView?id=005298980&type=1
+- https://help.salesforce.com/s/articleView?id=005298977&type=1
+- https://help.salesforce.com/s/articleView?id=005299002&type=1
+
+Developer
+- https://help.salesforce.com/s/articleView?id=005298924&type=1
+- https://help.salesforce.com/s/articleView?id=005298941&type=1
+- https://help.salesforce.com/s/articleView?id=005298949&type=1
+- https://help.salesforce.com/s/articleView?id=005298945&type=1
+- https://help.salesforce.com/s/articleView?id=005298954&type=1
+- https://help.salesforce.com/s/articleView?id=005298959&type=1
+- https://help.salesforce.com/s/articleView?id=005298955&type=1
+- https://help.salesforce.com/s/articleView?id=005298960&type=1
+- https://help.salesforce.com/s/articleView?id=005298971&type=1
+- https://help.salesforce.com/s/articleView?id=005298964&type=1
+- https://help.salesforce.com/s/articleView?id=005298965&type=1
+- https://help.salesforce.com/s/articleView?id=005298967&type=1
+- https://help.salesforce.com/s/articleView?id=005298987&type=1
+
+Sales Professional
+- https://help.salesforce.com/s/articleView?id=005298982&type=1
+
+Marketer
+- https://help.salesforce.com/s/articleView?id=005298951&type=1
+- https://help.salesforce.com/s/articleView?id=005298953&type=1
+- https://help.salesforce.com/s/articleView?id=005298950&type=1
+- https://help.salesforce.com/s/articleView?id=005298952&type=1
+- https://help.salesforce.com/s/articleView?id=005298946&type=1
+- https://help.salesforce.com/s/articleView?id=005298954&type=1
+
+Consultant
+- https://help.salesforce.com/s/articleView?id=005305357&type=1
+- https://help.salesforce.com/s/articleView?id=005298939&type=1
+- https://help.salesforce.com/s/articleView?id=005298935&type=1
+- https://help.salesforce.com/s/articleView?id=005298940&type=1
+- https://help.salesforce.com/s/articleView?id=005298934&type=1
+- https://help.salesforce.com/s/articleView?id=005298944&type=1
+- https://help.salesforce.com/s/articleView?id=005298947&type=1
+- https://help.salesforce.com/s/articleView?id=005298951&type=1
+- https://help.salesforce.com/s/articleView?id=005298946&type=1
+- https://help.salesforce.com/s/articleView?id=005298958&type=1
+- https://help.salesforce.com/s/articleView?id=005298973&type=1
+- https://help.salesforce.com/s/articleView?id=005298970&type=1
+- https://help.salesforce.com/s/articleView?id=005298978&type=1
+- https://help.salesforce.com/s/articleView?id=005298976&type=1
+- https://help.salesforce.com/s/articleView?id=005298989&type=1
+- https://help.salesforce.com/s/articleView?id=005298991&type=1
+
+Designer
+- https://help.salesforce.com/s/articleView?id=005298981&type=1
+- https://help.salesforce.com/s/articleView?id=005298974&type=1

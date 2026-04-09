@@ -18,7 +18,18 @@ export function getCertificationById(id: string): Certification | undefined {
   return parsed.find((c) => c.id === id);
 }
 
-export const DEFAULT_CERTIFICATION_ID = "salesforce-associate";
+const DEFAULT_CERTIFICATION_CANDIDATES = [
+  "salesforce-associate",
+  "platform-administrator",
+  "platform-developer",
+] as const;
+
+export const DEFAULT_CERTIFICATION_ID =
+  DEFAULT_CERTIFICATION_CANDIDATES.find((id) =>
+    parsed.some((c) => c.id === id),
+  ) ??
+  parsed[0]?.id ??
+  "";
 
 export function buildRoleMap(
   certs: Certification[],

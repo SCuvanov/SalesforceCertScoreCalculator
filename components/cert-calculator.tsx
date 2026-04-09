@@ -22,6 +22,7 @@ import { decodeScoresPayload, encodeScoresPayload, wouldUrlBeTooLong } from "@/l
 import type { Certification } from "@/lib/cert-schema";
 import {
   BarChart3,
+  BookOpenText,
   Calculator,
   CheckCircle2,
   ChevronDown,
@@ -78,6 +79,13 @@ export function CertCalculator() {
 
   useEffect(() => {
     queueMicrotask(() => {
+      const fallbackCert =
+        getCertificationById(DEFAULT_CERTIFICATION_ID) ?? activeCerts[0];
+      if (!fallbackCert) {
+        setHydrated(true);
+        return;
+      }
+
       const params =
         typeof window !== "undefined"
           ? new URLSearchParams(window.location.search)
@@ -86,14 +94,14 @@ export function CertCalculator() {
       const urlS = params.get("s");
       const persisted = loadPersistedState();
 
-      let nextId = DEFAULT_CERTIFICATION_ID;
+      let nextId = fallbackCert.id;
       if (urlCert && getCertificationById(urlCert)) {
         nextId = urlCert;
       } else if (persisted?.certId && getCertificationById(persisted.certId)) {
         nextId = persisted.certId;
       }
 
-      const c = getCertificationById(nextId)!;
+      const c = getCertificationById(nextId) ?? fallbackCert;
       let nextScores = emptyScoresForCert(c);
 
       if (urlS) {
@@ -112,7 +120,7 @@ export function CertCalculator() {
       if (persisted?.roleFilter) setRoleFilter(persisted.roleFilter);
       setHydrated(true);
     });
-  }, []);
+  }, [activeCerts]);
 
   useEffect(() => {
     if (!hydrated) return;
@@ -314,25 +322,37 @@ export function CertCalculator() {
 
           <label className="flex min-h-11 flex-1 flex-col gap-2 text-sm font-semibold text-slate-700">
             <span>Certification</span>
-            <div className="group relative">
-              <select
-                className="min-h-12 w-full cursor-pointer appearance-none rounded-xl border border-slate-200/90 bg-white/90 py-2.5 pl-4 pr-11 text-base text-slate-900 shadow-inner shadow-slate-900/[0.03] transition-colors motion-safe:duration-200 motion-safe:hover:border-slate-300 motion-safe:hover:shadow-sm focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/25"
-                value={certId}
-                onChange={(e) => {
-                  const next = getCertificationById(e.target.value);
-                  if (next) pickCert(next);
-                }}
+            <div className="flex items-center gap-2">
+              <div className="group relative flex-1">
+                <select
+                  className="min-h-12 w-full cursor-pointer appearance-none rounded-xl border border-slate-200/90 bg-white/90 py-2.5 pl-4 pr-11 text-base text-slate-900 shadow-inner shadow-slate-900/[0.03] transition-colors motion-safe:duration-200 motion-safe:hover:border-slate-300 motion-safe:hover:shadow-sm focus:border-teal-500 focus:outline-none focus:ring-2 focus:ring-teal-500/25"
+                  value={certId}
+                  onChange={(e) => {
+                    const next = getCertificationById(e.target.value);
+                    if (next) pickCert(next);
+                  }}
+                >
+                  {filteredCerts.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.name}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown
+                  className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-teal-600/70 motion-safe:transition-transform motion-safe:duration-200 group-hover:-translate-y-[55%]"
+                  aria-hidden
+                />
+              </div>
+              <a
+                href={cert.officialExamGuideUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center justify-center gap-1 rounded-lg border border-slate-200/90 bg-white/80 px-2.5 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur-sm transition-all motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 motion-safe:hover:border-slate-300 motion-safe:hover:bg-white motion-safe:hover:shadow-md motion-safe:active:translate-y-0 motion-safe:active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+                aria-label={`Open exam guide for ${cert.name}`}
               >
-                {filteredCerts.map((c) => (
-                  <option key={c.id} value={c.id}>
-                    {c.name}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown
-                className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-teal-600/70 motion-safe:transition-transform motion-safe:duration-200 group-hover:-translate-y-[55%]"
-                aria-hidden
-              />
+                <BookOpenText className="h-3.5 w-3.5" aria-hidden />
+                Guide
+              </a>
             </div>
           </label>
         </div>

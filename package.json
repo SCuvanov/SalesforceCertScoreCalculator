@@ -9,8 +9,7 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "extract:certs": "node scripts/extract-certifications.mjs",
-    "sync:certs": "node scripts/sync-certs.mjs"
+    "refresh:certs": "node scripts/refresh-certifications.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.7.0",
@@ -28,6 +27,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
     "happy-dom": "^20.8.9",
+    "playwright": "^1.59.1",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.1.3"
