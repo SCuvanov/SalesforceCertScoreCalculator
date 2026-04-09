@@ -527,7 +527,7 @@ export function CertCalculator() {
                     Topic breakdown
                   </p>
                   <p className="mt-1 text-xs font-medium text-slate-600">
-                    Highest impact first
+                    Highest impact first - focus on these topics to improve your score
                   </p>
                 </div>
                 <div
