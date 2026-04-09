@@ -27,12 +27,10 @@ import {
   CheckCircle2,
   ChevronDown,
   Compass,
-  Link2,
   ListChecks,
-  Printer,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const ALL_ROLES = "__all__";
 
@@ -71,7 +69,6 @@ export function CertCalculator() {
     message: string;
   } | null>(null);
   const [workspaceView, setWorkspaceView] = useState<WorkspaceView>("scores");
-  const [copyHint, setCopyHint] = useState<string | null>(null);
 
   const cert = getCertificationById(certId);
 
@@ -217,31 +214,6 @@ export function CertCalculator() {
         a.categoryName.localeCompare(b.categoryName),
     );
   }, [cert, scores]);
-
-  const copyPageLink = useCallback(async () => {
-    const params = new URLSearchParams();
-    params.set("cert", certId);
-    const enc = encodeScoresPayload(scores);
-    if (Object.values(scores).some((v) => v > 0)) {
-      params.set("s", enc);
-    }
-    const rel = `?${params.toString()}`;
-    const full =
-      typeof window !== "undefined"
-        ? `${window.location.origin}${pathname}${rel}`
-        : "";
-    if (wouldUrlBeTooLong(`${pathname}${rel}`)) {
-      setCopyHint("Link too long: clear some scores or use fewer categories.");
-      return;
-    }
-    try {
-      await navigator.clipboard.writeText(full);
-      setCopyHint("Link copied.");
-    } catch {
-      setCopyHint("Could not copy.");
-    }
-    setTimeout(() => setCopyHint(null), 2500);
-  }, [certId, pathname, scores]);
 
   const onClear = () => {
     clearPersistedState();
@@ -490,20 +462,7 @@ export function CertCalculator() {
             >
               Clear
             </button>
-            <button
-              type="button"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-slate-200/90 bg-white/80 px-5 font-semibold text-slate-800 shadow-sm backdrop-blur-sm transition-all motion-safe:duration-200 motion-safe:hover:-translate-y-0.5 motion-safe:hover:border-slate-300 motion-safe:hover:bg-white motion-safe:hover:shadow-md motion-safe:active:translate-y-0 motion-safe:active:scale-[0.98]"
-              onClick={copyPageLink}
-            >
-              <Link2 className="h-4 w-4" aria-hidden />
-              Copy link
-            </button>
           </div>
-          {copyHint && (
-            <p className="text-sm font-medium text-slate-600" role="status">
-              {copyHint}
-            </p>
-          )}
         </form>
 
         </div>
@@ -662,17 +621,6 @@ export function CertCalculator() {
               </div>
             </div>
           )}
-        </div>
-
-        <div className="mt-8 flex justify-end print:hidden">
-          <button
-            type="button"
-            className="inline-flex items-center gap-2 rounded-lg px-2 py-1 text-sm font-semibold text-teal-700 transition-all motion-safe:duration-200 motion-safe:hover:-translate-y-px motion-safe:hover:bg-teal-50 motion-safe:hover:text-teal-800 motion-safe:active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
-            onClick={() => window.print()}
-          >
-            <Printer className="h-4 w-4" aria-hidden />
-            Print / Save as PDF
-          </button>
         </div>
       </section>
     </div>
