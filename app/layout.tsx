@@ -13,6 +13,21 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [
+      {
+        url: "/img/icons8-calculator-pastel-glyph-32.png",
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
+        url: "/img/icons8-calculator-pastel-glyph-16.png",
+        sizes: "16x16",
+        type: "image/png",
+      },
+    ],
+    apple: "/img/icons8-calculator-pastel-glyph-96.png",
+  },
   title: "Salesforce Certification Calculator",
   description:
     "Estimate your Salesforce certification score from section percentages using official-style topic weights. Not affiliated with Salesforce.",
