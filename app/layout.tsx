@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { publicAsset } from "@/lib/public-asset";
 import "./globals.css";
 
 const appSans = Plus_Jakarta_Sans({
@@ -16,17 +17,17 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/img/icons8-calculator-pastel-glyph-32.png",
+        url: publicAsset("/img/icons8-calculator-pastel-glyph-32.png"),
         sizes: "32x32",
         type: "image/png",
       },
       {
-        url: "/img/icons8-calculator-pastel-glyph-16.png",
+        url: publicAsset("/img/icons8-calculator-pastel-glyph-16.png"),
         sizes: "16x16",
         type: "image/png",
       },
     ],
-    apple: "/img/icons8-calculator-pastel-glyph-96.png",
+    apple: publicAsset("/img/icons8-calculator-pastel-glyph-96.png"),
   },
   title: "Salesforce Certification Calculator",
   description:

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { publicAsset } from "@/lib/public-asset";
 
 export function SiteHeader() {
   return (
@@ -15,7 +16,7 @@ export function SiteHeader() {
           />
           <div className="relative grid h-28 w-28 place-items-center rounded-2xl border border-white/60 bg-white/80 shadow-lg shadow-teal-900/10 ring-1 ring-slate-200/50 motion-safe:transition-transform motion-safe:duration-500 motion-safe:ease-out motion-safe:hover:scale-[1.04] motion-safe:hover:shadow-xl motion-safe:hover:shadow-teal-900/15 motion-reduce:hover:scale-100">
             <Image
-              src="/img/icons8-calculator-pastel-glyph-96.png"
+              src={publicAsset("/img/icons8-calculator-pastel-glyph-96.png")}
               alt="Calculator"
               width={96}
               height={96}
