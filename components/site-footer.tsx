@@ -49,6 +49,9 @@ export function SiteFooter() {
           </a>
         ))}
       </div>
+      <p className="mx-auto mt-6 max-w-4xl px-4 text-center text-xs text-slate-500">
+        This project was originally created in 2019.
+      </p>
     </footer>
   );
 }
