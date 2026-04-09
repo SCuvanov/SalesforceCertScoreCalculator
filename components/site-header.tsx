@@ -25,7 +25,7 @@ export function SiteHeader() {
           </div>
         </div>
         <div className="min-w-0 space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-700/90">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0891b2]">
             Score estimator
           </p>
           <h1 className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700 bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl">
