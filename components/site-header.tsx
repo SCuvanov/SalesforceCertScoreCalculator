@@ -1,9 +1,4 @@
-import Image from "next/image";
-
-const publicAsset = (path: string) => {
-  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-  return `${base}${path.startsWith("/") ? path : `/${path}`}`;
-};
+import { Calculator } from "lucide-react";
 
 export function SiteHeader() {
   return (
@@ -18,14 +13,10 @@ export function SiteHeader() {
             className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-teal-400/20 via-indigo-400/15 to-cyan-400/20 blur-xl"
             aria-hidden
           />
-          <Image
-            src={publicAsset("/img/salesforce_logo.png")}
-            alt="Salesforce"
-            width={273}
-            height={191}
-            className="relative h-28 w-28 rounded-2xl border border-white/60 bg-white/80 object-contain shadow-lg shadow-teal-900/10 ring-1 ring-slate-200/50 motion-safe:transition-transform motion-safe:duration-500 motion-safe:ease-out motion-safe:hover:scale-[1.04] motion-safe:hover:shadow-xl motion-safe:hover:shadow-teal-900/15 motion-reduce:hover:scale-100"
-            unoptimized
-          />
+          <div className="relative grid h-28 w-28 place-items-center rounded-2xl border border-white/60 bg-white/80 shadow-lg shadow-teal-900/10 ring-1 ring-slate-200/50 motion-safe:transition-transform motion-safe:duration-500 motion-safe:ease-out motion-safe:hover:scale-[1.04] motion-safe:hover:shadow-xl motion-safe:hover:shadow-teal-900/15 motion-reduce:hover:scale-100">
+            <Calculator className="h-14 w-14 text-teal-700" aria-hidden />
+            <span className="sr-only">Calculator icon</span>
+          </div>
         </div>
         <div className="min-w-0 space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-700/90">
