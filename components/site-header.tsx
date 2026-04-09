@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+const publicAsset = (path: string) => {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  return `${base}${path.startsWith("/") ? path : `/${path}`}`;
+};
+
 export function SiteHeader() {
   return (
     <header className="relative border-b border-white/40 bg-white/55 shadow-sm shadow-slate-900/[0.04] backdrop-blur-xl print:border-slate-300 print:bg-white print:shadow-none">
@@ -14,7 +19,7 @@ export function SiteHeader() {
             aria-hidden
           />
           <Image
-            src="/img/salesforce_logo.png"
+            src={publicAsset("/img/salesforce_logo.png")}
             alt="Salesforce"
             width={273}
             height={191}

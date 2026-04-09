@@ -8,6 +8,10 @@ const basePath =
 
 const nextConfig: NextConfig = {
   output: "export",
+  env: {
+    // Same as basePath, inlined for public asset URLs (e.g. /img/...) in static HTML.
+    NEXT_PUBLIC_BASE_PATH: basePath ?? "",
+  },
   ...(basePath ? { basePath, assetPrefix: basePath } : {}),
   images: {
     unoptimized: true,
