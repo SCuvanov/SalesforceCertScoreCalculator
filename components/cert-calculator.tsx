@@ -14,7 +14,6 @@ import {
   scorePasses,
 } from "@/lib/scoring";
 import {
-  clearPersistedState,
   emptyScoresForCert,
   loadPersistedState,
   savePersistedState,
@@ -216,16 +215,14 @@ export function CertCalculator() {
   }, [cert, scores]);
 
   const onClear = () => {
-    clearPersistedState();
-    const c = getCertificationById(DEFAULT_CERTIFICATION_ID)!;
-    setRoleFilter(ALL_ROLES);
-    setCertId(DEFAULT_CERTIFICATION_ID);
-    setScores(emptyScoresForCert(c));
+    const currentCert = cert ?? getCertificationById(certId);
+    if (!currentCert) return;
+    setScores(emptyScoresForCert(currentCert));
     setFieldErrors({});
     setResult(null);
     setWorkspaceView("scores");
     const clearParams = new URLSearchParams();
-    clearParams.set("cert", DEFAULT_CERTIFICATION_ID);
+    clearParams.set("cert", certId);
     replaceUrlQueryIfNeeded(clearParams);
   };
 
