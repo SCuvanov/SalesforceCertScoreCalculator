@@ -50,7 +50,7 @@ export function SiteFooter() {
         ))}
       </div>
       <p className="mx-auto mt-6 max-w-4xl px-4 text-center text-xs text-slate-500">
-        This project was originally created in 2019 and is completely Open Source.
+        This project was originally created in 2019 by Sean Cuvanov. It continues to be actively maintained, and collaboratively developed with the community.
       </p>
     </footer>
   );
