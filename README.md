@@ -1,4 +1,4 @@
-# Salesforce Certification Score Checker
+# Salesforce Certification Score Calculator
 
 Next.js app that estimates a Salesforce certification score from **section percentages** you enter and **topic weights** stored in [`data/certifications.json`](data/certifications.json). This is **not** an official Salesforce tool.
 

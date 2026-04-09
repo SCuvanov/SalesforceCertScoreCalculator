@@ -23,7 +23,7 @@ export function SiteHeader() {
             Score estimator
           </p>
           <h1 className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700 bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl">
-            Salesforce Certification Checker
+            Salesforce Certification Calculator
           </h1>
           <p className="max-w-2xl text-base leading-relaxed text-slate-600">
             Did you ever want to figure out how close you were to passing your
