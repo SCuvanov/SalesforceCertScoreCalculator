@@ -498,7 +498,7 @@ export function CertCalculator() {
                 <div className="flex flex-wrap gap-x-8 gap-y-2 border-t border-white/60 pt-3 text-slate-800 print:border-slate-200">
                   <p>
                     <span className="text-xs font-medium text-slate-500">
-                      Final score
+                      Final Score
                     </span>
                     <span
                       className={
@@ -512,7 +512,7 @@ export function CertCalculator() {
                   </p>
                   <p>
                     <span className="text-xs font-medium text-slate-500">
-                      Score needed
+                      Score Needed
                     </span>
                     <span className="ml-2 text-xl font-bold tabular-nums leading-none text-slate-700">
                       {cert.passingScore}
@@ -535,7 +535,7 @@ export function CertCalculator() {
                   aria-hidden
                 >
                   <span>Topic</span>
-                  <span className="shrink-0 tabular-nums">Earned / weight</span>
+                  <span className="shrink-0 tabular-nums">Earned  /  Max Score</span>
                 </div>
                 <ul
                   className="m-0 list-none space-y-3 p-0"
