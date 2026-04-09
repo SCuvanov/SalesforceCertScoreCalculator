@@ -14,7 +14,7 @@ export function SiteHeader() {
             aria-hidden
           />
           <Image
-            src="/img/salesforce_logo.svg"
+            src="/img/salesforce_logo.png"
             alt="Salesforce"
             width={273}
             height={191}
