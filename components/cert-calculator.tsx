@@ -38,6 +38,12 @@ const ALL_ROLES = "__all__";
 
 type WorkspaceView = "scores" | "breakdown";
 
+function urlSearchSyncMatches(wanted: URLSearchParams): boolean {
+  if (typeof window === "undefined") return false;
+  const cur = new URLSearchParams(window.location.search);
+  return cur.get("cert") === wanted.get("cert") && cur.get("s") === wanted.get("s");
+}
+
 export function CertCalculator() {
   const router = useRouter();
   const pathname = usePathname();
@@ -129,6 +135,7 @@ export function CertCalculator() {
         }
       }
       const next = `${pathname}?${params.toString()}`;
+      if (urlSearchSyncMatches(params)) return;
       router.replace(next, { scroll: false });
     }, 300);
     return () => clearTimeout(id);
@@ -238,9 +245,12 @@ export function CertCalculator() {
     setFieldErrors({});
     setResult(null);
     setWorkspaceView("scores");
-    router.replace(`${pathname}?cert=${DEFAULT_CERTIFICATION_ID}`, {
-      scroll: false,
-    });
+    const clearParams = new URLSearchParams();
+    clearParams.set("cert", DEFAULT_CERTIFICATION_ID);
+    const clearNext = `${pathname}?${clearParams.toString()}`;
+    if (!urlSearchSyncMatches(clearParams)) {
+      router.replace(clearNext, { scroll: false });
+    }
   };
 
   if (!cert) {
