@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --background: #eef1f8;
+  --foreground: #0b1220;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-solid: #ffffff;
+  --border-subtle: rgba(100, 116, 139, 0.18);
+  --accent-teal: #0d9488;
+  --accent-teal-dark: #0f766e;
+  --accent-indigo: #6366f1;
+  --accent-cyan: #0891b2;
+  --glow-teal: rgba(13, 148, 136, 0.35);
+  --glow-indigo: rgba(99, 102, 241, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-app), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(
+      ellipse 130% 90% at 0% -15%,
+      var(--glow-indigo),
+      transparent 52%
+    ),
+    radial-gradient(
+      ellipse 110% 70% at 100% -5%,
+      rgba(8, 145, 178, 0.14),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse 90% 55% at 50% 105%,
+      rgba(13, 148, 136, 0.08),
+      transparent 55%
+    );
+  background-attachment: fixed;
+}
+
+@keyframes ui-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-ui-fade-up {
+  animation: ui-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ui-fade-up {
+    animation: none;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    background-image: none;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print\:block {
+    display: block !important;
+  }
+
+  .print\:border-0 {
+    border-width: 0 !important;
+  }
+
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+}

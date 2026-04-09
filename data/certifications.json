@@ -1,0 +1,750 @@
+[
+  {
+    "id": "administrator",
+    "name": "Administrator",
+    "questionCount": 60,
+    "passingScore": 65,
+    "roles": [
+      "Salesforce Administrator"
+    ],
+    "categories": {
+      "Configuration and Setup": 20,
+      "Object Manager and Lightning App Builder": 20,
+      "Sales and Marketing Applications": 12,
+      "Service and Support Applications": 11,
+      "Productivity and Collaboration": 7,
+      "Data and Analytics Management": 14,
+      "Workflow/Process Automation": 16
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "advanced-administrator",
+    "name": "Advanced Administrator",
+    "questionCount": 60,
+    "passingScore": 65,
+    "roles": [
+      "Salesforce Administrator"
+    ],
+    "categories": {
+      "Security and Access": 20,
+      "Objects and Applications": 19,
+      "Auditing and Monitoring": 10,
+      "Cloud Applications": 11,
+      "Data and Analytics Management": 13,
+      "Environment Management and Deployment": 7,
+      "Process Automation": 20
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "b2b-solution-architect",
+    "name": "B2B Solution Architect",
+    "questionCount": 60,
+    "passingScore": 58,
+    "roles": [
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Discovery and Customer Success": 25,
+      "Data Governance and Integration": 26,
+      "Design": 29,
+      "Delivery": 12,
+      "Operationalize the Solution": 8
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "b2c-commerce-architect",
+    "name": "B2C Commerce Architect",
+    "questionCount": 60,
+    "passingScore": 65,
+    "roles": [
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Design/Discovery": 29,
+      "Build": 19,
+      "Monitoring/Troubleshooting": 14,
+      "Integrations and Customizations": 22,
+      "Launch": 16
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "b2c-commerce-developer",
+    "name": "B2C Commerce Developer",
+    "questionCount": 60,
+    "passingScore": 65,
+    "roles": [
+      "Salesforce Developer"
+    ],
+    "categories": {
+      "B2C Commerce Setup": 11,
+      "Work With a B2C Site": 12,
+      "Data Management Using Business Manager Usage": 24,
+      "Application Development": 53
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "b2c-solution-architect",
+    "name": "B2C Solution Architect",
+    "questionCount": 60,
+    "passingScore": 63,
+    "roles": [
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Discovery and Customer Success": 18,
+      "Functional Capabilities and Business Value": 19,
+      "Architecture Design": 23,
+      "Data Models and Management": 21,
+      "Integration": 19
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "business-analyst",
+    "name": "Business Analyst",
+    "questionCount": 60,
+    "passingScore": 72,
+    "roles": [
+      "Salesforce Administrator",
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "Customer Discovery": 17,
+      "Collaboration with Stakeholders": 24,
+      "Business Process Mapping": 16,
+      "Requirements": 17,
+      "User Stories": 18,
+      "User Acceptance": 8
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "cpq-specialist",
+    "name": "CPQ Specialist",
+    "questionCount": 60,
+    "passingScore": 65,
+    "roles": [
+      "Salesforce Administrator"
+    ],
+    "categories": {
+      "CPQ Platform": 23,
+      "Bundle Configurations": 17,
+      "Pricing": 16,
+      "Quote Templates": 7,
+      "Product Selection": 7,
+      "Orders, Contracts, Amendments, and Renewals": 15,
+      "Products": 11,
+      "Approvals": 4
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "data-architect",
+    "name": "Data Architect",
+    "questionCount": 60,
+    "passingScore": 58,
+    "roles": [
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Data Modeling/Database Design": 25,
+      "Master Data Management": 5,
+      "Salesforce Data Management": 25,
+      "Data Governance": 10,
+      "Large Data Volume Considerations": 20,
+      "Data Migration": 15
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "development-lifecycle-and-deployment-architect",
+    "name": "Development Lifecycle and Deployment Architect",
+    "questionCount": 60,
+    "passingScore": 65,
+    "roles": [
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Application Lifecycle Management": 8,
+      "Planning": 13,
+      "System Design": 15,
+      "Building": 14,
+      "Deploying": 14,
+      "Testing": 13,
+      "Releasing": 13,
+      "Operating": 10
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "education-cloud-consultant",
+    "name": "Education Cloud Consultant",
+    "questionCount": 60,
+    "passingScore": 67,
+    "roles": [
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "Domain Expertise": 18,
+      "Education Cloud Configuration": 22,
+      "Implementation Strategies and Best Practices": 18,
+      "Solution Design": 19,
+      "Integration and Data Management": 16,
+      "Analytics": 7
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "experience-cloud-consultant",
+    "name": "Experience Cloud Consultant",
+    "questionCount": 60,
+    "passingScore": 65,
+    "roles": [
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "Experience Cloud Basics": 8,
+      "Sharing, Visibility, and Licensing": 17,
+      "Branding, Personalization, and Content": 15,
+      "Templates and Themes": 10,
+      "User Creation and Authentication": 13,
+      "Adoption and Analytics": 5,
+      "Administration, Setup and Configuration": 25,
+      "Customization Considerations, and Limitations": 7
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "field-service-consultant",
+    "name": "Field Service Consultant",
+    "questionCount": 60,
+    "passingScore": 63,
+    "roles": [
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "Managing Resources": 16,
+      "Managing Work Orders": 23,
+      "Managing Scheduling and Optimization": 28,
+      "Configuring Mobility": 10,
+      "Managing Inventory": 8,
+      "Managing Assets": 5,
+      "Configuring Maintenance Plans": 5,
+      "Permissions and Sharing": 5
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "heroku-architect",
+    "name": "Heroku Architect",
+    "questionCount": 60,
+    "passingScore": 72,
+    "roles": [
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Heroku Platform": 10,
+      "Data": 17,
+      "Security": 15,
+      "Heroku Enterprise": 28,
+      "Architect Applications": 15,
+      "Integrations": 15
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "identity-and-access-management-architect",
+    "name": "Identity and Access Management Architect",
+    "questionCount": 60,
+    "passingScore": 67,
+    "roles": [
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Identity Management Concepts": 17,
+      "Accepting Third-Party Identity in Salesforce": 21,
+      "Salesforce as an Identity Provider": 17,
+      "Access Management Best Practices": 15,
+      "Salesforce Identity": 12,
+      "Community (Partner and Customer)": 18
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "industries-cpq-developer",
+    "name": "Industries CPQ Developer",
+    "questionCount": 60,
+    "passingScore": 63,
+    "roles": [
+      "Salesforce Developer"
+    ],
+    "categories": {
+      "Products": 20,
+      "Promotions and Discounts": 7,
+      "Pricing": 17,
+      "Rules": 12,
+      "APIs": 12,
+      "Ordering and Quoting": 12,
+      "Troubleshooting": 20
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "integration-architect",
+    "name": "Integration Architect",
+    "questionCount": 60,
+    "passingScore": 67,
+    "roles": [
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Evaluate the Current System Landscape": 8,
+      "Evaluate Business Needs": 11,
+      "Translate Needs to Integration Requirements": 22,
+      "Design Integration Solutions": 28,
+      "Build Solution": 23,
+      "Maintain Integration": 8
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "javascript-developer-i",
+    "name": "JavaScript Developer I",
+    "questionCount": 60,
+    "passingScore": 65,
+    "roles": [
+      "Salesforce Developer"
+    ],
+    "categories": {
+      "Variables, Types, and Collections": 23,
+      "Objects, Functions, and Classes": 25,
+      "Browser and Events": 17,
+      "Debugging and Error Handling": 7,
+      "Asynchronous Programming": 13,
+      "Server Side JavaScript": 8,
+      "Testing": 7
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "marketing-cloud-administrator",
+    "name": "Marketing Cloud Administrator",
+    "questionCount": 60,
+    "passingScore": 67,
+    "roles": [
+      "Salesforce Administrator",
+      "Salesforce Marketer"
+    ],
+    "categories": {
+      "Digital Marketing Proficiency": 13,
+      "Subscriber Data Management": 18,
+      "Setup": 38,
+      "Channel Management": 16,
+      "Maintenance": 15
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "marketing-cloud-consultant",
+    "name": "Marketing Cloud Consultant",
+    "questionCount": 60,
+    "passingScore": 67,
+    "roles": [
+      "Salesforce Marketer",
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "Discovery and Architecture": 16,
+      "Integration": 20,
+      "Account Configuration": 12,
+      "Automation": 20,
+      "Data Modeling and Management": 21,
+      "Messaging": 11
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "marketing-cloud-developer",
+    "name": "Marketing Cloud Developer",
+    "questionCount": 60,
+    "passingScore": 63,
+    "roles": [
+      "Salesforce Developer",
+      "Salesforce Marketer"
+    ],
+    "categories": {
+      "Data Modeling": 14,
+      "Programmatic Languages": 35,
+      "API": 22,
+      "Data Management": 22,
+      "Security": 7
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "marketing-cloud-email-specialist",
+    "name": "Marketing Cloud Email Specialist",
+    "questionCount": 60,
+    "passingScore": 67,
+    "roles": [
+      "Salesforce Marketer"
+    ],
+    "categories": {
+      "Email Marketing Best Practices": 10,
+      "Content Creation and Delivery": 24,
+      "Marketing Automation": 26,
+      "Subscriber and Data Management": 26,
+      "Insights and Analytics": 14
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "nonprofit-cloud-consultant",
+    "name": "Nonprofit Cloud Consultant",
+    "questionCount": 60,
+    "passingScore": 67,
+    "roles": [
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "Domain Expertise": 20,
+      "Nonprofit Cloud Product Configuration": 22,
+      "Implementation Strategies and Best Practices": 18,
+      "Solution Design": 20,
+      "Integration and Data Management": 15,
+      "Analytics": 5
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "omnistudio-consultant",
+    "name": "OmniStudio Consultant",
+    "questionCount": 60,
+    "passingScore": 63,
+    "roles": [
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "FlexCards": 23,
+      "OmniScripts": 27,
+      "Data Tools": 23,
+      "Best Fit Solutioning": 27
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "omnistudio-developer",
+    "name": "OmniStudio Developer",
+    "questionCount": 60,
+    "passingScore": 67,
+    "roles": [
+      "Salesforce Developer"
+    ],
+    "categories": {
+      "FlexCards": 15,
+      "OmniScripts": 20,
+      "Integration Procedures": 17,
+      "Data Raptors": 20,
+      "Expression Sets & Decision Matrices": 8,
+      "Integrated Troubleshooting and Deployment": 20
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "pardot-consultant",
+    "name": "Pardot Consultant",
+    "questionCount": 60,
+    "passingScore": 68,
+    "roles": [
+      "Salesforce Marketer",
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "Evaluation": 17,
+      "Account Configuration": 20,
+      "Automating Business Processes": 17,
+      "Email Marketing": 10,
+      "Lead Management": 14,
+      "Personalizing the Prospect Experience": 8,
+      "Reporting, Metrics & Analytics": 11,
+      "Salesforce Engage": 3
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "pardot-specialist",
+    "name": "Pardot Specialist",
+    "questionCount": 60,
+    "passingScore": 72,
+    "roles": [
+      "Salesforce Marketer"
+    ],
+    "categories": {
+      "Visitors and Prospects": 8,
+      "Administration": 11,
+      "Pardot Forms, Form Handlers and Landing Pages": 20,
+      "Lead Management": 24,
+      "Email Marketing": 20,
+      "Engagement Studio": 17
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "platform-app-builder",
+    "name": "Platform App Builder",
+    "questionCount": 60,
+    "passingScore": 63,
+    "roles": [
+      "Salesforce Administrator",
+      "Salesforce Developer",
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Salesforce Fundamentals": 23,
+      "Data Modeling and Management": 22,
+      "Business Logic and Process Automation": 28,
+      "User Interface": 17,
+      "App Development": 10
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "platform-developer-i",
+    "name": "Platform Developer I",
+    "questionCount": 60,
+    "passingScore": 68,
+    "roles": [
+      "Salesforce Developer",
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Developer Fundamentals": 23,
+      "Process Automation and Logic": 30,
+      "User Interface": 25,
+      "Testing, Debugging, and Deployment": 22
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "platform-developer-ii",
+    "name": "Platform Developer II",
+    "questionCount": 60,
+    "passingScore": 70,
+    "roles": [
+      "Salesforce Developer"
+    ],
+    "categories": {
+      "Advanced Developer Fundamentals": 15,
+      "Process Automation, Logic, and Integration": 27,
+      "User Interface": 20,
+      "Testing, Debugging, and Deployment": 20,
+      "Performance": 18
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "sales-cloud-consultant",
+    "name": "Sales Cloud Consultant",
+    "questionCount": 60,
+    "passingScore": 68,
+    "roles": [
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "Sales Practices": 11,
+      "Implementation Strategies": 13,
+      "Application of Product Knowledge": 18,
+      "Lead Management": 7,
+      "Account and Contact Management": 11,
+      "Opportunity Management": 10,
+      "Sales Productivity and Integration": 8,
+      "Consulting Practices": 7,
+      "Sales Metrics, Reports & Dashboards": 7,
+      "Data Management": 8
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "salesforce-associate",
+    "name": "Salesforce Associate",
+    "questionCount": 40,
+    "passingScore": 62,
+    "roles": [
+      "Salesforce Associate"
+    ],
+    "categories": {
+      "Salesforce Ecosystem": 32,
+      "Navigation": 28,
+      "Data Model": 25,
+      "Reports & Dashboards": 15
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "service-cloud-consultant",
+    "name": "Service Cloud Consultant",
+    "questionCount": 60,
+    "passingScore": 67,
+    "roles": [
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "Industry Knowledge": 10,
+      "Implementation Strategies": 15,
+      "Service Cloud Solution Design": 16,
+      "Knowledge Management": 9,
+      "Interaction Channels": 10,
+      "Case Management": 15,
+      "Contact Center Analytics": 5,
+      "Integration and Data Management": 5,
+      "Service Console": 15
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "sharing-and-visibility-architect",
+    "name": "Sharing and Visibility Architect",
+    "questionCount": 60,
+    "passingScore": 67,
+    "roles": [
+      "Salesforce Architect"
+    ],
+    "categories": {
+      "Declarative Sharing": 76,
+      "Performance and Scalability": 7,
+      "Programmatic Sharing": 17
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "strategy-designer",
+    "name": "Strategy Designer",
+    "questionCount": 60,
+    "passingScore": 70,
+    "roles": [
+      "Salesforce Designer"
+    ],
+    "categories": {
+      "Value Design": 32,
+      "Tools and Artifacts": 23,
+      "Intangible Deliverables": 26,
+      "Leveraging Adjacent Roles/Skills": 19
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "tableau-crm-and-einstein-discovery-consultant",
+    "name": "Tableau CRM and Einstein Discovery Consultant",
+    "questionCount": 60,
+    "passingScore": 68,
+    "roles": [
+      "Salesforce Consultant"
+    ],
+    "categories": {
+      "Data Layer": 24,
+      "Security": 11,
+      "Administration": 9,
+      "Tableau CRM Dashboard Design": 19,
+      "Tableau CRM Dashboard Implementation": 18,
+      "Einstein Discovery Story Design": 19
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  },
+  {
+    "id": "user-experience-designer",
+    "name": "User Experience Designer",
+    "questionCount": 60,
+    "passingScore": 65,
+    "roles": [
+      "Salesforce Designer"
+    ],
+    "categories": {
+      "Discovery": 13,
+      "UX Fundamentals": 16,
+      "Human-Centered Design": 12,
+      "Declarative Design": 27,
+      "Testing": 11,
+      "Salesforce Lightning Design System (SLDS)": 21
+    },
+    "officialExamGuideUrl": "https://trailhead.salesforce.com/en/credentials/overview/",
+    "dataVerifiedDate": "2026-04-08",
+    "examGuideVersion": "Migrated from legacy app; update per-cert URLs in data/certifications.json"
+  }
+]

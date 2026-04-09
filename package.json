@@ -1,34 +1,35 @@
 {
-  "name": "salesforcecertscorecalculator",
-  "version": "1.0.0",
-  "description": "A tool which can be used to calculate how close one was to passing a Salesforce certification based on their scores.",
-  "main": "index.js",
+  "name": "salesforce-cert-score-calculator",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss resources/css/style.css -w",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss resources/css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' resources/css/style.comp.css -o resources/css/style.prefix.css",
-    "compress:css": "node-sass resources/css/style.prefix.css resources/css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "extract:certs": "node scripts/extract-certifications.mjs",
+    "sync:certs": "node scripts/sync-certs.mjs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SCuvanov/SalesforceCertScoreCalculator.git"
+  "dependencies": {
+    "lucide-react": "^1.7.0",
+    "next": "16.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "^4.3.6"
   },
-  "author": "Sean Cuvanov",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SCuvanov/SalesforceCertScoreCalculator/issues"
-  },
-  "homepage": "https://github.com/SCuvanov/SalesforceCertScoreCalculator#readme",
-  "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "concat": "^1.0.3",
-    "live-server": "^1.2.1",
-    "node-sass": "^7.0.3",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^10.1.0"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "happy-dom": "^20.8.9",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^4.1.3"
   }
 }
