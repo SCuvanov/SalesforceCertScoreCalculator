@@ -13,12 +13,8 @@ import {
   messageForScore,
   scorePasses,
 } from "@/lib/scoring";
-import {
-  emptyScoresForCert,
-  loadPersistedState,
-  savePersistedState,
-} from "@/lib/storage";
-import { decodeScoresPayload, encodeScoresPayload, wouldUrlBeTooLong } from "@/lib/url-state";
+import { emptyScoresForCert } from "@/lib/storage";
+import { encodeScoresPayload, wouldUrlBeTooLong } from "@/lib/url-state";
 import type { Certification } from "@/lib/cert-schema";
 import {
   BarChart3,
@@ -79,60 +75,17 @@ export function CertCalculator() {
 
   useEffect(() => {
     queueMicrotask(() => {
-      const fallbackCert =
-        getCertificationById(DEFAULT_CERTIFICATION_ID) ?? activeCerts[0];
+      const fallbackCert = activeCerts[0] ?? getCertificationById(DEFAULT_CERTIFICATION_ID);
       if (!fallbackCert) {
         setHydrated(true);
         return;
       }
-
-      const params =
-        typeof window !== "undefined"
-          ? new URLSearchParams(window.location.search)
-          : new URLSearchParams();
-      const urlCert = params.get("cert");
-      const urlS = params.get("s");
-      const persisted = loadPersistedState();
-
-      let nextId = fallbackCert.id;
-      if (urlCert && getCertificationById(urlCert)) {
-        nextId = urlCert;
-      } else if (persisted?.certId && getCertificationById(persisted.certId)) {
-        nextId = persisted.certId;
-      }
-
-      const c = getCertificationById(nextId) ?? fallbackCert;
-      let nextScores = emptyScoresForCert(c);
-
-      if (urlS) {
-        const decoded = decodeScoresPayload(urlS);
-        if (decoded) {
-          for (const k of Object.keys(c.categories)) {
-            if (decoded[k] !== undefined) nextScores[k] = decoded[k];
-          }
-        }
-      } else if (persisted?.scores && persisted.certId === nextId) {
-        nextScores = { ...nextScores, ...persisted.scores };
-      }
-
-      setCertId(nextId);
-      setScores(nextScores);
-      if (persisted?.roleFilter) setRoleFilter(persisted.roleFilter);
+      setRoleFilter(ALL_ROLES);
+      setCertId(fallbackCert.id);
+      setScores(emptyScoresForCert(fallbackCert));
       setHydrated(true);
     });
   }, [activeCerts]);
-
-  useEffect(() => {
-    if (!hydrated) return;
-    const id = setTimeout(() => {
-      savePersistedState({
-        certId,
-        roleFilter,
-        scores,
-      });
-    }, 400);
-    return () => clearTimeout(id);
-  }, [hydrated, certId, roleFilter, scores]);
 
   useEffect(() => {
     if (!hydrated) return;
