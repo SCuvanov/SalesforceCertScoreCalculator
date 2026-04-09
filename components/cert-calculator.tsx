@@ -31,7 +31,7 @@ import {
   ListChecks,
   Printer,
 } from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
 const ALL_ROLES = "__all__";
@@ -44,8 +44,17 @@ function urlSearchSyncMatches(wanted: URLSearchParams): boolean {
   return cur.get("cert") === wanted.get("cert") && cur.get("s") === wanted.get("s");
 }
 
+/** Updates the query string without App Router navigation (avoids remounts / focus loss in inputs). */
+function replaceUrlQueryIfNeeded(wanted: URLSearchParams): void {
+  if (typeof window === "undefined") return;
+  if (urlSearchSyncMatches(wanted)) return;
+  const q = wanted.toString();
+  const path = window.location.pathname;
+  const next = q ? `${path}?${q}` : path;
+  window.history.replaceState(window.history.state, "", next);
+}
+
 export function CertCalculator() {
-  const router = useRouter();
   const pathname = usePathname();
 
   const activeCerts = useMemo(() => getActiveCertifications(), []);
@@ -134,12 +143,10 @@ export function CertCalculator() {
           params.set("s", enc);
         }
       }
-      const next = `${pathname}?${params.toString()}`;
-      if (urlSearchSyncMatches(params)) return;
-      router.replace(next, { scroll: false });
+      replaceUrlQueryIfNeeded(params);
     }, 300);
     return () => clearTimeout(id);
-  }, [hydrated, certId, scores, pathname, router]);
+  }, [hydrated, certId, scores, pathname]);
 
   const onRoleChange = (value: string) => {
     setRoleFilter(value);
@@ -247,10 +254,7 @@ export function CertCalculator() {
     setWorkspaceView("scores");
     const clearParams = new URLSearchParams();
     clearParams.set("cert", DEFAULT_CERTIFICATION_ID);
-    const clearNext = `${pathname}?${clearParams.toString()}`;
-    if (!urlSearchSyncMatches(clearParams)) {
-      router.replace(clearNext, { scroll: false });
-    }
+    replaceUrlQueryIfNeeded(clearParams);
   };
 
   if (!cert) {
